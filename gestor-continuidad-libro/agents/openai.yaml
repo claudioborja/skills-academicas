@@ -1,0 +1,8 @@
+interface:
+  display_name: "Continuidad De Libro"
+  short_description: "Uniforma voz y continuidad entre capítulos"
+  default_prompt: "Usa $gestor-continuidad-libro para revisar la continuidad entre estos capítulos."
+
+policy:
+  allow_implicit_invocation: true
+

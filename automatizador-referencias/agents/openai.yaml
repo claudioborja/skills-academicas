@@ -1,0 +1,4 @@
+interface:
+  display_name: "Automatizador Referencias"
+  short_description: "Audita DOI, citas y fuentes"
+  default_prompt: "Use $automatizador-referencias para auditar citas, DOI, bibliografía y fuentes descargadas."

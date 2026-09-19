@@ -1,0 +1,8 @@
+interface:
+  display_name: "Tablas Y Figuras"
+  short_description: "Ordena tablas, figuras y notas"
+  default_prompt: "Usa $gestor-tablas-figuras-pies para revisar las tablas, figuras y notas de este documento."
+
+policy:
+  allow_implicit_invocation: true
+

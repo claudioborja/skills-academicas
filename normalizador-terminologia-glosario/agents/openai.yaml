@@ -1,0 +1,8 @@
+interface:
+  display_name: "Terminología Y Glosario"
+  short_description: "Uniforma términos, siglas y conceptos"
+  default_prompt: "Usa $normalizador-terminologia-glosario para unificar la terminología de este manuscrito."
+
+policy:
+  allow_implicit_invocation: true
+

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Convertidor Tesis A Libro"
+  short_description: "Transforma tesis en manuscrito de libro"
+  default_prompt: "Usa $convertidor-tesis-a-libro para diagnosticar esta tesis y convertirla en una arquitectura de libro publicable."

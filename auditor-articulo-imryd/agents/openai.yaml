@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auditor Artículo IMRyD"
+  short_description: "Audita estructura científica IMRyD"
+  default_prompt: "Use $auditor-articulo-imryd para revisar estructura IMRyD, alineación objetivo-método-resultados y checklist de envío."

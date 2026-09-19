@@ -1,0 +1,4 @@
+interface:
+  display_name: "Referencias académicas APA 7 e IEEE"
+  short_description: "Verifica fuentes y citas en APA 7 o IEEE"
+  default_prompt: "Usa $gestor-referencias-academicas para respaldar este texto con fuentes verificadas y aplicar la norma APA 7 o IEEE del proyecto."

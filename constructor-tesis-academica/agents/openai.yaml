@@ -1,0 +1,4 @@
+interface:
+  display_name: "Constructor de tesis académica"
+  short_description: "Ruta integral para construir y revisar tesis"
+  default_prompt: "Usa $constructor-tesis-academica para diagnosticar y construir una tesis con coherencia entre problema, método, resultados y cierre."

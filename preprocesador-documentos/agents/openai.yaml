@@ -1,0 +1,4 @@
+interface:
+  display_name: "Preprocesador Documentos"
+  short_description: "Preprocesa documentos e instala dependencias"
+  default_prompt: "Use $preprocesador-documentos para instalar automáticamente las dependencias necesarias, convertir y segmentar este PDF, DOCX, HTML o TXT antes de procesarlo."

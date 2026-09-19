@@ -1,0 +1,34 @@
+# Entornos y dependencias locales
+.git-local/
+**/.runtime/
+**/.venv/
+**/venv/
+
+# Cachés de Python
+**/__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secretos y configuración privada
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Salidas generadas y temporales
+output/
+dist/
+build/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Respaldos históricos locales; no forman parte de la distribución Git
+workflow-maestro-academico-editorial/assets/migraciones/*.zip

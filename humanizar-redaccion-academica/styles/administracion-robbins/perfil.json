@@ -1,0 +1,483 @@
+{
+  "sources": [
+    {
+      "path": "Administracion-Robbins.pdf",
+      "characters": 2250454,
+      "words": 239629
+    }
+  ],
+  "counts": {
+    "characters": 2250454,
+    "words": 239629,
+    "paragraphs": 765,
+    "sentences": 15010
+  },
+  "protected_content": {
+    "fenced_blocks": 0,
+    "markdown_tables": 0,
+    "blockquote_lines": 1,
+    "numeric_citations": 2,
+    "doi_or_url": 9
+  },
+  "sentence_stats": {
+    "count": 15010,
+    "avg": 15.8,
+    "median": 12.0,
+    "stdev": 23.47,
+    "min": 0,
+    "max": 1362
+  },
+  "paragraph_stats": {
+    "count": 765,
+    "avg": 313.04,
+    "median": 375,
+    "stdev": 197.78,
+    "min": 4,
+    "max": 643
+  },
+  "punctuation_per_sentence": {
+    ",": 1.898,
+    ";": 0.059,
+    ":": 0.131,
+    "(": 0.121,
+    "?": 0.096,
+    "!": 0.007
+  },
+  "connectors": [
+    {
+      "phrase": "también",
+      "count": 314
+    },
+    {
+      "phrase": "sin embargo",
+      "count": 224
+    },
+    {
+      "phrase": "además",
+      "count": 152
+    },
+    {
+      "phrase": "en términos",
+      "count": 50
+    },
+    {
+      "phrase": "por lo tanto",
+      "count": 26
+    },
+    {
+      "phrase": "por otra parte",
+      "count": 24
+    },
+    {
+      "phrase": "no obstante",
+      "count": 16
+    },
+    {
+      "phrase": "en cambio",
+      "count": 12
+    },
+    {
+      "phrase": "asimismo",
+      "count": 7
+    },
+    {
+      "phrase": "por tanto",
+      "count": 7
+    },
+    {
+      "phrase": "por ello",
+      "count": 5
+    },
+    {
+      "phrase": "a su vez",
+      "count": 4
+    },
+    {
+      "phrase": "en consecuencia",
+      "count": 2
+    },
+    {
+      "phrase": "ademas",
+      "count": 1
+    },
+    {
+      "phrase": "conviene",
+      "count": 1
+    },
+    {
+      "phrase": "de este modo",
+      "count": 1
+    },
+    {
+      "phrase": "en la práctica",
+      "count": 1
+    }
+  ],
+  "hedges": [
+    {
+      "phrase": "cuando",
+      "count": 621
+    },
+    {
+      "phrase": "puede",
+      "count": 598
+    },
+    {
+      "phrase": "podría",
+      "count": 167
+    },
+    {
+      "phrase": "según",
+      "count": 56
+    },
+    {
+      "phrase": "depende",
+      "count": 52
+    },
+    {
+      "phrase": "parece",
+      "count": 46
+    },
+    {
+      "phrase": "probablemente",
+      "count": 37
+    },
+    {
+      "phrase": "no siempre",
+      "count": 29
+    },
+    {
+      "phrase": "tiende",
+      "count": 26
+    },
+    {
+      "phrase": "suele",
+      "count": 11
+    },
+    {
+      "phrase": "siempre que",
+      "count": 4
+    },
+    {
+      "phrase": "en algunos casos",
+      "count": 3
+    },
+    {
+      "phrase": "conviene",
+      "count": 1
+    }
+  ],
+  "repeated_sentence_starts": [
+    {
+      "start": "vaya página para ver",
+      "count": 78
+    },
+    {
+      "start": "repaso rápido objetivo aprendizaje",
+      "count": 54
+    },
+    {
+      "start": "parte tres cómo organizar",
+      "count": 31
+    },
+    {
+      "start": "parte uno cómo definir",
+      "count": 27
+    },
+    {
+      "start": "mejor consejo gerencial recibido",
+      "count": 24
+    },
+    {
+      "start": "autoevaluación puede resultar una",
+      "count": 18
+    },
+    {
+      "start": "conforme lea estudie este",
+      "count": 16
+    },
+    {
+      "start": "página objetivos aprendizaje capítulo",
+      "count": 15
+    },
+    {
+      "start": "lecturas sugeridas por steve",
+      "count": 15
+    },
+    {
+      "start": "qué hará para reforzar",
+      "count": 14
+    },
+    {
+      "start": "cuáles son las implicaciones",
+      "count": 13
+    },
+    {
+      "start": "con los resultados sus",
+      "count": 13
+    },
+    {
+      "start": "para más recursos visite",
+      "count": 12
+    },
+    {
+      "start": "con sus propias palabras",
+      "count": 11
+    },
+    {
+      "start": "upper saddle river prentice",
+      "count": 11
+    }
+  ],
+  "repeated_paragraph_starts": [
+    {
+      "start": "parte uno cómo definir",
+      "count": 45
+    },
+    {
+      "start": "parte tres cómo organizar",
+      "count": 33
+    },
+    {
+      "start": "capítulo trece cómo entender",
+      "count": 15
+    },
+    {
+      "start": "capítulo quince cómo motivar",
+      "count": 14
+    },
+    {
+      "start": "capítulo cinco responsabilidad social",
+      "count": 12
+    },
+    {
+      "start": "capítulo diez administración recursos",
+      "count": 12
+    },
+    {
+      "start": "capítulo tres cultura organizacional",
+      "count": 11
+    },
+    {
+      "start": "capítulo once manejo equipos",
+      "count": 11
+    },
+    {
+      "start": "capítulo catorce los gerentes",
+      "count": 11
+    },
+    {
+      "start": "capítulo diecisiete introducción control",
+      "count": 11
+    },
+    {
+      "start": "capítulo cuatro administración entorno",
+      "count": 10
+    },
+    {
+      "start": "capítulo seis los gerentes",
+      "count": 10
+    },
+    {
+      "start": "capítulo dieciséis los gerentes",
+      "count": 10
+    },
+    {
+      "start": "capítulo uno introducción administración",
+      "count": 9
+    },
+    {
+      "start": "capítulo ocho administración estratégica",
+      "count": 9
+    }
+  ],
+  "terms": {
+    "keywords": [
+      {
+        "term": "empleados",
+        "count": 1563
+      },
+      {
+        "term": "gerentes",
+        "count": 1561
+      },
+      {
+        "term": "más",
+        "count": 1496
+      },
+      {
+        "term": "trabajo",
+        "count": 1285
+      },
+      {
+        "term": "sus",
+        "count": 1269
+      },
+      {
+        "term": "son",
+        "count": 1148
+      },
+      {
+        "term": "qué",
+        "count": 1130
+      },
+      {
+        "term": "the",
+        "count": 1067
+      },
+      {
+        "term": "organización",
+        "count": 1028
+      },
+      {
+        "term": "and",
+        "count": 937
+      },
+      {
+        "term": "administración",
+        "count": 811
+      },
+      {
+        "term": "cómo",
+        "count": 789
+      },
+      {
+        "term": "ser",
+        "count": 651
+      },
+      {
+        "term": "decisiones",
+        "count": 641
+      },
+      {
+        "term": "compañía",
+        "count": 608
+      },
+      {
+        "term": "desempeño",
+        "count": 601
+      },
+      {
+        "term": "ejemplo",
+        "count": 588
+      },
+      {
+        "term": "journal",
+        "count": 542
+      },
+      {
+        "term": "organizaciones",
+        "count": 531
+      },
+      {
+        "term": "management",
+        "count": 530
+      }
+    ],
+    "bigrams": [
+      {
+        "term": "sin embargo",
+        "count": 246
+      },
+      {
+        "term": "qué tan",
+        "count": 214
+      },
+      {
+        "term": "academy management",
+        "count": 213
+      },
+      {
+        "term": "toma decisiones",
+        "count": 205
+      },
+      {
+        "term": "estados unidos",
+        "count": 177
+      },
+      {
+        "term": "objetivo aprendizaje",
+        "count": 168
+      },
+      {
+        "term": "new york",
+        "count": 145
+      },
+      {
+        "term": "cadena valor",
+        "count": 131
+      },
+      {
+        "term": "quiénes son",
+        "count": 120
+      },
+      {
+        "term": "wall street",
+        "count": 120
+      },
+      {
+        "term": "tan bien",
+        "count": 118
+      },
+      {
+        "term": "management journal",
+        "count": 117
+      }
+    ],
+    "trigrams": [
+      {
+        "term": "qué tan bien",
+        "count": 115
+      },
+      {
+        "term": "wall street journal",
+        "count": 113
+      },
+      {
+        "term": "ver qué tan",
+        "count": 85
+      },
+      {
+        "term": "vaya página ver",
+        "count": 84
+      },
+      {
+        "term": "página ver qué",
+        "count": 84
+      },
+      {
+        "term": "tan bien maneja",
+        "count": 84
+      },
+      {
+        "term": "bien maneja material",
+        "count": 84
+      },
+      {
+        "term": "repaso rápido objetivo",
+        "count": 84
+      },
+      {
+        "term": "rápido objetivo aprendizaje",
+        "count": 84
+      },
+      {
+        "term": "administración cadena valor",
+        "count": 81
+      }
+    ]
+  },
+  "voice_notes": [
+    "Predominan oraciones breves o de ritmo directo.",
+    "Hay variacion marcada de ritmo entre oraciones densas y frases mas cortas.",
+    "La cohesion depende de conectores explicitos; diversificar relaciones logicas al reescribir.",
+    "El estilo usa matizadores; conservar prudencia argumentativa y evitar afirmaciones absolutas."
+  ],
+  "style_directives": [
+    "Usar el perfil como guia de ritmo y decisiones, no como banco de frases copiables.",
+    "Variar entradas de parrafo y cierres para evitar molde repetido.",
+    "Conservar citas, DOI, URL, tablas, codigo, formulas y referencias.",
+    "Mantener matices si el perfil los usa; no convertir el texto en afirmaciones absolutas.",
+    "Agregar concrecion solo cuando el contenido la permita."
+  ]
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Planificador de Obra Académica"
+  short_description: "Planifica e inicializa proyectos editoriales completos"
+  default_prompt: "Usa $planificador-obra-academica para diseñar e inicializar la estructura completa de este libro."
+
+policy:
+  allow_implicit_invocation: true

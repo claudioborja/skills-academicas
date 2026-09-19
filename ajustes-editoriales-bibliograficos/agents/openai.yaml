@@ -1,0 +1,8 @@
+interface:
+  display_name: "Ajustes Editoriales"
+  short_description: "Aplica filtros editoriales a citas y bibliografía"
+  default_prompt: "Usa $ajustes-editoriales-bibliograficos para adaptar estas citas y referencias a las exigencias del editor."
+
+policy:
+  allow_implicit_invocation: true
+

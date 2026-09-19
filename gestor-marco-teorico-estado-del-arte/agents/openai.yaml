@@ -1,0 +1,8 @@
+interface:
+  display_name: "Marco Teórico"
+  short_description: "Organiza literatura, debates y vacíos"
+  default_prompt: "Usa $gestor-marco-teorico-estado-del-arte para convertir estas fuentes en un marco teórico o estado del arte analítico."
+
+policy:
+  allow_implicit_invocation: true
+

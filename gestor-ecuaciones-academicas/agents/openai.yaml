@@ -1,0 +1,8 @@
+interface:
+  display_name: "Ecuaciones Académicas"
+  short_description: "Revisa ecuaciones, notación y formatos"
+  default_prompt: "Usa $gestor-ecuaciones-academicas para revisar las ecuaciones, símbolos, unidades y referencias de este manuscrito."
+
+policy:
+  allow_implicit_invocation: true
+

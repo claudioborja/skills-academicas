@@ -1,0 +1,2 @@
+# Inspección técnica raster reproducible; Python >=3.10.
+pillow==12.3.0

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Artículo Científico IMRyD"
+  short_description: "Redacción científica IMRyD conectada"
+  default_prompt: "Use $redaccion-articulo-cientifico-imryd to planificar, redactar o revisar un artículo científico con estructura IMRyD."

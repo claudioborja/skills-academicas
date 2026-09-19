@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revisión Sistemática Kitchenham"
+  short_description: "Ejecuta SLR Kitchenham con fuentes locales verificadas"
+  default_prompt: "Usa $revision-sistematica-kitchenham para planificar, ejecutar, respaldar y redactar una revisión sistemática exclusivamente Kitchenham, descargando y revisando manualmente toda fuente utilizada."

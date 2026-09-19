@@ -1,0 +1,8 @@
+interface:
+  display_name: "Auditor De Coherencia"
+  short_description: "Detecta fallas lógicas y estructurales"
+  default_prompt: "Usa $auditor-coherencia-argumentativa para revisar la solidez lógica y estructural de este texto."
+
+policy:
+  allow_implicit_invocation: true
+

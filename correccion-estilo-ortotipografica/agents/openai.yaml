@@ -1,0 +1,8 @@
+interface:
+  display_name: "Corrección De Estilo"
+  short_description: "Corrige estilo, ortografía y ortotipografía"
+  default_prompt: "Usa $correccion-estilo-ortotipografica para revisar este texto y corregir estilo, ortografía y ortotipografía sin borrar la voz del autor."
+
+policy:
+  allow_implicit_invocation: true
+

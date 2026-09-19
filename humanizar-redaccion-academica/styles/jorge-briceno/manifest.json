@@ -1,0 +1,18 @@
+{
+  "style_name": "Jorge Briceño",
+  "source": "TesisDr.pdf",
+  "derived_source": "TesisDr_muestra_espanol.pdf",
+  "created": "2026-06-18",
+  "language": "es",
+  "scope": "perfil de redaccion academica tecnica de Jorge Briceno en espanol",
+  "canonical_files": {
+    "profile_markdown": "perfil.md",
+    "profile_json": "perfil.json",
+    "summary": "resumen.md"
+  },
+  "notes": [
+    "Se priorizaron secciones en espanol de la tesis.",
+    "Los articulos publicados en ingles fueron excluidos del perfil operativo.",
+    "El perfil orienta ritmo, conectores, matizadores y arquitectura de parrafo; no autoriza copiar frases literales."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "red": [
+    {"name": "OMICS International", "aliases": ["OMICS Publishing Group", "OMICS Group", "iMedPub", "Conference Series"], "reason": "Caso oficial FTC por prácticas engañosas."},
+    {"name": "WASET", "aliases": ["World Academy of Science, Engineering and Technology"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Science Publishing Group", "aliases": ["SciencePG", "SCIPG"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "MedCrave", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Austin Publishing Group", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Bentham Open", "aliases": [], "reason": "Listada como potencialmente depredadora; verificar sello específico."},
+    {"name": "Academic Journals, Inc.", "aliases": ["Academic Journals Inc"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Academic Research Publishing Group", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Academy of Science and Engineering", "aliases": ["ASE"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Asian Online Journal Publishing Group", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Open Access Text", "aliases": ["OAT"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Open Access Library", "aliases": ["OALib"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "OPAST", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Science Publications", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Herald Scholarly Open Access", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "E-Cronicon", "aliases": ["ECronicon"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Edelweiss Publications", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Enliven Archive", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "EPRA Journals", "aliases": ["EPRA"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "International Academy of Science, Engineering and Technology", "aliases": ["IASET"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "International Association of Engineering & Technology Researchers", "aliases": ["IAETR"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "International Association of Journals & Conferences", "aliases": ["IAJC"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Research India Publications", "aliases": ["RIP"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Research Publish Journals", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Research Publishing Group", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Scholars Academic and Scientific Publishers", "aliases": ["SAS Publishers"], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Scholars Research Library", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Sciedu Press", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Symbiosis Online Publishing", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "United Scientific Group", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Universe Scientific Publishing", "aliases": [], "reason": "Listada como potencialmente depredadora."},
+    {"name": "Vernon Innovative Publishers", "aliases": ["VIPOA"], "reason": "Listada como potencialmente depredadora."}
+  ],
+  "yellow": [
+    {"name": "Revista Espacios", "aliases": ["Espacios"], "reason": "Alerta por descontinuación Scopus; verificar ISSN, URL oficial, política editorial e indexación."},
+    {"name": "Revistas Académicas", "aliases": ["Revistas Academicas"], "reason": "Nombre en español listado en Beall; verificar identidad exacta."}
+  ]
+}
+

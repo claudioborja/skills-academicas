@@ -1,0 +1,7 @@
+# Base PDF/Word validada en Linux. Python >=3.10.
+# Incluye dependencias transitivas; no incluye extras criptográficos ni gráficos.
+pymupdf==1.28.2
+pypdf==6.16.2
+python-docx==1.2.0
+lxml==6.1.2
+typing_extensions==4.16.0

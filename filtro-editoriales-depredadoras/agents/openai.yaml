@@ -1,0 +1,8 @@
+interface:
+  display_name: "Filtro Editorial"
+  short_description: "Evita revistas y editoriales depredadoras"
+  default_prompt: "Usa $filtro-editoriales-depredadoras para verificar si estas fuentes, revistas o editoriales son confiables antes de citarlas."
+
+policy:
+  allow_implicit_invocation: true
+

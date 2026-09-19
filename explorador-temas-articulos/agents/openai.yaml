@@ -1,0 +1,4 @@
+interface:
+  display_name: "Explorador Temas Artículos"
+  short_description: "Propone temas desde estado del arte"
+  default_prompt: "Use $explorador-temas-articulos para clasificar literatura, mapear similares, detectar vacíos y proponer temas de artículos."

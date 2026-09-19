@@ -1,0 +1,7 @@
+interface:
+  display_name: "Respuesta A Observaciones"
+  short_description: "Convierte comentarios en plan de cambios"
+  default_prompt: "Usa $respondedor-observaciones-academicas para organizar estas observaciones y proponer respuestas y cambios."
+
+policy:
+  allow_implicit_invocation: true

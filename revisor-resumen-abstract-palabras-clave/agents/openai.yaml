@@ -1,0 +1,8 @@
+interface:
+  display_name: "Resumen Y Abstract"
+  short_description: "Optimiza resúmenes y palabras clave"
+  default_prompt: "Usa $revisor-resumen-abstract-palabras-clave para redactar o corregir el resumen y las palabras clave de este texto."
+
+policy:
+  allow_implicit_invocation: true
+

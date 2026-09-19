@@ -1,0 +1,4 @@
+interface:
+  display_name: "Imágenes Académicas para Libros"
+  short_description: "Genera o localiza imágenes académicas trazables"
+  default_prompt: "Usa $gestor-imagenes-academicas-libros para crear o localizar imágenes confiables y listas para integrar en este libro."

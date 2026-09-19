@@ -1,0 +1,2 @@
+# Para el intérprete del validador oficial de skill-creator.
+PyYAML==6.0.3

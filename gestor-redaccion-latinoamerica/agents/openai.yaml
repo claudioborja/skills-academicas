@@ -1,0 +1,8 @@
+interface:
+  display_name: "Gestor De Redacción"
+  short_description: "Redacción profesional en español latinoamericano"
+  default_prompt: "Usa $gestor-redaccion-latinoamerica para redactar o reescribir este texto en español neutro latinoamericano, sin patrones típicos de escritura por IA."
+
+policy:
+  allow_implicit_invocation: true
+

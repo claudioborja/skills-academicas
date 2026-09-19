@@ -1,0 +1,14 @@
+{
+  "style_name": "Administracion Robbins",
+  "style_slug": "administracion-robbins",
+  "created_at": "2026-06-14",
+  "model_files": [
+    "Administracion-Robbins.pdf"
+  ],
+  "files": {
+    "profile_md": "skills/humanizar-redaccion-academica/styles/administracion-robbins/perfil.md",
+    "profile_json": "skills/humanizar-redaccion-academica/styles/administracion-robbins/perfil.json",
+    "summary_md": "skills/humanizar-redaccion-academica/styles/administracion-robbins/resumen.md"
+  },
+  "use": "Perfil reusable para guiar ritmo, conectores, matizadores y arquitectura de parrafo en redaccion academica. No copiar frases literales del modelo."
+}

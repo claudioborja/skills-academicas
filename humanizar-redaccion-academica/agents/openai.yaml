@@ -1,0 +1,4 @@
+interface:
+  display_name: "Humanizar Redacción Académica"
+  short_description: "Humaniza, desgenerica y perfila la voz académica"
+  default_prompt: "Usa $humanizar-redaccion-academica para humanizar texto académico o extraer un perfil de estilo desde documentos modelo, conservando citas y fuentes."

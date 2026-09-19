@@ -1,0 +1,8 @@
+interface:
+  display_name: "Preentrega Académica"
+  short_description: "Audita forma y maquetación final"
+  default_prompt: "Usa $maquetacion-academica-preentrega para revisar este documento antes de entrega."
+
+policy:
+  allow_implicit_invocation: true
+

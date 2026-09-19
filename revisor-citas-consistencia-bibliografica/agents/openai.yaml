@@ -1,0 +1,8 @@
+interface:
+  display_name: "Revisor Bibliográfico"
+  short_description: "Audita citas y bibliografía final"
+  default_prompt: "Usa $revisor-citas-consistencia-bibliografica para revisar la consistencia entre citas y bibliografía."
+
+policy:
+  allow_implicit_invocation: true
+

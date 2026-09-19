@@ -1,0 +1,411 @@
+{
+  "sources": [
+    {
+      "path": "TesisDr_muestra_espanol.pdf",
+      "characters": 104096,
+      "words": 9940
+    }
+  ],
+  "counts": {
+    "characters": 104096,
+    "words": 9940,
+    "paragraphs": 148,
+    "sentences": 617
+  },
+  "protected_content": {
+    "fenced_blocks": 0,
+    "markdown_tables": 0,
+    "blockquote_lines": 0,
+    "numeric_citations": 0,
+    "doi_or_url": 0
+  },
+  "sentence_stats": {
+    "count": 617,
+    "avg": 15.86,
+    "median": 12,
+    "stdev": 15.4,
+    "min": 0,
+    "max": 118
+  },
+  "paragraph_stats": {
+    "count": 148,
+    "avg": 66.97,
+    "median": 38.0,
+    "stdev": 60.2,
+    "min": 2,
+    "max": 204
+  },
+  "punctuation_per_sentence": {
+    ",": 1.713,
+    ";": 0.018,
+    ":": 0.073,
+    "(": 0.287,
+    "?": 0.003,
+    "!": 0.066
+  },
+  "connectors": [
+    {
+      "phrase": "además",
+      "count": 11
+    },
+    {
+      "phrase": "también",
+      "count": 10
+    },
+    {
+      "phrase": "sin embargo",
+      "count": 8
+    },
+    {
+      "phrase": "en este sentido",
+      "count": 2
+    },
+    {
+      "phrase": "por otra parte",
+      "count": 2
+    },
+    {
+      "phrase": "asimismo",
+      "count": 1
+    },
+    {
+      "phrase": "cabe destacar",
+      "count": 1
+    },
+    {
+      "phrase": "en consecuencia",
+      "count": 1
+    },
+    {
+      "phrase": "no obstante",
+      "count": 1
+    },
+    {
+      "phrase": "por ello",
+      "count": 1
+    }
+  ],
+  "hedges": [
+    {
+      "phrase": "puede",
+      "count": 29
+    },
+    {
+      "phrase": "cuando",
+      "count": 17
+    },
+    {
+      "phrase": "parece",
+      "count": 7
+    },
+    {
+      "phrase": "suele",
+      "count": 3
+    },
+    {
+      "phrase": "según",
+      "count": 2
+    },
+    {
+      "phrase": "en algunos casos",
+      "count": 1
+    }
+  ],
+  "repeated_sentence_starts": [
+    {
+      "start": "para realizar las determinaciones",
+      "count": 5
+    },
+    {
+      "start": "condiciones instrumentales usadas para",
+      "count": 5
+    },
+    {
+      "start": "belarra analytica chimica acta",
+      "count": 4
+    },
+    {
+      "start": "comparison the performance line",
+      "count": 4
+    },
+    {
+      "start": "belarra spectrochimica acta part",
+      "count": 4
+    },
+    {
+      "start": "determinación boro tejidos vegetales",
+      "count": 4
+    },
+    {
+      "start": "determinación fósforo muestras biológicas",
+      "count": 4
+    },
+    {
+      "start": "sus características resumen tabla",
+      "count": 4
+    },
+    {
+      "start": "principales características los materiales",
+      "count": 4
+    },
+    {
+      "start": "valor certificado muestra analito",
+      "count": 4
+    },
+    {
+      "start": "valor absorbancia integrada obtenido",
+      "count": 4
+    },
+    {
+      "start": "determinación zinc ejemplares individuales",
+      "count": 3
+    },
+    {
+      "start": "las muestras para las",
+      "count": 3
+    },
+    {
+      "start": "calibrado realizó frente disoluciones",
+      "count": 3
+    },
+    {
+      "start": "las condiciones trabajo finalmente",
+      "count": 3
+    }
+  ],
+  "repeated_paragraph_starts": [
+    {
+      "start": "resumen tabla condiciones instrumentales",
+      "count": 5
+    },
+    {
+      "start": "direct determination phosphorus biological",
+      "count": 4
+    },
+    {
+      "start": "direct determination individual daphnia",
+      "count": 4
+    },
+    {
+      "start": "direct determination polymers solid",
+      "count": 3
+    },
+    {
+      "start": "resumen determinación mercurio polímeros",
+      "count": 3
+    },
+    {
+      "start": "tabla principales características los",
+      "count": 3
+    },
+    {
+      "start": "análisis directo muestras sólidas",
+      "count": 2
+    },
+    {
+      "start": "introducción determinación directa elementos",
+      "count": 2
+    },
+    {
+      "start": "características del horno grafito",
+      "count": 2
+    },
+    {
+      "start": "determinación boro tejidos vegetales",
+      "count": 2
+    },
+    {
+      "start": "solid sampling graphite furnace",
+      "count": 2
+    }
+  ],
+  "terms": {
+    "keywords": [
+      {
+        "term": "muestras",
+        "count": 93
+      },
+      {
+        "term": "determinación",
+        "count": 88
+      },
+      {
+        "term": "absorción",
+        "count": 64
+      },
+      {
+        "term": "and",
+        "count": 64
+      },
+      {
+        "term": "muestra",
+        "count": 62
+      },
+      {
+        "term": "aas",
+        "count": 58
+      },
+      {
+        "term": "gfaas",
+        "count": 56
+      },
+      {
+        "term": "atomización",
+        "count": 56
+      },
+      {
+        "term": "sólidas",
+        "count": 53
+      },
+      {
+        "term": "atomic",
+        "count": 50
+      },
+      {
+        "term": "más",
+        "count": 50
+      },
+      {
+        "term": "solid",
+        "count": 48
+      },
+      {
+        "term": "introducción",
+        "count": 48
+      },
+      {
+        "term": "mediante",
+        "count": 48
+      },
+      {
+        "term": "resumen",
+        "count": 47
+      },
+      {
+        "term": "fuente",
+        "count": 45
+      },
+      {
+        "term": "absorption",
+        "count": 45
+      },
+      {
+        "term": "spectrometry",
+        "count": 44
+      },
+      {
+        "term": "fósforo",
+        "count": 44
+      },
+      {
+        "term": "belarra",
+        "count": 42
+      }
+    ],
+    "bigrams": [
+      {
+        "term": "muestras sólidas",
+        "count": 52
+      },
+      {
+        "term": "atomic absorption",
+        "count": 41
+      },
+      {
+        "term": "absorption spectrometry",
+        "count": 40
+      },
+      {
+        "term": "solid sampling",
+        "count": 35
+      },
+      {
+        "term": "absorción atómica",
+        "count": 31
+      },
+      {
+        "term": "graphite furnace",
+        "count": 27
+      },
+      {
+        "term": "mediante gfaas",
+        "count": 27
+      },
+      {
+        "term": "furnace atomic",
+        "count": 25
+      },
+      {
+        "term": "horno grafito",
+        "count": 24
+      },
+      {
+        "term": "fuente continua",
+        "count": 24
+      },
+      {
+        "term": "direct determination",
+        "count": 24
+      },
+      {
+        "term": "daphnia magna",
+        "count": 24
+      }
+    ],
+    "trigrams": [
+      {
+        "term": "atomic absorption spectrometry",
+        "count": 36
+      },
+      {
+        "term": "graphite furnace atomic",
+        "count": 24
+      },
+      {
+        "term": "furnace atomic absorption",
+        "count": 24
+      },
+      {
+        "term": "solid sampling graphite",
+        "count": 16
+      },
+      {
+        "term": "sampling graphite furnace",
+        "count": 16
+      },
+      {
+        "term": "ejemplares daphnia magna",
+        "count": 13
+      },
+      {
+        "term": "análisis directo muestras",
+        "count": 12
+      },
+      {
+        "term": "directo muestras sólidas",
+        "count": 12
+      },
+      {
+        "term": "high resolution continuum",
+        "count": 9
+      },
+      {
+        "term": "resolution continuum source",
+        "count": 9
+      }
+    ]
+  },
+  "voice_notes": [
+    "Predominan oraciones breves o de ritmo directo.",
+    "Hay variacion marcada de ritmo entre oraciones densas y frases mas cortas.",
+    "La cohesion depende de conectores explicitos; diversificar relaciones logicas al reescribir.",
+    "El estilo usa matizadores; conservar prudencia argumentativa y evitar afirmaciones absolutas."
+  ],
+  "style_directives": [
+    "Usar el perfil como guia de ritmo y decisiones, no como banco de frases copiables.",
+    "Variar entradas de parrafo y cierres para evitar molde repetido.",
+    "Conservar citas, DOI, URL, tablas, codigo, formulas y referencias.",
+    "Mantener matices si el perfil los usa; no convertir el texto en afirmaciones absolutas.",
+    "Agregar concrecion solo cuando el contenido la permita."
+  ]
+}

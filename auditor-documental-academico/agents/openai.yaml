@@ -1,0 +1,4 @@
+interface:
+  display_name: "Auditor Documental Académico"
+  short_description: "Inventaria estructura y preentrega"
+  default_prompt: "Use $auditor-documental-academico para inventariar estructura, tablas, figuras, terminología y preentrega."
