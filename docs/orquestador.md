@@ -23,7 +23,7 @@ Para una corrección aislada —por ejemplo, normalizar una bibliografía IEEE o
 3. **Planificar.** Definir arquitectura y entregables sin imponer la estructura de un libro a otros productos.
 4. **Investigar y redactar.** Reutilizar evidencia trazable vigente y desarrollar capítulos completos con revisión integrada de respaldo, argumento y estilo.
 5. **Revisar el conjunto.** Comprobar continuidad, terminología, referencias, ecuaciones y recursos visuales; la revisión local no sustituye la global.
-6. **Cerrar.** Integrar el manuscrito y verificar el artefacto exportado mediante renderizado e inspección visual; entregar controles y pendientes fuera de la obra. Si hay bloqueos, identificarla como borrador.
+6. **Cerrar.** Si el libro requiere dirección visual profesional, diseñarlo con `disenador-maquetador-word`; después comprobar requisitos y entrega con `maquetacion-academica-preentrega`. Verificar el DOCX mediante renderizado e inspección visual y mantener controles y pendientes fuera de la obra. Si hay bloqueos, identificarla como borrador.
 7. **Responder observaciones.** Abrir una ronda trazable sin rehacer fases que no fueron afectadas.
 
 ## Reglas operativas
@@ -33,6 +33,7 @@ Para una corrección aislada —por ejemplo, normalizar una bibliografía IEEE o
 - Los scripts producen señales e inventarios; no certifican coherencia científica ni suficiencia de evidencia.
 - Kitchenham gobierna completamente las revisiones sistemáticas de ingeniería de software cuando está activo.
 - [`revision-sistematica-prisma`](../revision-sistematica-prisma/SKILL.md) gobierna PRISMA 2020, sus extensiones, el flujo y la lista de comprobación; el método de conducción debe declararse por separado y no se mezcla con Kitchenham por defecto.
+- [`disenador-maquetador-word`](../disenador-maquetador-word/SKILL.md) gobierna la identidad visual, los estilos y la composición editable de libros en Word; la preentrega conserva ese diseño y verifica los requisitos finales.
 - El perfil institucional o editorial prevalece sobre valores genéricos cuando ha sido suministrado y no contradice el método.
 - Cada script especializado permanece dentro de su skill; `scripts/ejecutar.py` es el lanzador transversal.
 - La [política de producción editorial eficiente](../editor-en-jefe/references/produccion-editorial-eficiente.md) exige preservar calidad y medir el consumo total antes de afirmar ahorros.

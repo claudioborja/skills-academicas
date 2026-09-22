@@ -19,6 +19,8 @@ Cuando exista un índice autorizado, pasar su ruta con `--estructura`. Resolver 
 
 Realizar la auditoria final de forma y presentacion. No se centra en la escritura de fondo, sino en que el manuscrito llegue limpio, consistente y listo para entrega academica o editorial.
 
+Cuando un libro requiera identidad visual, composición tipográfica y una arquitectura de Word capaz de resistir futuras adiciones o eliminaciones, activar primero `$disenador-maquetador-word`. Esta skill conserva esa dirección aprobada y comprueba requisitos, limpieza y entrega; no la sustituye por el formato genérico del conversor.
+
 ## Regla De Productos Finales
 
 Para libros completos, aplicar el cierre de [producción editorial integrada](../editor-en-jefe/references/produccion-editorial-eficiente.md). Recibir capítulos con controles editoriales registrados y revisar la obra integrada y renderizada. No confundir exportación exitosa con libro publicable ni omitir inspección visual por ahorro de tokens. Resolver defectos dentro del encargo; si persisten pendientes sustantivos, declarar borrador y sus límites.

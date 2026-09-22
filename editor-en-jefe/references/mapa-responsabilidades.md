@@ -31,5 +31,6 @@ Elegir por el resultado solicitado. Las siguientes especialidades complementan a
 | Ecuaciones, símbolos y unidades | `gestor-ecuaciones-academicas` | Preservar significado, editabilidad, notación y referencias; no certifica por sí sola la validez del modelo. |
 | Listados de código y salidas técnicas | `gestor-codigo-tecnico-editorial` | Presentación, trazabilidad y lectura editorial; no desarrolla ni valida el software. |
 | Resumen y piezas breves | `revisor-resumen-abstract-palabras-clave` | Condensar el contenido real. |
-| Formato y exportación final | `maquetacion-academica-preentrega` | Aplicar el perfil del proyecto y verificar el artefacto. |
+| Diseño profesional de libros en Word | `disenador-maquetador-word` | Dirección visual, estilos, composición y editabilidad; no cambia el contenido ni certifica requisitos académicos. |
+| Formato y exportación final | `maquetacion-academica-preentrega` | Aplicar requisitos del proyecto y verificar el artefacto sin sustituir la dirección visual aprobada. |
 | Observaciones de tutor o revisores | `respondedor-observaciones-academicas` | Vincular respuesta, decisión y cambio trazable. |

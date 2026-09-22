@@ -35,6 +35,8 @@ La ausencia de fecha se trata según la norma seleccionada salvo prohibición ed
 
 Valores históricos disponibles: DOCX, A4, márgenes de 2,5 cm, Times New Roman 12, interlineado 1,5, cuerpo justificado y lengua es-EC cuando corresponda. Coinciden con los valores operativos del conversor; no describirlos como APA estricto. Una plantilla o especificación del proyecto puede reemplazarlos.
 
+Cuando el encargo requiera diseño profesional, `$disenador-maquetador-word` debe convertir estas decisiones o las de la plantilla en un sistema coherente de estilos, secciones, navegación y composición editable. Los valores históricos no constituyen por sí solos una dirección visual ni deben reemplazar una maqueta aprobada.
+
 ### Libro académico extenso
 
 Objetivo opcional de 105–150 páginas, incluidas las preliminares y la bibliografía. Aplicar únicamente cuando sea adecuado a la obra o esté acordado; no imponerlo a artículos, informes ni a cualquier manuscrito por defecto. No rellenar contenido para alcanzar páginas.

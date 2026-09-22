@@ -2,7 +2,7 @@
 
 Colección de trabajo editorial, coordinada por **Editor en jefe** (`$editor-en-jefe`).
 
-Colección de 30 skills coordinadas para planificar, investigar, redactar, revisar y entregar tesis, libros, artículos científicos y revisiones sistemáticas. Incluye automatización reproducible para documentos, referencias, imágenes, ecuaciones, tablas, formato APA 7, IEEE y control de preentrega.
+Colección de 31 skills coordinadas para planificar, investigar, redactar, revisar, diseñar y entregar tesis, libros, artículos científicos y revisiones sistemáticas. Incluye automatización reproducible para documentos, referencias, imágenes, ecuaciones, tablas, diseño profesional en Word, formato APA 7, IEEE y control de preentrega.
 
 La colección está diseñada para trabajar de dos maneras:
 
@@ -19,7 +19,8 @@ La colección está diseñada para trabajar de dos maneras:
 - Redacción académica en español latinoamericano, estilo y ortotipografía.
 - Tablas, figuras, imágenes científicas y ecuaciones editables.
 - Preprocesamiento de PDF, DOCX, HTML, TXT y Markdown.
-- Exportación y control final de documentos Word/PDF.
+- Diseño y maquetación profesional de libros en Word editable.
+- Exportación y control final de documentos Word y representaciones de revisión.
 - Auditorías mecánicas reproducibles que apoyan, pero no reemplazan, el juicio académico.
 
 El [catálogo completo](docs/skills/README.md) contiene una ficha independiente por cada skill.
@@ -60,6 +61,10 @@ Usa $gestor-referencias-academicas para verificar y normalizar estas referencias
 
 ```text
 Usa $revision-sistematica-prisma para preparar y auditar el protocolo, la búsqueda, el flujo y el reporte PRISMA 2020 de esta revisión.
+```
+
+```text
+Usa $disenador-maquetador-word para convertir este manuscrito en un libro profesional en Word, con estilos editables y preparado para futuras adiciones o eliminaciones.
 ```
 
 Las instrucciones normativas están siempre en el `SKILL.md` de cada directorio. Las fichas de `docs/skills/` son guías de navegación y no sustituyen esas instrucciones.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Diseñador y maquetador Word"
+  short_description: "Maquetación profesional y editable de libros en Word"
+  default_prompt: "Usa $disenador-maquetador-word para diseñar y maquetar este libro como un DOCX profesional, editable y preparado para futuras revisiones."

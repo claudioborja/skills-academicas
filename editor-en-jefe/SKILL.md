@@ -38,7 +38,7 @@ Leer todas sus secciones y mantener una matriz de requisitos con origen, ámbito
 3. **Planificar.** Elegir con el planificador una estructura proporcional; crear carpetas cuando hagan falta. La estructura completa y su inicializador son opcionales. Respetar las carpetas de proyectos existentes y protocolos.
 4. **Investigar y redactar.** Resolver problema, objetivos, evidencia y método antes de pulir estilo. Seleccionar las skills de fuentes, marco teórico y redacción pertinentes.
 5. **Revisar.** Coherencia interna, continuidad entre capítulos y terminología según el alcance; referencias, ecuaciones y recursos visuales cuando existan.
-6. **Cerrar estilo y entrega.** Humanizar solo si hay genericidad o voz mecánica; después corregir ortotipografía, redactar resumen y maquetar.
+6. **Cerrar estilo y entrega.** Humanizar solo si hay genericidad o voz mecánica; después corregir ortotipografía y redactar el resumen. Si el libro requiere identidad visual y composición profesional en Word, activar `$disenador-maquetador-word`; cerrar con `$maquetacion-academica-preentrega` para comprobar requisitos y entrega.
 7. **Responder observaciones.** Abrir una nueva ronda trazable con la skill correspondiente, sin repetir fases ya resueltas.
 
 No ejecutar todas las etapas por rutina. Tras una edición sustancial, revisar únicamente lo que pudo verse afectado: por ejemplo, referencias y conclusiones si se cambió el argumento.
@@ -49,7 +49,9 @@ En libros con estructura canónica, leer al inicio y actualizar al cierre de una
 
 Usar la estructura de `$planificador-obra-academica` para libros. Conservar originales, borradores, fuentes activas/descartadas y entregables en sus destinos; documentar equivalencias en proyectos existentes.
 
-Para Word, usar `$maquetacion-academica-preentrega`: tablas editables y salida DOCX, con TXT de respaldo cuando sea parte del encargo. La extensión y el formato dependen del perfil seleccionado; una exportación no demuestra que el resultado visual sea correcto.
+Para diseñar un libro profesional en Word, usar `$disenador-maquetador-word`: sistema visual, estilos, secciones, navegación, composición resistente al reflujo e inspección de páginas. El entregable principal continúa siendo el DOCX editable; una representación temporal en PDF puede usarse para revisar, pero no se entrega por defecto.
+
+Usar después `$maquetacion-academica-preentrega` para verificar requisitos académicos o institucionales, limpieza y condiciones de entrega. Puede producir el DOCX inicial desde Markdown cuando sea necesario, pero no sustituye la dirección visual del libro ni debe deshacerla con valores genéricos.
 
 Las imágenes y tablas deben aportar comprensión. La skill de imágenes gobierna procedencia, licencias y generación; la de tablas/figuras gobierna integración, títulos, numeración, llamadas y notas. No duplicar recursos por cuotas ni presentar ilustraciones como evidencia.
 
