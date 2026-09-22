@@ -5,7 +5,7 @@ description: Convierte, limpia, segmenta e inventaria documentos largos en Linux
 
 # Preprocesador Documentos
 
-Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `workflow-maestro-academico-editorial/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../workflow-maestro-academico-editorial/references/portabilidad.md#protección-de-informes).
+Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `editor-en-jefe/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../editor-en-jefe/references/portabilidad.md#protección-de-informes).
 
 ## Objetivo
 
@@ -45,9 +45,11 @@ La entrada Python y el lanzador POSIX requieren Python instalado. En Windows, el
 
 ## Dependencias y entorno
 
+Si el Python actual ya cumple el perfil base y no se ha definido `SKILLS_RUNTIME_DIR`, reutilizarlo sin crear un entorno. Para preparar el equipo, Editor en jefe ofrece `scripts/instalar_requisitos.py`: instala en el Python actual por defecto y admite aislamiento opcional mediante `--entorno`. El mecanismo de preparación descrito a continuación es el respaldo cuando no hay una base compatible disponible.
+
 TXT, Markdown y HTML se procesan sin dependencias externas ni descargas. Para PDF/DOCX el lanzador crea un entorno aislado e instala la base de `scripts/requirements-lock.txt` cuando faltan paquetes; `requirements.txt` remite al mismo lock. Comprueba versiones exactas, importaciones y `pip check`. Si un entorno existente tiene versiones distintas, pide seleccionar una carpeta nueva con `SKILLS_RUNTIME_DIR`; no fuerza actualizaciones o degradaciones. La instalación requiere acceso a paquetes binarios compatibles.
 
-`scripts/dependencias.py` diagnostica versiones e importaciones sin instalar nada. Consultar [perfiles y límites](../workflow-maestro-academico-editorial/references/portabilidad.md#dependencias-fijadas).
+`scripts/dependencias.py` diagnostica versiones e importaciones sin instalar nada. Consultar [perfiles y límites](../editor-en-jefe/references/portabilidad.md#dependencias-fijadas).
 
 El entorno se separa por sistema operativo, arquitectura y versión de Python dentro de `.runtime/<plataforma-arquitectura-python>/`. No copiar entornos virtuales entre equipos. El antiguo `.runtime/Scripts/python.exe` no se reutiliza. Para una instalación de skills de solo lectura, definir `SKILLS_RUNTIME_DIR` con una carpeta nueva y escribible fuera de la instalación.
 
@@ -55,13 +57,13 @@ Si falta el módulo `venv`, instalar el soporte de entornos virtuales de la dist
 
 ## Herramientas individuales
 
-El lanzador común `skills/workflow-maestro-academico-editorial/scripts/ejecutar.py` selecciona el entorno local cuando está disponible y configura UTF-8. En estos ejemplos, sustituir `python` por `python3` en Linux/macOS o por `py -3` en Windows:
+El lanzador común `skills/editor-en-jefe/scripts/ejecutar.py` selecciona el entorno local cuando está disponible y configura UTF-8. En estos ejemplos, sustituir `python` por `python3` en Linux/macOS o por `py -3` en Windows:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py --preparar
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py preprocesador-documentos/scripts/documento_a_markdown.py "ruta/archivo.pdf" --out "ruta/salida.md" --json-out "ruta/salida.json"
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py preprocesador-documentos/scripts/segmentar_manuscrito.py "ruta/salida.md" --out "ruta/segmentos.md" --json-out "ruta/segmentos.json"
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py preprocesador-documentos/scripts/proteger_bloques.py "ruta/salida.md" --out "ruta/protegidos.md" --json-out "ruta/protegidos.json"
+python skills/editor-en-jefe/scripts/ejecutar.py --preparar
+python skills/editor-en-jefe/scripts/ejecutar.py preprocesador-documentos/scripts/documento_a_markdown.py "ruta/archivo.pdf" --out "ruta/salida.md" --json-out "ruta/salida.json"
+python skills/editor-en-jefe/scripts/ejecutar.py preprocesador-documentos/scripts/segmentar_manuscrito.py "ruta/salida.md" --out "ruta/segmentos.md" --json-out "ruta/segmentos.json"
+python skills/editor-en-jefe/scripts/ejecutar.py preprocesador-documentos/scripts/proteger_bloques.py "ruta/salida.md" --out "ruta/protegidos.md" --json-out "ruta/protegidos.json"
 ```
 
 En proyectos de libro, guardar la salida en `RUTA_LIBRO/00_contexto_y_diagnostico/preprocesado`. Conservar el original y evitar que las rutas de salida lo sobrescriban.

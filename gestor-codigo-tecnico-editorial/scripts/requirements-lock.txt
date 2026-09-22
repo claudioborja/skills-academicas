@@ -1,0 +1,4 @@
+# DOCX nativo para listados breves; no requiere LibreOffice.
+python-docx==1.2.0
+lxml==6.0.2
+typing_extensions==4.16.0

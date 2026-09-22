@@ -55,7 +55,7 @@ Si "idiomas no reconocidos" aparece en bibliografía, diagramas o terminología 
 
 La humanización no debe adelgazar un texto hasta convertirlo en apuntes. Antes de reescribir, identificar qué función cumple cada párrafo y conservarla. Si un bloque define, explica un mecanismo, interpreta una fuente, contrasta posiciones o deriva una implicación, la versión editada debe seguir cumpliendo esa función con una profundidad equivalente o mayor.
 
-Aplicar los umbrales orientativos del perfil del proyecto descrito en `../../workflow-maestro-academico-editorial/references/perfiles-editoriales.md`. Revisar rachas de fragmentos y pérdidas de desarrollo sin imponer tamaños uniformes ni transformar métricas en reglas de aprobación.
+Aplicar los umbrales orientativos del perfil del proyecto descrito en `../../editor-en-jefe/references/perfiles-editoriales.md`. Revisar rachas de fragmentos y pérdidas de desarrollo sin imponer tamaños uniformes ni transformar métricas en reglas de aprobación.
 
 Para ampliar sin rellenar, elegir una o más operaciones justificadas:
 

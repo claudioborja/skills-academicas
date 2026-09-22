@@ -1,0 +1,7 @@
+interface:
+  display_name: "Editor en jefe"
+  short_description: "Orquesta todo el flujo académico editorial"
+  default_prompt: "Usa $editor-en-jefe para diagnosticar este proyecto y decidir qué skills activar en cada etapa."
+
+policy:
+  allow_implicit_invocation: true

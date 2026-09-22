@@ -1,6 +1,6 @@
 ---
 name: redaccion-articulo-cientifico-imryd
-description: "Redacta, estructura, diagnostica y revisa artículos científicos de alto nivel con lógica IMRyD/IMRAD: título, resumen, palabras clave, introducción, métodos, resultados, discusión, conclusiones, limitaciones, tablas, figuras, citas, respuesta a revisores y adecuación a normas de revista. Use when Codex needs to convert tesis, informes, resultados de investigación, capítulos o borradores en artículos publicables; planificar un paper desde cero; auditar coherencia científica; preparar manuscritos para envío; o coordinar esta tarea con workflow-maestro-academico-editorial, gestores de referencias APA7/IEEE, revisor de resumen/abstract, tablas/figuras, humanización académica y respuesta a observaciones."
+description: "Redacta, estructura, diagnostica y revisa artículos científicos de alto nivel con lógica IMRyD/IMRAD: título, resumen, palabras clave, introducción, métodos, resultados, discusión, conclusiones, limitaciones, tablas, figuras, citas, respuesta a revisores y adecuación a normas de revista. Use when Codex needs to convert tesis, informes, resultados de investigación, capítulos o borradores en artículos publicables; planificar un paper desde cero; auditar coherencia científica; preparar manuscritos para envío; o coordinar esta tarea con editor-en-jefe, gestores de referencias APA7/IEEE, revisor de resumen/abstract, tablas/figuras, humanización académica y respuesta a observaciones."
 ---
 
 # Redacción Artículo Científico IMRyD
@@ -19,7 +19,7 @@ Usar esta skill como skill principal cuando el producto final sea un artículo c
 
 Si el usuario aún está definiendo el tema o comparando artículos similares, activar antes `$explorador-temas-articulos` para clasificar literatura, separar originales/revisiones, detectar vacíos y proponer preguntas investigables.
 
-Si el usuario pide una ruta completa, activar primero `$workflow-maestro-academico-editorial` para diagnosticar etapa y luego volver a esta skill para la arquitectura de artículo.
+Si el usuario pide una ruta completa, activar primero `$editor-en-jefe` para diagnosticar etapa y luego volver a esta skill para la arquitectura de artículo.
 
 Si el usuario entrega un artículo ya escrito, activar primero `$auditor-articulo-imryd` para detectar secciones faltantes, señales de objetivo, método, resultados, discusión, limitaciones y checklist de envío.
 

@@ -7,11 +7,13 @@ description: Usalo cuando el usuario necesite una revision final de presentacion
 
 ## Ejecución multiplataforma
 
-Consultar [la guía común de ejecución](../workflow-maestro-academico-editorial/references/portabilidad.md) para elegir intérprete y preparar dependencias.
+Consultar [la guía común de ejecución](../editor-en-jefe/references/portabilidad.md) para elegir intérprete y preparar dependencias.
 
 ## Automatizacion Previa
 
 Si el documento esta convertido a Markdown/TXT, ejecutar primero `$auditor-documental-academico`, especialmente `scripts/check_preentrega.py` e `inventariar_documento.py`, para detectar secciones, citas, referencias, tablas y faltantes mecanicos antes de la revision final.
+
+Cuando exista un índice autorizado, pasar su ruta con `--estructura`. Resolver sus alertas de encabezados ajenos al índice, rótulos operativos, casillas, cercas de código, marcadores de trabajo, niveles saltados y títulos duplicados antes de convertir a Word. Si no hay índice, ejecutar el control sin esa opción: sigue detectando residuos y problemas de jerarquía, pero no puede decidir qué encabezados pertenecen al libro.
 
 ## Objetivo
 
@@ -19,9 +21,11 @@ Realizar la auditoria final de forma y presentacion. No se centra en la escritur
 
 ## Regla De Productos Finales
 
+Para libros completos, aplicar el cierre de [producción editorial integrada](../editor-en-jefe/references/produccion-editorial-eficiente.md). Recibir capítulos con controles editoriales registrados y revisar la obra integrada y renderizada. No confundir exportación exitosa con libro publicable ni omitir inspección visual por ahorro de tokens. Resolver defectos dentro del encargo; si persisten pendientes sustantivos, declarar borrador y sus límites.
+
 Para libros destinados a edición en Microsoft Word, generar como salida principal un `.docx` con tablas nativas editables. Generar además un `.txt` limpio como respaldo de contenido y preservación. Markdown puede usarse como formato intermedio, pero no debe ser la única entrega final.
 
-Rutas obligatorias dentro de cada proyecto:
+En proyectos con estructura canónica completa, usar estas rutas; en proyectos compactos, usar `entregables/` y registrar la equivalencia:
 
 ```text
 09_entregables/v03_final_docx/libro_completo.docx
@@ -34,11 +38,17 @@ Evitar entregar `libro_completo.md` como producto final salvo que el usuario lo 
 
 Si la norma activa es IEEE, leer [references/ieee-presentacion.md](references/ieee-presentacion.md): usar la plantilla del destino y sus convenciones de tablas/figuras, no `--apa7-strict` ni el auditor APA. El conversor genérico es un intermedio, no un maquetador IEEE completo.
 
-Consultar [el perfil editorial común](../workflow-maestro-academico-editorial/references/perfiles-editoriales.md). Aplicar la plantilla, norma, lengua, formato y extensión seleccionados para esta obra; no imponer el perfil de libro extenso a cualquier manuscrito.
+Consultar [el perfil editorial común](../editor-en-jefe/references/perfiles-editoriales.md). Aplicar la plantilla, norma, lengua, formato y extensión seleccionados para esta obra; no imponer el perfil de libro extenso a cualquier manuscrito.
 
 El conversor conserva valores operativos para una maqueta de libro cuando no recibe opciones. Distinguirlos de requisitos del proyecto y de APA estricto; documentar los argumentos utilizados. Aplicar explícitamente tipografía y color para evitar cambios heredados del tema de Word, respetando la jerarquía de la norma activa.
 
 ## Flujo De Trabajo
+
+El contexto maestro no es un requisito de preentrega. Si falta, determinar la estructura y el formato desde el encargo, el manuscrito, la plantilla y el perfil editorial disponible. Comprobar igualmente títulos, numeración, marcas visibles, tablas, figuras y paginación; no exigir una matriz previa ni asumir cuotas o convenciones de otra obra.
+
+Para libros con contexto maestro, leer [interpretación integral del contexto](../editor-en-jefe/references/interpretacion-contexto-editorial.md) y recibir su matriz de requisitos y jerarquía acordada. Comparar los encabezados reales antes de exportar; no maquetar como contenido instrucciones, roles, checklist ni pendientes de producción. Aplicar las convenciones de todo el contexto y documentar conflictos, no únicamente su checklist final.
+
+Tras exportar, renderizar el DOCX a páginas o PDF y revisar jerarquía, numeración, separación de capítulos, tablas, figuras y pies. Buscar marcas Markdown literales, cercas, casillas, separadores heredados, títulos duplicados y rótulos de trabajo, distinguiéndolos de notación legítima. Corregir en la fuente o estilos y volver a inspeccionar las páginas afectadas. Sin renderizado, informar revisión visual pendiente y no afirmar que la maquetación está validada.
 
 1. Revisar estructura general y preliminares.
 2. Verificar titulos, numeracion y jerarquia.
@@ -56,24 +66,24 @@ El conversor conserva valores operativos para una maqueta de libro cuando no rec
 
 ## Script Para Word
 
-Los exportadores DOCX y TXT requieren `workflow-maestro-academico-editorial/scripts/archivos_seguros.py`, también al ejecutarlos directamente. Rechazan salidas existentes salvo `--overwrite`; nunca autorizan sustituir el manuscrito, la plantilla o las imágenes de entrada. Con el lanzador, añadir además `--permitir-sobrescritura` antes de la ruta del script. El DOCX se ensambla completo (incluidos los SVG) antes de publicarse atómicamente; un fallo de conversión conserva la salida anterior. Esto protege el archivo, no certifica su presentación visual. Consultar los límites de escritura y sistemas de archivos en [portabilidad](../workflow-maestro-academico-editorial/references/portabilidad.md).
+Los exportadores DOCX y TXT requieren `editor-en-jefe/scripts/archivos_seguros.py`, también al ejecutarlos directamente. Rechazan salidas existentes salvo `--overwrite`; nunca autorizan sustituir el manuscrito, la plantilla o las imágenes de entrada. Con el lanzador, añadir además `--permitir-sobrescritura` antes de la ruta del script. El DOCX se ensambla completo (incluidos los SVG) antes de publicarse atómicamente; un fallo de conversión conserva la salida anterior. Esto protege el archivo, no certifica su presentación visual. Consultar los límites de escritura y sistemas de archivos en [portabilidad](../editor-en-jefe/references/portabilidad.md).
 
 Usar el Python del entorno del preprocesador, que incluye `python-docx`:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_docx.py "ruta/09_entregables/v02_revision/libro_completo.md" --out "ruta/09_entregables/v03_final_docx/libro_completo.docx"
+python skills/editor-en-jefe/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_docx.py "ruta/09_entregables/v02_revision/libro_completo.md" --out "ruta/09_entregables/v03_final_docx/libro_completo.docx"
 ```
 
 El script convierte encabezados, párrafos, listas, imágenes locales y tablas Markdown. Las tablas se crean como objetos nativos de Word con estilo de cuadrícula y encabezado repetible.
 
-No guardar entregables de prueba o finales en `revisiones/` ni en la raíz general. La fuente integrada va en `09_entregables/v02_revision/` y el Word resultante en `09_entregables/v03_final_docx/` del mismo proyecto.
+Guardar entregables separados del trabajo cotidiano. En estructura completa, la fuente integrada va en `09_entregables/v02_revision/` y el Word en `09_entregables/v03_final_docx/`; en estructura compacta, usar los destinos equivalentes registrados.
 
 ## Formato editorial e imágenes
 
 La opción preferida para una colección o editorial es proporcionar una plantilla `.docx` en `plantillas/`. Puede contener tamaño de página, márgenes, estilos de títulos, tipografía, encabezados, pies y numeración. Ejemplo:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_docx.py "ruta/09_entregables/v02_revision/libro_completo.md" --out "ruta/09_entregables/v03_final_docx/libro_completo.docx" --template "ruta/plantillas/plantilla_editorial.docx" --assets-root "ruta/06_recursos_visuales/imagenes"
+python skills/editor-en-jefe/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_docx.py "ruta/09_entregables/v02_revision/libro_completo.md" --out "ruta/09_entregables/v03_final_docx/libro_completo.docx" --template "ruta/plantillas/plantilla_editorial.docx" --assets-root "ruta/06_recursos_visuales/imagenes"
 ```
 
 Sin plantilla, el script aplica automáticamente A4, márgenes de 2,5 cm, Times New Roman 12 e interlineado 1,5. Se admiten `--font`, `--font-size`, `--margin-cm`, `--line-spacing`, `--page-size` y `--image-width` para excepciones expresas. Las imágenes Markdown `![pie](archivo.png)` se insertan como imágenes reales en el DOCX: primero se resuelven respecto al manuscrito y luego respecto a `--assets-root`.
@@ -99,7 +109,7 @@ Aplicar `mantener con el siguiente` al número y al título de cada tabla o figu
 ## Script Para TXT Final
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_txt_final.py "ruta/09_entregables/v02_revision/libro_completo.md" --out "ruta/09_entregables/v03_final_txt/libro_completo.txt"
+python skills/editor-en-jefe/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_txt_final.py "ruta/09_entregables/v02_revision/libro_completo.md" --out "ruta/09_entregables/v03_final_txt/libro_completo.txt"
 ```
 
 El script elimina o convierte marcas Markdown: encabezados `#`, enfasis `**`, enlaces, codigo inline, cercas de codigo, listas y tablas Markdown. Las tablas se vuelven texto alineado sin filas separadoras `|---|`.

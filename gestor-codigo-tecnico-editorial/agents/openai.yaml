@@ -1,0 +1,4 @@
+interface:
+  display_name: "Código técnico editorial"
+  short_description: "Presenta código legible en libros técnicos"
+  default_prompt: "Usa $gestor-codigo-tecnico-editorial para preparar y revisar los listados de código de este manuscrito técnico."

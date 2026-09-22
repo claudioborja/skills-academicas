@@ -32,8 +32,13 @@ Usa $convertidor-tesis-a-libro para [describe aquí la tarea y los archivos de e
 
 ### Referencias
 
+- [`references/arquitectura-libro-derivado.md`](../../convertidor-tesis-a-libro/references/arquitectura-libro-derivado.md)
 - [`references/mapa-transformacion.md`](../../convertidor-tesis-a-libro/references/mapa-transformacion.md)
 - [`references/marcas-de-tesis.md`](../../convertidor-tesis-a-libro/references/marcas-de-tesis.md)
+
+### Pruebas
+
+- [`tests/test_diagnosticar_tesis.py`](../../convertidor-tesis-a-libro/tests/test_diagnosticar_tesis.py)
 
 ### Configuración de interfaz
 
@@ -41,6 +46,6 @@ Usa $convertidor-tesis-a-libro para [describe aquí la tarea y los archivos de e
 
 ## Integración
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `workflow-maestro-academico-editorial` para decidir el orden y evitar intervenciones duplicadas.
+Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
 
 Consulta las instrucciones normativas en [`convertidor-tesis-a-libro/SKILL.md`](../../convertidor-tesis-a-libro/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.

@@ -32,6 +32,6 @@ Usa $gestor-continuidad-libro para [describe aquí la tarea y los archivos de en
 
 ## Integración
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `workflow-maestro-academico-editorial` para decidir el orden y evitar intervenciones duplicadas.
+Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
 
 Consulta las instrucciones normativas en [`gestor-continuidad-libro/SKILL.md`](../../gestor-continuidad-libro/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.

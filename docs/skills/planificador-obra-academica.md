@@ -19,7 +19,7 @@ Usa $planificador-obra-academica para [describe aquí la tarea y los archivos de
 - Cuándo usarlo
 - Flujo de trabajo
 - Perfil editorial predeterminado
-- Inicialización obligatoria de libros
+- Inicialización opcional de la estructura completa
 - Validación final
 - Referencias de apoyo
 
@@ -44,6 +44,6 @@ Usa $planificador-obra-academica para [describe aquí la tarea y los archivos de
 
 ## Integración
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `workflow-maestro-academico-editorial` para decidir el orden y evitar intervenciones duplicadas.
+Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
 
 Consulta las instrucciones normativas en [`planificador-obra-academica/SKILL.md`](../../planificador-obra-academica/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.

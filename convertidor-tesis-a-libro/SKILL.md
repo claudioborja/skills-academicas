@@ -7,13 +7,17 @@ description: Úsalo cuando el usuario necesite transformar una tesis, tesina, tr
 
 ## Objetivo
 
-Convertir una tesis escrita en un manuscrito de libro publicable. La transformación no es cosmética: cambia lector, propósito, arquitectura, voz, ritmo y aparato paratextual, conservando el rigor académico y la trazabilidad de fuentes.
+Convertir una tesis escrita en un manuscrito de libro académico publicable. La transformación no es cosmética: cambia lector, propósito, arquitectura, voz, ritmo y aparato paratextual, conservando el rigor académico y la trazabilidad de fuentes. El libro debe desarrollar una sola propuesta central derivada de la tesis; no debe ser una compilación de temas cercanos ni reproducir la secuencia de capítulos universitarios.
 
 ## Regla Central
 
 No borrar evidencia ni cambiar resultados para que el texto "parezca libro". Reubicar, resumir o explicar los componentes académicos según su función editorial.
 
 No parafrasear citas textuales, transcripciones, datos, tablas de resultados, instrumentos, referencias, DOI ni fragmentos normativos. Si un pasaje es evidencia o cita literal, se conserva o se marca para decisión del usuario.
+
+No convertir, resumir ni suprimir una tabla, figura, anexo, cita extensa o dato identificable sin registrar su procedencia, su destino editorial y la aprobación necesaria. Una síntesis narrativa nunca reemplaza el original: conserva la tabla o figura fuente, o una referencia verificable a ella.
+
+No crear capítulos solo porque sean afines al tema. Todo capítulo debe declarar qué parte de la pregunta, tesis argumental, hallazgo, caso o evidencia de la investigación desarrolla. Si la tesis no lo respalda y el usuario no autoriza una ampliación con fuentes nuevas, no incorporarlo.
 
 ## Diagnóstico Inicial
 
@@ -25,20 +29,26 @@ Antes de reescribir, identificar:
 - partes aprovechables: marco teórico, resultados, discusión, instrumentos, tablas, casos, conclusiones;
 - partes que deben transformarse: planteamiento del problema, objetivos, hipótesis, justificación, metodología, defensa institucional;
 - restricciones: norma de citas, confidencialidad, permisos de reproducción, datos personales, derechos de autor.
+- núcleo del libro: pregunta editorial, tesis argumental y aportación basada en los hallazgos;
+- mapa de evidencia: qué datos, resultados, casos y fuentes de la tesis sostienen cada capítulo;
+- alcance material: extensión solicitada, formato de publicación y contenido disponible para sostenerla.
 
-Para manuscritos largos, ejecutar `scripts/diagnosticar_tesis.py` sobre el archivo fuente.
+Para DOCX, PDF, HTML o manuscritos extensos, usar primero `$preprocesador-documentos` para obtener Markdown, inventario y bloques protegidos; conservar el original. Ejecutar `scripts/diagnosticar_tesis.py` sobre el Markdown o TXT resultante. El script no interpreta el diseño ni el contenido interno de DOCX/PDF: sus conteos son señales, no decisiones editoriales.
 
 ## Flujo De Transformación
 
-1. Inventariar la estructura original de la tesis.
-2. Detectar marcas universitarias que no pertenecen al libro.
-3. Definir el lector y la promesa editorial.
-4. Convertir el índice de tesis en índice de libro.
-5. Reubicar metodología, resultados y anexos según su utilidad.
-6. Reescribir introducciones y transiciones para lector de libro.
-7. Revisar citas, tablas, figuras, permisos y bibliografía.
-8. Aplicar continuidad, humanización académica y corrección final.
-9. Preparar preliminares y cierre editorial.
+1. Inventariar la estructura original, incluidos anexos, tablas, figuras y bloques protegidos.
+2. Detectar marcas universitarias y registrar sus ubicaciones; no decidir solo por frecuencia.
+3. Definir lector, tipo de libro y promesa editorial.
+4. Formular la tesis argumental del libro y comprobar que procede de la evidencia disponible.
+5. Diseñar el mapa capítulo -> pregunta -> evidencia antes de reescribir.
+6. Elaborar y validar la matriz de conversión y el presupuesto de extensión antes de reescribir.
+7. Convertir el índice de tesis en índice de libro, con progresión acumulativa.
+8. Reubicar metodología, resultados y anexos según su utilidad, sin aislar los datos en un único capítulo cuando sostienen argumentos posteriores.
+9. Resolver antes de publicar los permisos, confidencialidad, datos personales y atribuciones pendientes.
+10. Reescribir introducciones y transiciones para lector de libro.
+11. Aplicar continuidad, humanización académica y corrección final.
+12. Preparar preliminares y cierre editorial.
 
 Si el usuario pide solo diagnóstico, no reescribir todavía: entregar mapa de conversión y prioridades.
 
@@ -102,6 +112,12 @@ Usar `references/mapa-transformacion.md` para decidir qué hacer con cada secci�
 
 Usar `references/marcas-de-tesis.md` cuando el texto conserva lenguaje universitario o defensivo.
 
+Usar `references/arquitectura-libro-derivado.md` al proponer un índice, distribuir resultados entre capítulos o planificar un libro de más de 100 páginas.
+
+La matriz de conversión debe incluir, como mínimo: ubicación o sección de origen, función en la tesis, tratamiento, destino en el libro, evidencia que debe preservarse, estado de permisos/confidencialidad y la decisión o aprobación pendiente. No reescribir elementos con riesgo pendiente como si estuvieran autorizados.
+
+El mapa de evidencia por capítulo debe indicar: propósito del capítulo, vínculo con la tesis argumental, material de origen, datos/hallazgos/casos que lo sostienen y su transición al siguiente capítulo. Un capítulo de contexto puede no repetir cifras, pero debe explicar qué problema o interpretación de la evidencia habilita; no puede quedar desconectado del núcleo investigado.
+
 Usar otros skills del workflow después de esta conversión:
 
 - `$gestor-continuidad-libro` para coherencia entre capítulos;
@@ -117,7 +133,10 @@ Según el pedido, entregar:
 
 - diagnóstico de conversión;
 - índice editorial propuesto;
+- arquitectura argumental y mapa de evidencia por capítulo;
 - tabla "tesis -> libro";
+- matriz de conversión trazable, con decisiones pendientes claramente separadas;
+- presupuesto de extensión por capítulo cuando se solicite una longitud objetivo;
 - lista de secciones que se conservan, se resumen, se mueven o se eliminan;
 - capítulos reescritos;
 - preliminares de libro;
@@ -134,3 +153,8 @@ Comprobar:
 - el índice tiene progresión editorial;
 - el tono es académico, claro y publicable;
 - no se inventó contenido para completar el libro.
+- cada transformación de evidencia, tabla, figura o anexo conserva origen y decisión editorial;
+- no quedan permisos, atribuciones, datos personales o confidencialidad sin resolver en el material destinado a publicación.
+- todos los capítulos desarrollan la misma tesis argumental y tienen una relación explícita con evidencia, hallazgos o casos de la investigación;
+- los datos no quedan relegados a un único capítulo si fundamentan interpretaciones o aplicaciones posteriores;
+- la extensión solicitada se sostiene con contenido planificado y verificable, sin relleno ni temas externos no autorizados.

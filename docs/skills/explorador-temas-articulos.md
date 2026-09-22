@@ -1,6 +1,6 @@
 # Explorador Temas Articulos
 
-Explora, clasifica y propone temas de articulos cientificos a partir de literatura, resultados bibliograficos, PDFs convertidos, matrices de fuentes o notas de estado del arte. Use when Codex needs to investigar lineas posibles, mapear articulos similares, distinguir estudios originales de revisiones, detectar vacios, agrupar temas, seleccionar metodologias estandarizadas como PRISMA/STROBE/CONSORT/COREQ/SRQR, generar protocolo de busqueda sistematica, crear cadenas reproducibles, deduplicar y cribar fuentes con conteos tipo PRISMA, combinar resultados preliminares, construir matrices de estado del arte, priorizar preguntas investigables, o generar tablas y visualizaciones Python antes de pasar a redaccion-articulo-cientifico-imryd, gestor-marco-teorico-estado-del-arte, automatizador-referencias o workflow-maestro-academico-editorial.
+Explora, clasifica y propone temas de articulos cientificos a partir de literatura, resultados bibliograficos, PDFs convertidos, matrices de fuentes o notas de estado del arte. Use when Codex needs to investigar lineas posibles, mapear articulos similares, distinguir estudios originales de revisiones, detectar vacios, agrupar temas, seleccionar metodologias estandarizadas como PRISMA/STROBE/CONSORT/COREQ/SRQR, generar protocolo de busqueda sistematica, crear cadenas reproducibles, deduplicar y cribar fuentes con conteos tipo PRISMA, combinar resultados preliminares, construir matrices de estado del arte, priorizar preguntas investigables, o generar tablas y visualizaciones Python antes de pasar a redaccion-articulo-cientifico-imryd, gestor-marco-teorico-estado-del-arte, automatizador-referencias o editor-en-jefe.
 
 ## Uso
 
@@ -50,6 +50,6 @@ Usa $explorador-temas-articulos para [describe aquí la tarea y los archivos de 
 
 ## Integración
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `workflow-maestro-academico-editorial` para decidir el orden y evitar intervenciones duplicadas.
+Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
 
 Consulta las instrucciones normativas en [`explorador-temas-articulos/SKILL.md`](../../explorador-temas-articulos/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.

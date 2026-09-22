@@ -31,4 +31,12 @@ build/
 Thumbs.db
 
 # Respaldos históricos locales; no forman parte de la distribución Git
-workflow-maestro-academico-editorial/assets/migraciones/*.zip
+editor-en-jefe/assets/migraciones/*.zip
+
+# Binarios portables: distribuir aparte; conservar el manifiesto de referencia
+editor-en-jefe/runtime/python/*
+!editor-en-jefe/runtime/python/MANIFEST.json
+
+# Configuración local del agente, no forma parte de las skills distribuidas
+/.agents/
+/.codex/

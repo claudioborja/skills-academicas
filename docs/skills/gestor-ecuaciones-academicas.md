@@ -42,6 +42,6 @@ Usa $gestor-ecuaciones-academicas para [describe aquí la tarea y los archivos d
 
 ## Integración
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `workflow-maestro-academico-editorial` para decidir el orden y evitar intervenciones duplicadas.
+Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
 
 Consulta las instrucciones normativas en [`gestor-ecuaciones-academicas/SKILL.md`](../../gestor-ecuaciones-academicas/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.

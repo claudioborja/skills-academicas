@@ -5,7 +5,7 @@ description: Úsalo como filtro auxiliar antes de buscar, descargar, citar o val
 
 # Filtro De Editoriales Depredadoras
 
-Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `workflow-maestro-academico-editorial/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../workflow-maestro-academico-editorial/references/portabilidad.md#protección-de-informes).
+Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `editor-en-jefe/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../editor-en-jefe/references/portabilidad.md#protección-de-informes).
 
 ## Objetivo
 
@@ -29,7 +29,7 @@ Actívalo dentro de:
 - `$gestor-referencias-academicas`
 - `$revisor-citas-consistencia-bibliografica`
 - `$ajustes-editoriales-bibliograficos`
-- `$workflow-maestro-academico-editorial`
+- `$editor-en-jefe`
 
 También úsalo cuando el usuario pregunte si una revista, editorial, congreso o fuente es confiable.
 

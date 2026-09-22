@@ -9,7 +9,7 @@ import sys
 from datetime import date
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'workflow-maestro-academico-editorial/scripts'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'editor-en-jefe/scripts'))
 from archivos_seguros import atomic_write
 
 
@@ -45,6 +45,7 @@ def starter_files(title: str) -> dict[str, str]:
         "01_planificacion_editorial/00_ficha_editorial.md": f"""# Ficha editorial\n\n- **Título:** {safe_title}\n- **Subtítulo:** [Pendiente]\n- **Tipo de obra:** [Pendiente]\n- **Propósito:** [Pendiente]\n- **Lector principal:** [Pendiente]\n- **Alcance y exclusiones:** [Pendiente]\n- **Perfil editorial y formato:** [Seleccionar perfil o plantilla del proyecto]\n- **Norma bibliográfica:** [APA 7, IEEE u otra indicada]\n- **Extensión estimada:** [Objetivo y límite acordados; no imponer una cuota universal]\n- **Método y protocolo:** [Si corresponde]\n- **Política de fuentes:** [DOI, fecha, acceso y tipos documentales según el perfil/protocolo]\n- **Perfil de estilo y umbrales orientativos:** [Si corresponde]\n- **Excepciones documentadas:** [Registrar autoridad y motivo]\n""",
         "01_planificacion_editorial/01_indice_maestro.md": "# Índice maestro\n\n[Definir partes, capítulos y función de cada bloque.]\n",
         "01_planificacion_editorial/02_matriz_capitulos.md": "# Matriz de capítulos\n\n| Capítulo | Propósito | Lector cambia porque | Evidencia | Caso | Recurso visual | Estado |\n|---|---|---|---|---|---|---|\n",
+        "01_planificacion_editorial/03_registro_editorial.md": f"""# Registro editorial\n\nMantener este registro breve y actualizado tras decisiones o intervenciones sustantivas. No forma parte del manuscrito ni sustituye las matrices especializadas.\n\n## Estado actual\n\n- **Proyecto:** {safe_title}\n- **Etapa actual:** Planificación\n- **Última actualización:** {date.today().isoformat()}\n\n## Decisiones vigentes\n\n| Fecha | Decisión | Motivo o fuente | Impacto |\n|---|---|---|---|\n\n## Estado de capítulos\n\n| Capítulo | Estado | Evidencia o archivo | Próximo paso |\n|---|---|---|---|\n\n## Requisitos y controles\n\n| Requisito | Ámbito | Estado | Evidencia o pendiente |\n|---|---|---|---|\n\n## Pendientes y próxima acción\n\n| Prioridad | Pendiente | Responsable o skill | Próxima acción |\n|---|---|---|---|\n""",
         "02_manuscrito/00_preliminares.md": f"# {safe_title}\n\n## Presentación\n\n[Pendiente]\n\n## Cómo usar este libro\n\n[Pendiente]\n",
         "03_casos_aplicados/00_mapa_casos.md": "# Mapa de casos aplicados\n\n| ID | Capítulo | Función | Evidencia requerida | Estado |\n|---|---|---|---|---|\n",
         "04_recursos_didacticos/00_mapa_recursos.md": "# Mapa de recursos didácticos\n\n| ID | Capítulo | Tipo | Objetivo de aprendizaje | Estado |\n|---|---|---|---|---|\n",

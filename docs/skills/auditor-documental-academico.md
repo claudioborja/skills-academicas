@@ -1,6 +1,6 @@
 # Auditor Documental Academico
 
-Inventaria y audita mecánicamente documentos académicos o editoriales para reducir lectura manual: estructura, encabezados, extensión por sección, tablas, figuras, citas, bibliografía, terminología, anexos y checklist de preentrega. Use when Codex needs to prepare compact reports for workflow-maestro-academico-editorial, convertidor-tesis-a-libro, redaccion-articulo-cientifico-imryd, gestor-tablas-figuras-pies, normalizador-terminologia-glosario or maquetacion-academica-preentrega.
+Inventaria y audita mecánicamente documentos académicos o editoriales para reducir lectura manual: estructura, encabezados, extensión por sección, tablas, figuras, citas, bibliografía, terminología, anexos y checklist de preentrega. Use when Codex needs to prepare compact reports for editor-en-jefe, convertidor-tesis-a-libro, redaccion-articulo-cientifico-imryd, gestor-tablas-figuras-pies, normalizador-terminologia-glosario or maquetacion-academica-preentrega.
 
 ## Uso
 
@@ -43,6 +43,6 @@ Usa $auditor-documental-academico para [describe aquí la tarea y los archivos d
 
 ## Integración
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `workflow-maestro-academico-editorial` para decidir el orden y evitar intervenciones duplicadas.
+Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
 
 Consulta las instrucciones normativas en [`auditor-documental-academico/SKILL.md`](../../auditor-documental-academico/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.

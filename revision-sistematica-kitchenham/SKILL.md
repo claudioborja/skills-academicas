@@ -7,9 +7,9 @@ description: "Planifica, ejecuta, documenta, respalda, analiza y redacta revisio
 
 ## Ejecución multiplataforma
 
-Las escrituras usan `workflow-maestro-academico-editorial/scripts/archivos_seguros.py`: JSON, CSV e informes reemplazan atómicamente cada archivo; plantillas, copias de fuentes, manifiestos y ZIP se publican sin sustituir destinos existentes. Las copias preservan contenido, no permisos ni fechas del archivo fuente. Al reclasificar una fuente se verifica la copia antes de eliminar la ubicación anterior. Los comandos conservan su permiso funcional para actualizar matrices y estados; no requieren `--overwrite`. Se rechazan enlaces simbólicos internos y junctions cuando el intérprete permite detectarlos. No es una transacción entre varios archivos ni un bloqueo de concurrencia: usar un solo proceso escritor y rutas estables. Si falla un ZIP puede quedar su manifiesto, pero no un ZIP parcial; una interrupción tras copiar una fuente puede dejar una copia aún no registrada. Revisar estos casos antes de reintentar.
+Las escrituras usan `editor-en-jefe/scripts/archivos_seguros.py`: JSON, CSV e informes reemplazan atómicamente cada archivo; plantillas, copias de fuentes, manifiestos y ZIP se publican sin sustituir destinos existentes. Las copias preservan contenido, no permisos ni fechas del archivo fuente. Al reclasificar una fuente se verifica la copia antes de eliminar la ubicación anterior. Los comandos conservan su permiso funcional para actualizar matrices y estados; no requieren `--overwrite`. Se rechazan enlaces simbólicos internos y junctions cuando el intérprete permite detectarlos. No es una transacción entre varios archivos ni un bloqueo de concurrencia: usar un solo proceso escritor y rutas estables. Si falla un ZIP puede quedar su manifiesto, pero no un ZIP parcial; una interrupción tras copiar una fuente puede dejar una copia aún no registrada. Revisar estos casos antes de reintentar.
 
-Consultar [la guía común de ejecución](../workflow-maestro-academico-editorial/references/portabilidad.md) para elegir intérprete y preparar dependencias.
+Consultar [la guía común de ejecución](../editor-en-jefe/references/portabilidad.md) para elegir intérprete y preparar dependencias.
 
 ## Autoridad Metodológica
 
@@ -93,7 +93,7 @@ Nunca incluir estudios irrelevantes, duplicar publicaciones, mezclar fenómenos,
 Crear el espacio de revisión:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py init --project-dir "revisiones/mi-revision" --title "Título provisional" --topic "Tema delimitado" --question "Pregunta principal" --disciplines "informática;ingeniería" --citation-style apa7 --threshold-enforcement advisory --search-update-enforcement advisory
+python skills/editor-en-jefe/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py init --project-dir "revisiones/mi-revision" --title "Título provisional" --topic "Tema delimitado" --question "Pregunta principal" --disciplines "informática;ingeniería" --citation-style apa7 --threshold-enforcement advisory --search-update-enforcement advisory
 ```
 
 Si `python` no está disponible, usar el intérprete creado por `$preprocesador-documentos`.
@@ -157,7 +157,7 @@ Puerta: protocolo completo, pilotado, evaluado y versionado.
 Registrar exportaciones:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py register-source --project-dir "revisiones/mi-revision" --file "descargas/scopus.csv" --kind search-export --database "Scopus" --query-id "Q-SCOPUS-001" --origin "Exportación directa"
+python skills/editor-en-jefe/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py register-source --project-dir "revisiones/mi-revision" --file "descargas/scopus.csv" --kind search-export --database "Scopus" --query-id "Q-SCOPUS-001" --origin "Exportación directa"
 ```
 
 Puerta: cobertura funcional y disciplinar razonable, cadenas reproducibles, evidencia bruta preservada y limitaciones explícitas. No afirmar exhaustividad absoluta.
@@ -196,13 +196,13 @@ Registrar textos y suplementos con hash. Separar incluidos, excluidos y pendient
 Registrar primero el texto pendiente:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py register-source --project-dir "revisiones/mi-revision" --file "descargas/estudio.pdf" --kind fulltext --decision pending --source-id "SRC-001" --study-id "S001" --source-role primary-study --title "Título del estudio" --doi "10.xxxx/xxxxx" --origin "Repositorio institucional"
+python skills/editor-en-jefe/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py register-source --project-dir "revisiones/mi-revision" --file "descargas/estudio.pdf" --kind fulltext --decision pending --source-id "SRC-001" --study-id "S001" --source-role primary-study --title "Título del estudio" --doi "10.xxxx/xxxxx" --origin "Repositorio institucional"
 ```
 
 Después de abrirlo y revisar manualmente contenido y citas, clasificarlo usando el `record_id` devuelto:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py review-source --project-dir "revisiones/mi-revision" --record-id "SRC-..." --decision included --content-reviewed --citations-reviewed --reviewed-by "Investigador"
+python skills/editor-en-jefe/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py review-source --project-dir "revisiones/mi-revision" --record-id "SRC-..." --decision included --content-reviewed --citations-reviewed --reviewed-by "Investigador"
 ```
 
 Puerta: cada fuente utilizada tiene texto completo local, hash válido, vínculo de inventario y revisión manual de contenido y citas. Una indisponibilidad nunca justifica inclusión.
@@ -244,7 +244,7 @@ Puerta: informe, matrices, auditorías, paquete reproducible y snapshot final co
 Ejecutar:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py audit --project-dir "revisiones/mi-revision"
+python skills/editor-en-jefe/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py audit --project-dir "revisiones/mi-revision"
 ```
 
 Interpretar:
@@ -258,7 +258,7 @@ Interpretar:
 Registrar una auditoría de búsqueda:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py search-audit --project-dir "revisiones/mi-revision" --decision keep-protocol --reviewed-by "Investigador" --review-notes "Se revisaron en orden preguntas, sinónimos, sintaxis, campos, fuentes, semillas, idiomas, periodo, criterios y evidencia disponible."
+python skills/editor-en-jefe/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py search-audit --project-dir "revisiones/mi-revision" --decision keep-protocol --reviewed-by "Investigador" --review-notes "Se revisaron en orden preguntas, sinónimos, sintaxis, campos, fuentes, semillas, idiomas, periodo, criterios y evidencia disponible."
 ```
 
 ## Excepciones Y Requisitos Externos
@@ -266,7 +266,7 @@ python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py revision-
 Generar borradores de excepción cuando un valor esperado no se alcance. Completar cada excepción con responsable, revisiones, cambios, justificación, riesgo, impacto, decisión y aprobación:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py methodological-exception --project-dir "revisiones/mi-revision" --exception-id "EXC-CORPUS-001" --threshold included_studies --expected 50 --obtained 28 --responsible "Investigador" --reviews-performed "Auditoría completa de búsqueda" --changes-applied "Ninguno; mantener alcance" --justification "El campo especializado contiene evidencia primaria limitada." --risk "Baja precisión y generalización restringida" --impact "Interpretar como evidencia emergente" --decision "Continuar sin ampliar artificialmente" --approved-by "Responsable metodológico"
+python skills/editor-en-jefe/scripts/ejecutar.py revision-sistematica-kitchenham/scripts/kitchenham_workspace.py methodological-exception --project-dir "revisiones/mi-revision" --exception-id "EXC-CORPUS-001" --threshold included_studies --expected 50 --obtained 28 --responsible "Investigador" --reviews-performed "Auditoría completa de búsqueda" --changes-applied "Ninguno; mantener alcance" --justification "El campo especializado contiene evidencia primaria limitada." --risk "Baja precisión y generalización restringida" --impact "Interpretar como evidencia emergente" --decision "Continuar sin ampliar artificialmente" --approved-by "Responsable metodológico"
 ```
 
 No llamar “excepción” al simple incumplimiento de una recomendación antes de auditarlo. Si el valor era un requisito externo, identificarlo como tal y no atribuirlo a Kitchenham.

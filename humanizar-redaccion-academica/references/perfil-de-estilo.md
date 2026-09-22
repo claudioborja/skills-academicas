@@ -13,13 +13,13 @@ No imitar literalmente ni transferir oraciones largas del documento modelo. Usar
 1. Convertir el documento modelo o extraer perfil:
 
 ```powershell
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py humanizar-redaccion-academica/scripts/documento_a_perfil_estilo.py "modelo.docx" --out perfil.md --json-out perfil.json
+python skills/editor-en-jefe/scripts/ejecutar.py humanizar-redaccion-academica/scripts/documento_a_perfil_estilo.py "modelo.docx" --out perfil.md --json-out perfil.json
 ```
 
 Para crear un estilo reutilizable dentro del skill, preferir:
 
 ```powershell
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py humanizar-redaccion-academica/scripts/perfilar_y_comparar_estilo.py --style-name "nombre del estilo" --model "modelo.docx" --draft "borrador.docx"
+python skills/editor-en-jefe/scripts/ejecutar.py humanizar-redaccion-academica/scripts/perfilar_y_comparar_estilo.py --style-name "nombre del estilo" --model "modelo.docx" --draft "borrador.docx"
 ```
 
 Cada estilo queda en `skills/humanizar-redaccion-academica/styles/<nombre-del-estilo>/`.
@@ -27,7 +27,7 @@ Cada estilo queda en `skills/humanizar-redaccion-academica/styles/<nombre-del-es
 2. Analizar el borrador que se quiere reescribir:
 
 ```powershell
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py humanizar-redaccion-academica/scripts/comparar_con_perfil_estilo.py "borrador.md" --profile perfil.json --out diagnostico.md --json-out diagnostico.json
+python skills/editor-en-jefe/scripts/ejecutar.py humanizar-redaccion-academica/scripts/comparar_con_perfil_estilo.py "borrador.md" --profile perfil.json --out diagnostico.md --json-out diagnostico.json
 ```
 
 3. Reescribir por bloques, no todo de una vez. Mantener encabezados y contenido protegido.

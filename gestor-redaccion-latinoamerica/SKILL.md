@@ -140,7 +140,13 @@ Conserva el sentido original, pero mejora orden, precisión, continuidad y tono.
 
 ### Libro o capítulo
 
+Aplicar [producción editorial integrada](../editor-en-jefe/references/produccion-editorial-eficiente.md). Elaborar bloques completos desde evidencia consultada y revisar respaldo, desarrollo, continuidad y estilo antes de cerrarlos. Recibir un contexto breve con propósito, pasajes/localizadores, límites y términos; ampliarlo cuando resulte insuficiente. Evitar rondas de reescritura global sin defectos identificados. El ahorro de tokens nunca justifica convertir el libro en un esquema, resumir su desarrollo ni omitir matices.
+
 Redacta con visión de obra completa. Mantén continuidad temática, coherencia de enfoque y voz autoral estable entre capítulos.
+
+El contexto editorial y su matriz son apoyos opcionales. Sin ellos, desarrollar el encargo con el índice, manuscrito y evidencia disponibles; inferir decisiones reversibles y aclarar solo carencias determinantes. Mantener los mismos controles de estructura y presentación, sin exigir documentación adicional ni importar instrucciones de otro proyecto.
+
+Si existe contexto editorial, aplicar [su interpretación integral](../editor-en-jefe/references/interpretacion-contexto-editorial.md) y la matriz del proyecto. Desarrollar propósito, alcance, enfoque, objetivos y recursos dentro de los temas autorizados. Respetar niveles y numeración acordados; no copiar la plantilla de instrucciones como subtítulos recurrentes ni convertir los puntos del esquema en listas sin desarrollo. Mantener pendientes y comentarios editoriales fuera del manuscrito final; un marcador permitido durante el borrador debe resolverse o declararse pendiente, nunca entregarse como texto terminado.
 
 ### Pulido de estilo
 

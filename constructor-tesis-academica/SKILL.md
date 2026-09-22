@@ -7,7 +7,7 @@ description: Construye, diagnostica, organiza y revisa tesis, tesinas, trabajos 
 
 ## Objetivo
 
-Construir o revisar la tesis como un sistema: problema, objetivos, teoría, método, resultados, discusión y cierre deben sostenerse mutuamente. Usar `$workflow-maestro-academico-editorial` para coordinar la ruta general y esta skill como guía especializada.
+Construir o revisar la tesis como un sistema: problema, objetivos, teoría, método, resultados, discusión y cierre deben sostenerse mutuamente. Usar `$editor-en-jefe` para coordinar la ruta general y esta skill como guía especializada.
 
 ## Regla central
 

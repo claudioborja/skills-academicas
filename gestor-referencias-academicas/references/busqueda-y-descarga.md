@@ -2,7 +2,7 @@
 
 ## Antes de buscar
 
-Identificar la afirmación, el contexto, el alcance y la política de fuentes. Consultar el perfil del proyecto en `../../workflow-maestro-academico-editorial/references/perfiles-editoriales.md`. Con Kitchenham, seguir su protocolo y su estructura de archivos.
+Identificar la afirmación, el contexto, el alcance y la política de fuentes. Consultar el perfil del proyecto en `../../editor-en-jefe/references/perfiles-editoriales.md`. Con Kitchenham, seguir su protocolo y su estructura de archivos.
 
 ## Secuencia
 

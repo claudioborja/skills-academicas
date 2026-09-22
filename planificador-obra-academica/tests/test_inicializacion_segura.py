@@ -8,6 +8,19 @@ SCRIPT = Path(__file__).resolve().parents[1]/'scripts/inicializar_proyecto_libro
 
 
 class InitializationTests(unittest.TestCase):
+    def test_initializes_editorial_register_for_session_continuity(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / 'proyecto'
+            result = self.run_init(root)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            register = root / '01_planificacion_editorial/03_registro_editorial.md'
+            self.assertTrue(register.is_file())
+            content = register.read_text(encoding='utf-8')
+            self.assertIn('## Decisiones vigentes', content)
+            self.assertIn('## Estado de capítulos', content)
+            self.assertIn('## Requisitos y controles', content)
+            self.assertIn('## Pendientes y próxima acción', content)
+
     def run_init(self, root, *options):
         return subprocess.run([sys.executable, str(SCRIPT), str(root), '--title', 'Obra de prueba', *options], capture_output=True, text=True)
 

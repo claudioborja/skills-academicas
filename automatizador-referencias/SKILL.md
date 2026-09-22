@@ -1,15 +1,15 @@
 ---
 name: automatizador-referencias
-description: "Automatiza tareas mecánicas de citas, DOI, bibliografía y fuentes descargadas para reducir consumo de tokens. Use when Codex needs to auditar citas APA/IEEE frente a bibliografía, detectar DOI faltantes o repetidos, consultar metadatos DOI en Crossref, inventariar PDFs/HTML/Markdown de referencias, normalizar entradas bibliográficas preliminares, o preparar insumos para gestor-referencias-academicas, revisor-citas-consistencia-bibliografica, filtro-editoriales-depredadoras y workflow-maestro-academico-editorial."
+description: "Automatiza tareas mecánicas de citas, DOI, bibliografía y fuentes descargadas para reducir consumo de tokens. Use when Codex needs to auditar citas APA/IEEE frente a bibliografía, detectar DOI faltantes o repetidos, consultar metadatos DOI en Crossref, inventariar PDFs/HTML/Markdown de referencias, normalizar entradas bibliográficas preliminares, o preparar insumos para gestor-referencias-academicas, revisor-citas-consistencia-bibliografica, filtro-editoriales-depredadoras y editor-en-jefe."
 ---
 
 # Automatizador Referencias
 
-Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `workflow-maestro-academico-editorial/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../workflow-maestro-academico-editorial/references/portabilidad.md#protección-de-informes).
+Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `editor-en-jefe/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../editor-en-jefe/references/portabilidad.md#protección-de-informes).
 
 ## Ejecución multiplataforma
 
-Consultar [la guía común de ejecución](../workflow-maestro-academico-editorial/references/portabilidad.md) para elegir intérprete y preparar dependencias.
+Consultar [la guía común de ejecución](../editor-en-jefe/references/portabilidad.md) para elegir intérprete y preparar dependencias.
 
 ## Objetivo
 
@@ -24,7 +24,7 @@ No inventar metadatos. Si DOI, año, autores, revista, volumen, número o págin
 ### DOI A Referencia
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py automatizador-referencias/scripts/doi_a_referencia.py 10.xxxx/xxxxx --style apa --out refs.md --json-out refs.json
+python skills/editor-en-jefe/scripts/ejecutar.py automatizador-referencias/scripts/doi_a_referencia.py 10.xxxx/xxxxx --style apa --out refs.md --json-out refs.json
 ```
 
 Acepta uno o varios DOI. Consulta Crossref si hay red; si falla, conserva el DOI y marca metadatos pendientes.
@@ -34,7 +34,7 @@ La salida es preliminar en ambas normas. IEEE genera borradores de artículos de
 ### Auditoría De Citas Y Bibliografía
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py automatizador-referencias/scripts/auditar_citas_bibliografia.py manuscrito.md --out auditoria.md --json-out auditoria.json
+python skills/editor-en-jefe/scripts/ejecutar.py automatizador-referencias/scripts/auditar_citas_bibliografia.py manuscrito.md --out auditoria.md --json-out auditoria.json
 ```
 
 Detecta citas numéricas, citas APA probables, referencias finales, DOI, citas sin referencia y referencias no citadas.
@@ -44,7 +44,7 @@ Para una obra completa IEEE añadir `--style ieee --strict`: reconoce localizado
 ### Inventario De Fuentes
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py automatizador-referencias/scripts/inventario_fuentes.py referencias-descargadas --recursive --out fuentes.md --json-out fuentes.json
+python skills/editor-en-jefe/scripts/ejecutar.py automatizador-referencias/scripts/inventario_fuentes.py referencias-descargadas --recursive --out fuentes.md --json-out fuentes.json
 ```
 
 Lista archivos fuente, tamaño, extensión, DOI probable y decisión inicial.
@@ -52,7 +52,7 @@ Lista archivos fuente, tamaño, extensión, DOI probable y decisión inicial.
 ### Normalizar Referencias
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py automatizador-referencias/scripts/normalizar_referencias.py bibliografia.md --out normalizadas.md --json-out normalizadas.json
+python skills/editor-en-jefe/scripts/ejecutar.py automatizador-referencias/scripts/normalizar_referencias.py bibliografia.md --out normalizadas.md --json-out normalizadas.json
 ```
 
 Limpia espacios, detecta estilo probable, DOI y duplicados exactos.

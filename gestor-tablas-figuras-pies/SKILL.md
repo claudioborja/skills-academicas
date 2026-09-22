@@ -5,11 +5,11 @@ description: Úsalo cuando el usuario necesite decidir, crear, revisar, uniforma
 
 # Gestor De Tablas Figuras Y Pies
 
-El exportador HTML exige `--overwrite` para reemplazar informes. El registrador añade datos mediante publicación atómica y exige manifiesto y anexo distintos. Requieren el helper del orquestador y un solo proceso escritor. Consultar [protección y límites de escritura](../workflow-maestro-academico-editorial/references/portabilidad.md#protección-de-informes).
+El exportador HTML exige `--overwrite` para reemplazar informes. El registrador añade datos mediante publicación atómica y exige manifiesto y anexo distintos. Requieren el helper del orquestador y un solo proceso escritor. Consultar [protección y límites de escritura](../editor-en-jefe/references/portabilidad.md#protección-de-informes).
 
 ## Ejecución multiplataforma
 
-Consultar [la guía común de ejecución](../workflow-maestro-academico-editorial/references/portabilidad.md) para elegir intérprete y preparar dependencias.
+Consultar [la guía común de ejecución](../editor-en-jefe/references/portabilidad.md) para elegir intérprete y preparar dependencias.
 
 ## Automatización Previa
 
@@ -79,7 +79,7 @@ Priorizar, en este orden:
 Para crear el HTML auxiliar:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py gestor-tablas-figuras-pies/scripts/exportar_tablas_html.py "ruta/02_manuscrito/libro_completo.md" --out "ruta/06_recursos_visuales/tablas_html/tablas_del_libro.html"
+python skills/editor-en-jefe/scripts/ejecutar.py gestor-tablas-figuras-pies/scripts/exportar_tablas_html.py "ruta/02_manuscrito/libro_completo.md" --out "ruta/06_recursos_visuales/tablas_html/tablas_del_libro.html"
 ```
 
 El script detecta tablas Markdown, reutiliza como título la línea inmediatamente anterior cuando comienza con `Tabla`, y genera enlaces internos para cada elemento.

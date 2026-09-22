@@ -5,7 +5,7 @@ description: Revisa prosa académica genérica, mecánica o fragmentada y la ali
 
 # Humanizar Redacción Académica
 
-Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `workflow-maestro-academico-editorial/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../workflow-maestro-academico-editorial/references/portabilidad.md#protección-de-informes).
+Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `editor-en-jefe/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../editor-en-jefe/references/portabilidad.md#protección-de-informes).
 
 ## Modos
 
@@ -26,11 +26,11 @@ Redactar contenido nuevo corresponde a `$gestor-redaccion-latinoamerica`; correg
 6. Verificar sentido, respaldo de citas, desarrollo y voz. No comprimir por sistema ni ampliar con relleno.
 7. Entregar el texto solicitado y, cuando aporte valor, un balance breve de cambios y pendientes.
 
-Los rangos de extensión y párrafos proceden del [perfil del proyecto](../workflow-maestro-academico-editorial/references/perfiles-editoriales.md). Son orientativos; la función y el encargo prevalecen. Si falta evidencia para desarrollar una idea, señalar el vacío.
+Los rangos de extensión y párrafos proceden del [perfil del proyecto](../editor-en-jefe/references/perfiles-editoriales.md). Son orientativos; la función y el encargo prevalecen. Si falta evidencia para desarrollar una idea, señalar el vacío.
 
 ## Herramientas reutilizables
 
-Consultar [la guía de ejecución](../workflow-maestro-academico-editorial/references/portabilidad.md). Las rutas siguientes son relativas a esta skill:
+Consultar [la guía de ejecución](../editor-en-jefe/references/portabilidad.md). Las rutas siguientes son relativas a esta skill:
 
 | Herramienta | Uso y límite |
 | --- | --- |
@@ -47,7 +47,7 @@ Consultar [la guía de ejecución](../workflow-maestro-academico-editorial/refer
 Ejemplo:
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py humanizar-redaccion-academica/scripts/analizar_marcas_ia.py "ruta/editado.md" --baseline "ruta/original.md" --json
+python skills/editor-en-jefe/scripts/ejecutar.py humanizar-redaccion-academica/scripts/analizar_marcas_ia.py "ruta/editado.md" --baseline "ruta/original.md" --json
 ```
 
 ## Evidencia y reportes

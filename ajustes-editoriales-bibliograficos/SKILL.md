@@ -20,7 +20,7 @@ Actívalo cuando:
 
 ## Regla central
 
-Registrar las restricciones en el perfil existente del proyecto según `../workflow-maestro-academico-editorial/references/perfiles-editoriales.md`. No duplicar ni endurecer por defecto los criterios de un protocolo metodológico activo.
+Registrar las restricciones en el perfil existente del proyecto según `../editor-en-jefe/references/perfiles-editoriales.md`. No duplicar ni endurecer por defecto los criterios de un protocolo metodológico activo.
 
 Primero identifica la norma bibliográfica base. Después aplica la política editorial adicional sin confundir ambos niveles.
 

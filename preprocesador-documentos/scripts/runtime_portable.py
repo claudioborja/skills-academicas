@@ -10,6 +10,7 @@ import subprocess
 import sys
 
 SCRIPTS = Path(__file__).resolve().parent
+COLLECTION_ROOT = SCRIPTS.parents[2]
 
 
 def utf8_environment() -> dict[str, str]:
@@ -22,16 +23,45 @@ def configure_console() -> None:
             stream.reconfigure(encoding='utf-8')
 
 
-def runtime_directory() -> Path:
+def runtime_directory(owner: Path | None = None) -> Path:
     override = os.environ.get('SKILLS_RUNTIME_DIR')
     if override:
         return Path(override).expanduser().resolve()
     tag = f'{sys.platform}-{platform.machine().lower()}-py{sys.version_info.major}{sys.version_info.minor}'
-    return SCRIPTS.parent / '.runtime' / tag
+    base = Path(owner).resolve() if owner is not None else SCRIPTS.parent
+    return base / '.runtime' / tag
 
 
 def runtime_python(directory: Path) -> Path:
     return directory / ('Scripts/python.exe' if os.name == 'nt' else 'bin/python')
+
+
+def bundled_python(directory: Path) -> Path | None:
+    """Localizar un intérprete opcional empaquetado para esta plataforma."""
+    machine = platform.machine().lower()
+    bundle = bundled_label()
+    if bundle is None:
+        return None
+    candidate = COLLECTION_ROOT / 'editor-en-jefe' / 'runtime' / 'python' / bundle / ('python.exe' if os.name == 'nt' else 'bin/python')
+    return candidate if candidate.is_file() else None
+
+
+def bundled_label() -> str | None:
+    machine = platform.machine().lower()
+    return {
+        ('linux', 'x86_64'): 'linux-x86_64-py314',
+        ('win32', 'amd64'): 'windows-x86_64-py314',
+        ('darwin', 'x86_64'): 'macos-x86_64-py314',
+        ('darwin', 'arm64'): 'macos-arm64-py314',
+    }.get((sys.platform, machine))
+
+
+def bundled_wheels(directory: Path) -> Path | None:
+    bundle = bundled_label()
+    if bundle is None:
+        return None
+    wheels = COLLECTION_ROOT / 'editor-en-jefe' / 'runtime' / 'python' / 'wheels' / bundle
+    return wheels if wheels.is_dir() else None
 
 
 def usable(python: Path) -> bool:
@@ -44,23 +74,37 @@ def usable(python: Path) -> bool:
         return False
 
 
-def select_python(prepare: bool = False) -> str:
+def select_python(prepare: bool = False, lock: Path | None = None, directory: Path | None = None) -> str:
+    """Seleccionar Python y, al preparar, instalar solo el perfil declarado."""
     if sys.version_info < (3, 10):
         raise RuntimeError('Se requiere Python 3.10 o posterior.')
-    directory = runtime_directory()
-    python = runtime_python(directory)
+    lock = Path(lock) if lock is not None else SCRIPTS / 'requirements-lock.txt'
+    if not lock.is_file():
+        raise RuntimeError(f'No existe el lock de dependencias: {lock}')
+    isolated = directory is not None or bool(os.environ.get('SKILLS_RUNTIME_DIR'))
+    if not isolated:
+        current = subprocess.run([sys.executable, str(SCRIPTS / 'dependencias.py'), '--lock', str(lock)],
+                                 capture_output=True, env=utf8_environment(), timeout=30)
+        if current.returncode == 0:
+            return sys.executable
+    directory = Path(directory).resolve() if directory is not None else runtime_directory()
+    packaged = bundled_python(directory)
+    python = packaged or runtime_python(directory)
     valid = usable(python)
     if not prepare:
         return str(python) if valid else sys.executable
     if not valid:
+        if packaged is not None:
+            raise RuntimeError(f'El intérprete empaquetado no es ejecutable: {packaged}')
         if directory.exists():
             raise RuntimeError(f'Entorno no válido: {directory}. Usa SKILLS_RUNTIME_DIR con una carpeta nueva.')
-        if importlib.util.find_spec('venv') is None or importlib.util.find_spec('ensurepip') is None:
+        creator = Path(sys.executable)
+        if creator == Path(sys.executable) and (importlib.util.find_spec('venv') is None or importlib.util.find_spec('ensurepip') is None):
             raise RuntimeError('Faltan venv/ensurepip en este Python. Instala el paquete venv correspondiente '
-                               'a su versión o usa un entorno Python completo.')
-        subprocess.run([sys.executable, '-m', 'venv', str(directory)], check=True,
+                               'a su versión o incluye un intérprete completo en runtime/python.')
+        subprocess.run([str(creator), '-m', 'venv', str(directory)], check=True,
                        env=utf8_environment())
-    probe_command = [str(python), str(SCRIPTS / 'dependencias.py')]
+    probe_command = [str(python), str(SCRIPTS / 'dependencias.py'), '--lock', str(lock)]
     probe = subprocess.run(probe_command, capture_output=True, text=True, encoding='utf-8',
                            env=utf8_environment(), timeout=30)
     if probe.returncode:
@@ -71,8 +115,13 @@ def select_python(prepare: bool = False) -> str:
         if any(p['status'] == 'version_mismatch' for p in state.get('packages', [])):
             raise RuntimeError('El entorno tiene versiones distintas de la base fijada. '
                                'Usa SKILLS_RUNTIME_DIR con una carpeta nueva; no se reemplazan paquetes existentes.')
-        subprocess.run([str(python), '-m', 'pip', 'install', '--disable-pip-version-check',
-                        '--only-binary=:all:', '-r', str(SCRIPTS / 'requirements-lock.txt')], check=True,
+        command = [str(python), '-m', 'pip', 'install', '--disable-pip-version-check',
+                   '--only-binary=:all:']
+        wheels = bundled_wheels(directory)
+        if wheels is not None:
+            command.extend(['--no-index', '--find-links', str(wheels)])
+        command.extend(['-r', str(lock)])
+        subprocess.run(command, check=True,
                        env=utf8_environment())
         subprocess.run(probe_command, check=True, capture_output=True, env=utf8_environment(), timeout=30)
     subprocess.run([str(python), '-m', 'pip', 'check'], check=True,

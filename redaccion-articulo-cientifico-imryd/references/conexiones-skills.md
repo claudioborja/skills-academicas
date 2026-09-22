@@ -4,9 +4,9 @@
 
 Esta skill gobierna la forma científica del artículo. Las demás skills complementan tareas específicas sin desplazar la lógica IMRyD.
 
-## Workflow Maestro
+## Editor en jefe
 
-Usar `$workflow-maestro-academico-editorial` cuando:
+Usar `$editor-en-jefe` cuando:
 - el usuario no tenga clara la etapa del manuscrito;
 - el material venga de tesis, libro o informe y haya que decidir qué conservar;
 - el proyecto requiera ruta por fases;

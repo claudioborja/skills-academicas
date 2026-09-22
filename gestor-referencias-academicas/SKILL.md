@@ -22,11 +22,13 @@ Si el encargo incluye cumplimiento APA del documento completo, leer también [la
 
 No inventar autores, fechas, DOI, páginas, resultados ni citas. Abrir y leer el texto completo y el pasaje pertinente antes de respaldar una afirmación; un título, abstract o coincidencia de palabras no demuestra respaldo.
 
-Aplicar la política del proyecto según [../workflow-maestro-academico-editorial/references/perfiles-editoriales.md](../workflow-maestro-academico-editorial/references/perfiles-editoriales.md). El perfil histórico de fuentes con DOI es una política de selección, no parte de APA o IEEE. Si solo se pide corregir formato, no buscar, excluir ni sustituir fuentes por defecto.
+Aplicar la política del proyecto según [../editor-en-jefe/references/perfiles-editoriales.md](../editor-en-jefe/references/perfiles-editoriales.md). El perfil histórico de fuentes con DOI es una política de selección, no parte de APA o IEEE. Si solo se pide corregir formato, no buscar, excluir ni sustituir fuentes por defecto.
 
 Con Kitchenham activo, su protocolo gobierna admisión, descarga, revisión manual y trazabilidad. Esta skill solo verifica el respaldo y da formato a fuentes admitidas; no cambia criterios de inclusión ni introduce requisitos de DOI o PRISMA.
 
 ## Flujo
+
+Para libros, aplicar la sección de evidencia de [producción editorial integrada](../editor-en-jefe/references/produccion-editorial-eficiente.md). Antes de buscar o extraer de nuevo, consultar los originales, extracciones y decisiones del proyecto. Recuperar pasajes con contexto y localizadores; una coincidencia de búsqueda o una fuente admitida no certifica respaldo. No exigir aprobación individual del usuario salvo instrucción o protocolo. Registrar cambios que invaliden evidencia ya usada.
 
 1. Identificar norma, política de fuentes, alcance de la intervención y carpeta del proyecto.
 2. Usar `$automatizador-referencias` cuando haga falta inventariar metadatos, DOI, duplicados o correspondencia entre citas y bibliografía.
@@ -43,10 +45,10 @@ Respetar las rutas de un protocolo o proyecto existente. En libros con estructur
 
 ## Extractor común de PDF
 
-Leer [../workflow-maestro-academico-editorial/references/portabilidad.md](../workflow-maestro-academico-editorial/references/portabilidad.md) para intérpretes y dependencias.
+Leer [../editor-en-jefe/references/portabilidad.md](../editor-en-jefe/references/portabilidad.md) para intérpretes y dependencias.
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py gestor-referencias-academicas/scripts/pdf_a_contexto.py "ruta/fuente.pdf" --out "ruta/lectura.md" --json-out "ruta/lectura.json" --profile fuente
+python skills/editor-en-jefe/scripts/ejecutar.py gestor-referencias-academicas/scripts/pdf_a_contexto.py "ruta/fuente.pdf" --out "ruta/lectura.md" --json-out "ruta/lectura.json" --profile fuente
 ```
 
 Acepta PDF, carpeta y URL directa. Para descargas, proporcionar `--download-dir` con la carpeta del proyecto. Los perfiles `fuente`, `imryd` y `tesis` solo priorizan vocabulario: no cambian el método ni verifican semánticamente la evidencia.

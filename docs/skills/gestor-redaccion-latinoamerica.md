@@ -41,6 +41,6 @@ Usa $gestor-redaccion-latinoamerica para [describe aquí la tarea y los archivos
 
 ## Integración
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `workflow-maestro-academico-editorial` para decidir el orden y evitar intervenciones duplicadas.
+Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
 
 Consulta las instrucciones normativas en [`gestor-redaccion-latinoamerica/SKILL.md`](../../gestor-redaccion-latinoamerica/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.

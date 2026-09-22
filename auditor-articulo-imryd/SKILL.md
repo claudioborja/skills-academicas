@@ -7,7 +7,7 @@ description: Extrae secciones, fragmentos y señales mecánicas de artículos IM
 
 ## Ejecución multiplataforma
 
-Consultar [la guía común de ejecución](../workflow-maestro-academico-editorial/references/portabilidad.md) para elegir intérprete y preparar dependencias.
+Consultar [la guía común de ejecución](../editor-en-jefe/references/portabilidad.md) para elegir intérprete y preparar dependencias.
 
 ## Objetivo
 
@@ -16,9 +16,9 @@ Producir un diagnóstico rápido de estructura científica antes de redactar, re
 ## Scripts
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py auditor-articulo-imryd/scripts/auditar_imryd.py articulo.md --out imryd.md --json-out imryd.json
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py auditor-articulo-imryd/scripts/matriz_objetivo_metodo_resultados.py articulo.md --out matriz.md --json-out matriz.json
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py auditor-articulo-imryd/scripts/check_envio_revista.py articulo.md --out envio.md --json-out envio.json
+python skills/editor-en-jefe/scripts/ejecutar.py auditor-articulo-imryd/scripts/auditar_imryd.py articulo.md --out imryd.md --json-out imryd.json
+python skills/editor-en-jefe/scripts/ejecutar.py auditor-articulo-imryd/scripts/matriz_objetivo_metodo_resultados.py articulo.md --out matriz.md --json-out matriz.json
+python skills/editor-en-jefe/scripts/ejecutar.py auditor-articulo-imryd/scripts/check_envio_revista.py articulo.md --out envio.md --json-out envio.json
 ```
 
 ## Uso

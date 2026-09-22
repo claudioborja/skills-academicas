@@ -1,0 +1,310 @@
+{
+  "interpreters": {
+    "linux-x86_64-py314": {
+      "asset": "cpython-3.14.7+20260901-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "release": "20260901",
+      "sha256": "3959f92825141e04adf44982d3a83ee57af0877e893b0796e04c1468749d9b04",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260901/cpython-3.14.7%2B20260901-x86_64-unknown-linux-gnu-install_only_stripped.tar.gz",
+      "wheels": [
+        {
+          "file": "contourpy-1.3.3-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+          "sha256": "f64836de09927cba6f79dcd00fdd7d5329f3fccc633468507079c829ca4db4e3"
+        },
+        {
+          "file": "cycler-0.12.1-py3-none-any.whl",
+          "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30"
+        },
+        {
+          "file": "fonttools-4.64.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "sha256": "b4a7af455ffed980925bc0ebf5b8d6239e6c3e797d9d755b6db192fb3080d614"
+        },
+        {
+          "file": "kiwisolver-1.4.9-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl",
+          "sha256": "767c23ad1c58c9e827b649a9ab7809fd5fd9db266a9cf02b0e926ddc2c680d58"
+        },
+        {
+          "file": "lxml-6.0.2-cp314-cp314-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl",
+          "sha256": "98a5e1660dc7de2200b00d53fa00bcd3c35a3608c305d45a7bbcaf29fa16e83d"
+        },
+        {
+          "file": "matplotlib-3.10.9-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+          "sha256": "34cf8167e023ad956c15f36302911d5406bd99a9862c1a8499ea6f7c0e015dc2"
+        },
+        {
+          "file": "numpy-2.3.3-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+          "sha256": "ce020080e4a52426202bdb6f7691c65bb55e49f261f31a8f506c9f6bc7450421"
+        },
+        {
+          "file": "packaging-26.3-py3-none-any.whl",
+          "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+        },
+        {
+          "file": "pillow-11.3.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+          "sha256": "93efb0b4de7e340d99057415c749175e24c8864302369e05914682ba642e5d77"
+        },
+        {
+          "file": "pymupdf-1.27.2.3-cp310-abi3-manylinux_2_28_x86_64.whl",
+          "sha256": "857842b4888827bd6155a1131341b2822a7ebe9a8c15a975fd7d490d7a64a30c"
+        },
+        {
+          "file": "pyparsing-3.3.2-py3-none-any.whl",
+          "sha256": "850ba148bd908d7e2411587e247a1e4f0327839c40e2e5e6d05a007ecc69911d"
+        },
+        {
+          "file": "pypdf-6.16.2-py3-none-any.whl",
+          "sha256": "c8b09a59399062fb45a1b8156c18a787a10a3dae03ac9674397a226712c94604"
+        },
+        {
+          "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+        },
+        {
+          "file": "python_docx-1.2.0-py3-none-any.whl",
+          "sha256": "3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7"
+        },
+        {
+          "file": "pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl",
+          "sha256": "c458b6d084f9b935061bc36216e8a69a7e293a2f1e68bf956dcd9e6cbcd143f5"
+        },
+        {
+          "file": "six-1.17.0-py2.py3-none-any.whl",
+          "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+        },
+        {
+          "file": "typing_extensions-4.16.0-py3-none-any.whl",
+          "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+        }
+      ]
+    },
+    "macos-arm64-py314": {
+      "asset": "cpython-3.14.7+20260901-aarch64-apple-darwin-install_only_stripped.tar.gz",
+      "release": "20260901",
+      "sha256": "4632cb1a6edad9e73d3c81b6d2e69131637d995173e3e85005df14102b0592ba",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260901/cpython-3.14.7%2B20260901-aarch64-apple-darwin-install_only_stripped.tar.gz",
+      "wheels": [
+        {
+          "file": "contourpy-1.3.3-cp314-cp314-macosx_11_0_arm64.whl",
+          "sha256": "cbedb772ed74ff5be440fa8eee9bd49f64f6e3fc09436d9c7d8f1c287b121d77"
+        },
+        {
+          "file": "cycler-0.12.1-py3-none-any.whl",
+          "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30"
+        },
+        {
+          "file": "fonttools-4.64.0-cp314-cp314-macosx_10_15_universal2.whl",
+          "sha256": "6f1ce9ef9a1b13098efdc2e43a2ed96d9851bbde7b31c652a87552c4efe9b422"
+        },
+        {
+          "file": "kiwisolver-1.4.9-cp314-cp314-macosx_11_0_arm64.whl",
+          "sha256": "2635d352d67458b66fd0667c14cb1d4145e9560d503219034a18a87e971ce4f3"
+        },
+        {
+          "file": "lxml-6.0.2-cp314-cp314-macosx_10_13_universal2.whl",
+          "sha256": "b0c732aa23de8f8aec23f4b580d1e52905ef468afb4abeafd3fec77042abb6fe"
+        },
+        {
+          "file": "matplotlib-3.10.9-cp314-cp314-macosx_11_0_arm64.whl",
+          "sha256": "97e35e8d39ccc85859095e01a53847432ba9a53ddf7986f7a54a11b73d0e143f"
+        },
+        {
+          "file": "numpy-2.3.3-cp314-cp314-macosx_11_0_arm64.whl",
+          "sha256": "414a97499480067d305fcac9716c29cf4d0d76db6ebf0bf3cbce666677f12652"
+        },
+        {
+          "file": "packaging-26.3-py3-none-any.whl",
+          "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+        },
+        {
+          "file": "pillow-11.3.0-cp314-cp314-macosx_11_0_arm64.whl",
+          "sha256": "0b275ff9b04df7b640c59ec5a3cb113eefd3795a8df80bac69646ef699c6981a"
+        },
+        {
+          "file": "pymupdf-1.27.2.3-cp310-abi3-macosx_11_0_arm64.whl",
+          "sha256": "660d93cb6da5bbddf11d3982ae27745dd3a9902d9f24cdb69adab83962294b5a"
+        },
+        {
+          "file": "pyparsing-3.3.2-py3-none-any.whl",
+          "sha256": "850ba148bd908d7e2411587e247a1e4f0327839c40e2e5e6d05a007ecc69911d"
+        },
+        {
+          "file": "pypdf-6.16.2-py3-none-any.whl",
+          "sha256": "c8b09a59399062fb45a1b8156c18a787a10a3dae03ac9674397a226712c94604"
+        },
+        {
+          "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+        },
+        {
+          "file": "python_docx-1.2.0-py3-none-any.whl",
+          "sha256": "3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7"
+        },
+        {
+          "file": "pyyaml-6.0.3-cp314-cp314-macosx_11_0_arm64.whl",
+          "sha256": "34d5fcd24b8445fadc33f9cf348c1047101756fd760b4dacb5c3e99755703310"
+        },
+        {
+          "file": "six-1.17.0-py2.py3-none-any.whl",
+          "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+        },
+        {
+          "file": "typing_extensions-4.16.0-py3-none-any.whl",
+          "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+        }
+      ]
+    },
+    "macos-x86_64-py314": {
+      "asset": "cpython-3.14.7+20260901-x86_64-apple-darwin-install_only_stripped.tar.gz",
+      "release": "20260901",
+      "sha256": "7e151a7c9028855b61a7d6e78381f2020a1ef185281399f3b1aafc5e1c9a1a64",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260901/cpython-3.14.7%2B20260901-x86_64-apple-darwin-install_only_stripped.tar.gz",
+      "wheels": [
+        {
+          "file": "contourpy-1.3.3-cp314-cp314-macosx_10_13_x86_64.whl",
+          "sha256": "fde6c716d51c04b1c25d0b90364d0be954624a0ee9d60e23e850e8d48353d07a"
+        },
+        {
+          "file": "cycler-0.12.1-py3-none-any.whl",
+          "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30"
+        },
+        {
+          "file": "fonttools-4.64.0-py3-none-any.whl",
+          "sha256": "4a05783ff54ce4c7a28f18e5772efdf63c219374bd9ffc55452182e1cef8be60"
+        },
+        {
+          "file": "kiwisolver-1.4.9-cp314-cp314-macosx_10_13_x86_64.whl",
+          "sha256": "d0005b053977e7b43388ddec89fa567f43d4f6d5c2c0affe57de5ebf290dc552"
+        },
+        {
+          "file": "lxml-6.0.2-cp314-cp314-macosx_10_13_x86_64.whl",
+          "sha256": "4468e3b83e10e0317a89a33d28f7aeba1caa4d1a6fd457d115dd4ffe90c5931d"
+        },
+        {
+          "file": "matplotlib-3.10.9-cp314-cp314-macosx_10_13_x86_64.whl",
+          "sha256": "172db52c9e683f5d12eaf57f0f54834190e12581fe1cc2a19595a8f5acb4e77d"
+        },
+        {
+          "file": "numpy-2.3.3-cp314-cp314-macosx_10_13_x86_64.whl",
+          "sha256": "cd052f1fa6a78dee696b58a914b7229ecfa41f0a6d96dc663c1220a55e137593"
+        },
+        {
+          "file": "packaging-26.3-py3-none-any.whl",
+          "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+        },
+        {
+          "file": "pillow-11.3.0-cp314-cp314-macosx_10_13_x86_64.whl",
+          "sha256": "d9da3df5f9ea2a89b81bb6087177fb1f4d1c7146d583a3fe5c672c0d94e55e12"
+        },
+        {
+          "file": "pymupdf-1.27.2.3-cp310-abi3-macosx_10_9_x86_64.whl",
+          "sha256": "fc1bc3cae6e9e150b0dbb0a9221bdfd411d65f0db2fe359eaa22467d7cc2a05f"
+        },
+        {
+          "file": "pyparsing-3.3.2-py3-none-any.whl",
+          "sha256": "850ba148bd908d7e2411587e247a1e4f0327839c40e2e5e6d05a007ecc69911d"
+        },
+        {
+          "file": "pypdf-6.16.2-py3-none-any.whl",
+          "sha256": "c8b09a59399062fb45a1b8156c18a787a10a3dae03ac9674397a226712c94604"
+        },
+        {
+          "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+        },
+        {
+          "file": "python_docx-1.2.0-py3-none-any.whl",
+          "sha256": "3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7"
+        },
+        {
+          "file": "pyyaml-6.0.3-cp314-cp314-macosx_10_13_x86_64.whl",
+          "sha256": "8d1fab6bb153a416f9aeb4b8763bc0f22a5586065f86f7664fc23339fc1c1fac"
+        },
+        {
+          "file": "six-1.17.0-py2.py3-none-any.whl",
+          "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+        },
+        {
+          "file": "typing_extensions-4.16.0-py3-none-any.whl",
+          "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+        }
+      ]
+    },
+    "windows-x86_64-py314": {
+      "asset": "cpython-3.14.7+20260901-x86_64-pc-windows-msvc-install_only_stripped.tar.gz",
+      "release": "20260901",
+      "sha256": "ca3c33ca924dfcab3b74205a7a58a88b0255135c53f95497b26b5e60700fd66d",
+      "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20260901/cpython-3.14.7%2B20260901-x86_64-pc-windows-msvc-install_only_stripped.tar.gz",
+      "wheels": [
+        {
+          "file": "contourpy-1.3.3-cp314-cp314-win_amd64.whl",
+          "sha256": "cf9022ef053f2694e31d630feaacb21ea24224be1c3ad0520b13d844274614fd"
+        },
+        {
+          "file": "cycler-0.12.1-py3-none-any.whl",
+          "sha256": "85cef7cff222d8644161529808465972e51340599459b8ac3ccbac5a854e0d30"
+        },
+        {
+          "file": "fonttools-4.64.0-cp314-cp314-win_amd64.whl",
+          "sha256": "043f6c572bf236f2a76e762c25f841daea11e8fc03e78088d7be66e0c5b4e4c0"
+        },
+        {
+          "file": "kiwisolver-1.4.9-cp314-cp314-win_amd64.whl",
+          "sha256": "0763515d4df10edf6d06a3c19734e2566368980d21ebec439f33f9eb936c07b7"
+        },
+        {
+          "file": "lxml-6.0.2-cp314-cp314-win_amd64.whl",
+          "sha256": "fa25afbadead523f7001caf0c2382afd272c315a033a7b06336da2637d92d6ed"
+        },
+        {
+          "file": "matplotlib-3.10.9-cp314-cp314-win_amd64.whl",
+          "sha256": "336b9acc64d309063126edcdaca00db9373af3c476bb94388fe9c5a53ad13e6f"
+        },
+        {
+          "file": "numpy-2.3.3-cp314-cp314-win_amd64.whl",
+          "sha256": "691808c2b26b0f002a032c73255d0bd89751425f379f7bcd22d140db593a96e8"
+        },
+        {
+          "file": "packaging-26.3-py3-none-any.whl",
+          "sha256": "d7193f7c8e4e93f444fde0262bf90af30e16fa0ad0ad44cb553c87339b23cd1c"
+        },
+        {
+          "file": "pillow-11.3.0-cp314-cp314-win_amd64.whl",
+          "sha256": "a418486160228f64dd9e9efcd132679b7a02a5f22c982c78b6fc7dab3fefb635"
+        },
+        {
+          "file": "pymupdf-1.27.2.3-cp310-abi3-win_amd64.whl",
+          "sha256": "d20f68ef15195e073071dbc4ae7455257c7889af7584e39df490c0a92728526e"
+        },
+        {
+          "file": "pyparsing-3.3.2-py3-none-any.whl",
+          "sha256": "850ba148bd908d7e2411587e247a1e4f0327839c40e2e5e6d05a007ecc69911d"
+        },
+        {
+          "file": "pypdf-6.16.2-py3-none-any.whl",
+          "sha256": "c8b09a59399062fb45a1b8156c18a787a10a3dae03ac9674397a226712c94604"
+        },
+        {
+          "file": "python_dateutil-2.9.0.post0-py2.py3-none-any.whl",
+          "sha256": "a8b2bc7bffae282281c8140a97d3aa9c14da0b136dfe83f850eea9a5f7470427"
+        },
+        {
+          "file": "python_docx-1.2.0-py3-none-any.whl",
+          "sha256": "3fd478f3250fbbbfd3b94fe1e985955737c145627498896a8a6bf81f4baf66c7"
+        },
+        {
+          "file": "pyyaml-6.0.3-cp314-cp314-win_amd64.whl",
+          "sha256": "4a2e8cebe2ff6ab7d1050ecd59c25d4c8bd7e6f400f5f82b96557ac0abafd0ac"
+        },
+        {
+          "file": "six-1.17.0-py2.py3-none-any.whl",
+          "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+        },
+        {
+          "file": "typing_extensions-4.16.0-py3-none-any.whl",
+          "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8"
+        }
+      ]
+    }
+  },
+  "provider": "astral-sh/python-build-standalone",
+  "release": "20260901"
+}

@@ -52,8 +52,8 @@ No saltar niveles ni numerarlos por defecto. Capitalización según idioma: no t
 ## Automatización y límites
 
 ```text
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_docx.py fuente.md --out salida.docx --apa7-strict
-python skills/workflow-maestro-academico-editorial/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/auditar_docx_apa7.py salida.docx
+python skills/editor-en-jefe/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_docx.py fuente.md --out salida.docx --apa7-strict
+python skills/editor-en-jefe/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/auditar_docx_apa7.py salida.docx
 ```
 
 `--apa7-strict` conserva su nombre por compatibilidad: aplica **formato base**, no produce ni valida por sí solo un manuscrito completo. Usa carta, 2,54 cm, doble espacio, izquierda, cinco niveles, bloques `>` sin decoración y campo PAGE en encabezados vacíos. Documentar `--page-size A4` o `template` como excepción. Preserva encabezados no vacíos de plantillas: comprobar paginación y encabezado profesional.
@@ -105,7 +105,7 @@ Requisitos: Python 3.10+ con `pymupdf` para el verificador; un entorno de render
 Desde la raíz de la colección, reemplazar las rutas de ejemplo por las del equipo:
 
 ```text
-python workflow-maestro-academico-editorial/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/regresion_visual_apa.py --out "ruta/nueva/revision-apa" --renderer-python "ruta/al/python-del-renderizador" --renderer-script "ruta/a/render_docx.py"
+python editor-en-jefe/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/regresion_visual_apa.py --out "ruta/nueva/revision-apa" --renderer-python "ruta/al/python-del-renderizador" --renderer-script "ruta/a/render_docx.py"
 ```
 
 El Python que ejecute el verificador debe disponer de PyMuPDF; el conversor usa el Python explícito del renderizador. En Windows puede iniciarse el lanzador con `py -3`; en Linux/macOS, con `python3`. Se invocan procesos sin shell y se admiten rutas con espacios. La compatibilidad del código no sustituye pruebas nativas en cada plataforma.

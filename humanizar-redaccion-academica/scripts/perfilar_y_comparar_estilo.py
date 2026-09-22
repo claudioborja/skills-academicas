@@ -12,7 +12,7 @@ from pathlib import Path
 import comparar_con_perfil_estilo as comparator
 import documento_a_perfil_estilo as profiler
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'workflow-maestro-academico-editorial/scripts'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'editor-en-jefe/scripts'))
 from archivos_seguros import atomic_write, validate_outputs
 
 

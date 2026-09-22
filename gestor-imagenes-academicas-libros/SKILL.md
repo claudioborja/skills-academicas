@@ -5,7 +5,7 @@ description: Genera, localiza, evalúa, descarga y documenta imágenes para libr
 
 # Gestor de Imágenes Académicas para Libros
 
-El registrador exige capítulo, número de figura, ubicación, fecha real de creación y un archivo verificable; conserva original, archivo de trabajo y derivados con sus hashes SHA-256. Rechaza identificadores duplicados y añade datos mediante publicación atómica por archivo; manifiesto y anexo deben ser distintos y no pueden coincidir con ningún recurso. Para recursos asistidos publica primero el anexo y el manifiesto al final; si falla el manifiesto, restaura el anexo a sus bytes anteriores. Esta compensación requiere un solo proceso escritor y no constituye una transacción frente a concurrencia o fallos durante la reversión. Consultar [protección y límites de escritura](../workflow-maestro-academico-editorial/references/portabilidad.md#protección-de-informes).
+El registrador exige capítulo, número de figura, ubicación, fecha real de creación y un archivo verificable; conserva original, archivo de trabajo y derivados con sus hashes SHA-256. Rechaza identificadores duplicados y añade datos mediante publicación atómica por archivo; manifiesto y anexo deben ser distintos y no pueden coincidir con ningún recurso. Para recursos asistidos publica primero el anexo y el manifiesto al final; si falla el manifiesto, restaura el anexo a sus bytes anteriores. Esta compensación requiere un solo proceso escritor y no constituye una transacción frente a concurrencia o fallos durante la reversión. Consultar [protección y límites de escritura](../editor-en-jefe/references/portabilidad.md#protección-de-informes).
 
 ## Principio rector
 
@@ -131,7 +131,7 @@ Usar nombres como `fig-03-02-ciclo-agua-v01.png`; evitar `imagen_final2.png`. Pa
 El inspector decodifica el archivo completo con Pillow, informa formato, modo, dimensiones, fotogramas, canal alfa, presencia real de píxeles transparentes y PPI efectivo calculado desde el ancho final indicado. Ejemplo desde la raíz de la colección:
 
 ```text
-python workflow-maestro-academico-editorial/scripts/ejecutar.py gestor-imagenes-academicas-libros/scripts/inspeccionar_imagen.py "ruta/figura.png" --ancho-cm 15 --ppi-minimo 300 --out "ruta/informe-figura.json"
+python editor-en-jefe/scripts/ejecutar.py gestor-imagenes-academicas-libros/scripts/inspeccionar_imagen.py "ruta/figura.png" --ancho-cm 15 --ppi-minimo 300 --out "ruta/informe-figura.json"
 ```
 
 El perfil está fijado en `scripts/requirements-lock.txt`. Instalarlo en un entorno aislado con `python -m pip install --only-binary=:all: -r gestor-imagenes-academicas-libros/scripts/requirements-lock.txt`. Salida 0 significa imagen íntegra que alcanza el PPI mínimo; 1 indica baja resolución o archivo rechazado por daño; 2 corresponde a argumentos, rutas, dependencias o destinos inválidos. `--overwrite` debe ser explícito para reemplazar un informe existente.
@@ -141,7 +141,7 @@ La transparencia se informa, no se considera por sí sola un defecto. El PPI se 
 ## Integración con otras skills
 
 - Coordinar con `$imagegen` únicamente para generar o editar recursos raster; esta skill mantiene la decisión académica, procedencia, licencia, inspección y trazabilidad.
-- Coordinar con `$workflow-maestro-academico-editorial` para ubicación, secuencia y control de preentrega.
+- Coordinar con `$editor-en-jefe` para ubicación, secuencia y control de preentrega.
 - Coordinar con `$constructor-tesis-academica` o `$redaccion-articulo-cientifico-imryd` cuando una figura represente método, resultados o discusión.
 - No modificar citas ni bibliografía al preparar pies de figura.
 

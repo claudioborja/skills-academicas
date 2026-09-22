@@ -9,7 +9,7 @@ import sys
 
 from runtime_portable import configure_console, run_script, select_python
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'workflow-maestro-academico-editorial/scripts'))
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'editor-en-jefe/scripts'))
 from archivos_seguros import validate_outputs
 
 

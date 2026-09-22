@@ -41,7 +41,7 @@ Leer [formatos, notación y control editorial](references/formatos-y-control.md)
 Desde la raíz de la colección:
 
 ```text
-python workflow-maestro-academico-editorial/scripts/ejecutar.py gestor-ecuaciones-academicas/scripts/auditar_ecuaciones.py "ruta/manuscrito.tex" --out "ruta/informe-ecuaciones.json"
+python editor-en-jefe/scripts/ejecutar.py gestor-ecuaciones-academicas/scripts/auditar_ecuaciones.py "ruta/manuscrito.tex" --out "ruta/informe-ecuaciones.json"
 ```
 
 El auditor usa únicamente la biblioteca estándar de Python y funciona en Linux, Windows y macOS. Procesa UTF-8 en `.md`, `.tex` y `.txt`; inventaría `$$...$$`, `\[...\]` y los entornos `equation`, `align`, `gather` y `multline`, incluidas sus variantes con asterisco. Detecta delimitadores o entornos sin cierre, llaves desbalanceadas, etiquetas duplicadas, referencias `\eqref` inexistentes y etiquetas sin `\eqref`.
@@ -59,7 +59,7 @@ La salida 0 indica ausencia de errores mecánicos; 1 indica hallazgos de error y
 
 ## Coordinación
 
-- `$workflow-maestro-academico-editorial` activa esta skill cuando la obra contiene matemáticas relevantes, cuando se convierten formatos o cuando una revisión afecta símbolos, unidades o referencias.
+- `$editor-en-jefe` activa esta skill cuando la obra contiene matemáticas relevantes, cuando se convierten formatos o cuando una revisión afecta símbolos, unidades o referencias.
 - `$maquetacion-academica-preentrega` gobierna la integración y comprobación visual en Word/PDF conforme al perfil editorial.
 - `$normalizador-terminologia-glosario` coordina nombres, siglas y conceptos; esta skill gobierna símbolos y notación matemática.
 - `$auditor-documental-academico` puede inventariar la presencia de fórmulas, pero esta skill realiza su revisión especializada.

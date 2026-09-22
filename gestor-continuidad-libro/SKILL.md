@@ -18,6 +18,8 @@ Este skill vela por la unidad de obras extensas. Revisa si los capítulos mantie
 
 ## Flujo de trabajo
 
+Reutilizar el registro de capítulos y decisiones según [producción editorial integrada](../editor-en-jefe/references/produccion-editorial-eficiente.md). Durante la escritura, revisar bloques modificados y sus relaciones; conservar una revisión global al integrar el libro. Una conclusión o término cambiado puede afectar capítulos no contiguos. No repetir auditorías vigentes ni reescribir toda la obra por rutina.
+
 1. Identifica propósito global e hilo conductor.
 2. Compara capítulos en voz, tono, terminología y nivel de desarrollo.
 3. Compara extensión total y por sección, mediana de palabras por párrafo, densidad conceptual y rachas de párrafos breves.
