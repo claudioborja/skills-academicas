@@ -1,6 +1,6 @@
 ---
 name: redaccion-articulo-cientifico-imryd
-description: "Redacta, estructura, diagnostica y revisa artículos científicos de alto nivel con lógica IMRyD/IMRAD: título, resumen, palabras clave, introducción, métodos, resultados, discusión, conclusiones, limitaciones, tablas, figuras, citas, respuesta a revisores y adecuación a normas de revista. Use when Codex needs to convert tesis, informes, resultados de investigación, capítulos o borradores en artículos publicables; planificar un paper desde cero; auditar coherencia científica; preparar manuscritos para envío; o coordinar esta tarea con editor-en-jefe, gestores de referencias APA7/IEEE, revisor de resumen/abstract, tablas/figuras, humanización académica y respuesta a observaciones."
+description: "Redacta, estructura, diagnostica y revisa artículos científicos de alto nivel con lógica IMRyD o IMRAD: título, resumen, palabras clave, introducción, métodos, resultados, discusión, conclusiones, limitaciones, tablas, figuras, citas, respuesta a revisores y adecuación a las normas de la revista. Usar cuando Codex necesite convertir tesis, informes, resultados de investigación, capítulos o borradores en artículos publicables; planificar un artículo desde cero; auditar la coherencia científica; preparar manuscritos para envío; o coordinar esta tarea con editor-en-jefe, los gestores de referencias APA 7 o IEEE, el revisor de resúmenes y palabras clave, el gestor de tablas y figuras, la humanización académica y la respuesta a observaciones."
 ---
 
 # Redacción Artículo Científico IMRyD
@@ -69,9 +69,9 @@ Leer `references/checklist-envio.md` antes de entregar un manuscrito final, una 
 
 Identificar primero el método activo. Si el proyecto usa `$revision-sistematica-kitchenham`, conservar su protocolo, criterios y trazabilidad; esta skill organiza el informe sin generar protocolo, cribado ni conteos PRISMA. La ruta general siguiente se aplica solo cuando es compatible con el método elegido.
 
-Si el usuario aun define tema, tipo de articulo o guia internacional, usar `$explorador-temas-articulos` antes de escribir el manuscrito. Ejecutar `seleccionar_metodologia.py` cuando haya corpus o clasificacion previa, y alinear la estructura IMRyD con la guia que corresponda: PRISMA/PRISMA-ScR para revisiones, STROBE para observacionales, CONSORT 2025 para ensayos, COREQ/SRQR para cualitativos, STARD para diagnosticos, TRIPOD para modelos predictivos, CARE para casos, SPIRIT o PRISMA-P para protocolos.
+Si el proyecto usa PRISMA 2020, PRISMA-ScR, PRISMA-P o PRISMA-S, activar `$revision-sistematica-prisma` para seleccionar la guía/extensión, auditar protocolo, búsqueda, cribado, flujo y checklist. Esta skill conserva esas decisiones y organiza el artículo sin inventar artefactos faltantes.
 
-Para articulos de revision, no redactar como PRISMA/PRISMA-ScR sin protocolo y cribado trazable. Pedir o generar con `$explorador-temas-articulos` el protocolo de busqueda, las cadenas por base, la matriz de cribado, las razones de exclusion y los conteos tipo PRISMA antes de escribir metodos y resultados.
+Si el usuario aún define tema o tipo de artículo, usar `$explorador-temas-articulos` para exploración preliminar. Para artículos de revisión, no redactar como PRISMA/PRISMA-ScR sin protocolo, búsquedas, cribado y conteos trazables; derivar esos faltantes a `$revision-sistematica-prisma`. Para otros diseños, alinear IMRyD con la guía pertinente: STROBE, CONSORT 2025, COREQ/SRQR, STARD, TRIPOD, CARE o SPIRIT.
 
 ## Salida Esperada
 

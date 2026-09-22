@@ -1,4 +1,4 @@
-# Humanizar Redaccion Academica
+# Humanizar Redacción Académica
 
 Revisa prosa académica genérica, mecánica o fragmentada y la alinea con una voz definida, preservando evidencia, citas y desarrollo. Usar para desgenericar, recuperar continuidad o extraer y comparar perfiles de estilo; no sustituye la redacción de resultados ni la corrección ortográfica final.
 
@@ -22,7 +22,7 @@ Usa $humanizar-redaccion-academica para [describe aquí la tarea y los archivos 
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/analizar_marcas_ia.py`](../../humanizar-redaccion-academica/scripts/analizar_marcas_ia.py)
 - [`scripts/analizar_reporte_compilatio.py`](../../humanizar-redaccion-academica/scripts/analizar_reporte_compilatio.py)

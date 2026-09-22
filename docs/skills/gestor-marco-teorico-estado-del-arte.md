@@ -1,4 +1,4 @@
-# Gestor Marco Teorico Estado Del Arte
+# Gestor De Marco Teórico Y Estado Del Arte
 
 Úsalo cuando el usuario necesite construir, ordenar o fortalecer un marco teórico o estado del arte, integrando autores, enfoques, debates, vacíos, antecedentes y líneas conceptuales sin convertir la sección en una lista de resúmenes aislados.
 

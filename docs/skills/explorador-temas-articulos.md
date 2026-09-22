@@ -1,6 +1,6 @@
-# Explorador Temas Articulos
+# Explorador de Temas para Artículos
 
-Explora, clasifica y propone temas de articulos cientificos a partir de literatura, resultados bibliograficos, PDFs convertidos, matrices de fuentes o notas de estado del arte. Use when Codex needs to investigar lineas posibles, mapear articulos similares, distinguir estudios originales de revisiones, detectar vacios, agrupar temas, seleccionar metodologias estandarizadas como PRISMA/STROBE/CONSORT/COREQ/SRQR, generar protocolo de busqueda sistematica, crear cadenas reproducibles, deduplicar y cribar fuentes con conteos tipo PRISMA, combinar resultados preliminares, construir matrices de estado del arte, priorizar preguntas investigables, o generar tablas y visualizaciones Python antes de pasar a redaccion-articulo-cientifico-imryd, gestor-marco-teorico-estado-del-arte, automatizador-referencias o editor-en-jefe.
+Explora, clasifica y propone temas de artículos científicos a partir de literatura, resultados bibliográficos, PDFs convertidos, matrices de fuentes o notas de estado del arte. Usar para mapear estudios similares, distinguir originales de revisiones, detectar vacíos, agrupar temas, orientar el tipo de estudio o guía de reporte, preparar insumos preliminares de búsqueda y cribado, construir matrices y generar tablas o visualizaciones antes de transferir el trabajo a la skill metodológica o de redacción responsable. No gobierna una revisión PRISMA ni Kitchenham.
 
 ## Uso
 
@@ -18,7 +18,7 @@ Usa $explorador-temas-articulos para [describe aquí la tarea y los archivos de 
 - Objetivo
 - Regla Central
 - Flujo
-- Scripts
+- Herramientas automatizadas
 - Insumos Recomendados
 - Metodologias Estandarizadas
 - Busqueda Sistematica
@@ -26,7 +26,7 @@ Usa $explorador-temas-articulos para [describe aquí la tarea y los archivos de 
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/clasificar_literatura.py`](../../explorador-temas-articulos/scripts/clasificar_literatura.py)
 - [`scripts/common.py`](../../explorador-temas-articulos/scripts/common.py)

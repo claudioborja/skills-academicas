@@ -1,4 +1,4 @@
-# Gestor Codigo Tecnico Editorial
+# Gestor de código técnico editorial
 
 Presenta y revisa listados de código, salidas de consola y fragmentos técnicos para libros, manuales y documentación de software. Úsalo cuando el código sea parte legible de la obra; no para desarrollar ni validar el software.
 
@@ -23,7 +23,7 @@ Usa $gestor-codigo-tecnico-editorial para [describe aquí la tarea y los archivo
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/archivos_seguros.py`](../../gestor-codigo-tecnico-editorial/scripts/archivos_seguros.py)
 - [`scripts/auditar_listados_codigo.py`](../../gestor-codigo-tecnico-editorial/scripts/auditar_listados_codigo.py)

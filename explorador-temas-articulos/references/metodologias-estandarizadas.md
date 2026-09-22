@@ -8,15 +8,15 @@ No usar PRISMA como plantilla universal. Primero definir el tipo de producto cie
 
 | Producto o diseno | Guia principal | Marco de pregunta | Senales de uso |
 | --- | --- | --- | --- |
-| Revision sistematica | PRISMA 2020 | PICO/PICOS o PECO | Pregunta cerrada, busqueda reproducible, criterios de inclusion/exclusion, cribado, extraccion y sintesis. |
-| Revision con metaanalisis | PRISMA 2020 + criterios estadisticos del area | PICO/PICOS | Estudios comparables, medidas de efecto, heterogeneidad y analisis cuantitativo. |
-| Revision de alcance | PRISMA-ScR + JBI/PCC | PCC: poblacion, concepto, contexto | Tema amplio, mapeo de literatura, conceptos emergentes, no necesariamente evalua efecto. |
+| Revision sistematica | PRISMA 2020 mediante `$revision-sistematica-prisma` + método de conducción declarado | PICO/PICOS o PECO | Pregunta cerrada, búsqueda reproducible, criterios, cribado, extracción y síntesis. |
+| Revision con metaanalisis | PRISMA 2020 mediante `$revision-sistematica-prisma` + criterios estadísticos del área | PICO/PICOS | Estudios comparables, medidas de efecto, heterogeneidad y análisis cuantitativo. |
+| Revision de alcance | PRISMA-ScR mediante `$revision-sistematica-prisma` + método de conducción de scoping | PCC: población, concepto, contexto | Tema amplio, mapeo de literatura y conceptos emergentes. |
 | Mapeo sistematico | Guia de mapeo del area + matriz de clasificacion | PICo/PCC flexible | Necesidad de clasificar tendencias, vacios, metodos, poblaciones o contextos. |
 | Revision narrativa o integrativa | Marco explicito propio + justificacion | Pregunta conceptual | Sintesis teorica amplia, literatura heterogenea, no promete exhaustividad sistematica. |
 | Estudio observacional | STROBE | PECO/PICO observacional | Cohorte, caso-control, transversal, encuesta, datos secundarios, asociaciones. |
 | Ensayo o intervencion aleatorizada | CONSORT 2025 | PICO | Asignacion aleatoria, grupo control, flujo de participantes, desenlaces predefinidos. |
 | Protocolo de ensayo | SPIRIT | PICO | Plan previo de ensayo clinico/intervencion antes de resultados. |
-| Protocolo de revision sistematica | PRISMA-P | PICO/PICOS | Plan de revision antes de ejecutar busqueda y cribado. |
+| Protocolo de revision sistematica | PRISMA-P mediante `$revision-sistematica-prisma` | PICO/PICOS | Plan de revisión antes de ejecutar búsqueda y cribado. |
 | Estudio cualitativo | COREQ o SRQR | SPIDER o pregunta cualitativa | Entrevistas, grupos focales, analisis tematico, teoria fundamentada, fenomenologia. |
 | Estudio diagnostico | STARD | PIRD | Exactitud diagnostica, sensibilidad, especificidad, prueba indice y referencia. |
 | Modelo predictivo o pronostico | TRIPOD | PICO/objetivo predictivo | Desarrollo, validacion o actualizacion de modelos predictivos. |
@@ -37,6 +37,7 @@ No usar PRISMA como plantilla universal. Primero definir el tipo de producto cie
 - STROBE y CONSORT 2025 son guias de reporte, no pruebas de calidad metodologica por si solas.
 - En ciencias sociales y humanidades puede ser mejor declarar un marco metodologico disciplinar y usar estas guias como apoyo de transparencia.
 - Si el articulo apunta a una revista concreta, revisar siempre sus instrucciones para autores.
+- Este selector solo orienta. `$revision-sistematica-prisma` decide documentos PRISMA aplicables, separa reporte y conducción y audita el flujo/checklist.
 
 ## Fuentes Base Para Verificar
 

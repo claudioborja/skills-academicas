@@ -1,4 +1,4 @@
-# Auditor Coherencia Argumentativa
+# Auditor De Coherencia Argumentativa
 
 Úsalo cuando el usuario necesite revisar si un texto tiene continuidad lógica, tesis clara, transiciones válidas, conclusiones derivadas del desarrollo y ausencia de contradicciones, repeticiones conceptuales o saltos argumentativos.
 

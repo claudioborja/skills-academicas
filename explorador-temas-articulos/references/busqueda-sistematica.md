@@ -15,7 +15,7 @@ Convertir una busqueda bibliografica de calidad en un proceso reproducible para 
 7. Deduplicar por DOI y por titulo normalizado.
 8. Registrar razones de exclusion.
 9. Leer texto completo de los candidatos incluidos.
-10. Generar matriz final, conteos tipo PRISMA y corpus para redaccion.
+10. Generar matriz y conteos preliminares; si PRISMA está activo, transferirlos a `$revision-sistematica-prisma` para distinguir rutas, validar el flujo y completar el checklist oficial.
 
 ## Criterios De Calidad Base
 
@@ -28,7 +28,7 @@ Convertir una busqueda bibliografica de calidad en un proceso reproducible para 
 ## No Confundir
 
 - Una busqueda de fuentes para respaldar afirmaciones no equivale a una revision sistematica.
-- Una revision PRISMA exige declarar estrategia, bases, criterios, cribado, exclusiones y flujo.
+- PRISMA guía el reporte, no reemplaza el método de conducción. La skill `$revision-sistematica-prisma` gobierna su aplicación y extensiones.
 - Si no hay busqueda exhaustiva ni cribado trazable, usar "revision narrativa", "revision integrativa" o "estado del arte" con transparencia.
 
 ## Evidencias Que Debe Dejar El Agente
@@ -37,5 +37,5 @@ Convertir una busqueda bibliografica de calidad en un proceso reproducible para 
 - Cadenas por base de datos.
 - Archivo de resultados brutos o matriz inicial.
 - Matriz cribada con decision y razon.
-- Conteos de identificacion, duplicados, exclusiones, elegibles e incluidos.
+- Conteos trazables de registros, informes y estudios, sin confundir esas unidades.
 - Lista final de fuentes incluidas y fuentes excluidas principales.

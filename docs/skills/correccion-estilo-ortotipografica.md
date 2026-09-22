@@ -1,4 +1,4 @@
-# Correccion Estilo Ortotipografica
+# Corrección De Estilo Y Ortotipográfica
 
 Úsalo cuando el usuario necesite revisar, corregir o pulir un texto en español, especialmente para mejorar ortografía, puntuación, acentuación, mayúsculas, cursivas, comillas, rayas, abreviaturas, numeración, uniformidad editorial, claridad sintáctica, fluidez, concisión y consistencia de estilo sin alterar innecesariamente la voz del autor. También aplica a capítulos, artículos, tesis, informes, libros, prólogos, introducciones, conclusiones y textos institucionales.
 

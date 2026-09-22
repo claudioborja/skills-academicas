@@ -1,4 +1,4 @@
-# Gestor Continuidad Libro
+# Gestor De Continuidad De Libro
 
 Úsalo cuando el usuario necesite mantener continuidad temática, estilística, terminológica y estructural entre capítulos de un libro, tesis extensa o manuscrito largo, evitando repeticiones, cambios de voz y quiebres de enfoque.
 

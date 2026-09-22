@@ -1,9 +1,9 @@
 ---
 name: explorador-temas-articulos
-description: "Explora, clasifica y propone temas de articulos cientificos a partir de literatura, resultados bibliograficos, PDFs convertidos, matrices de fuentes o notas de estado del arte. Use when Codex needs to investigar lineas posibles, mapear articulos similares, distinguir estudios originales de revisiones, detectar vacios, agrupar temas, seleccionar metodologias estandarizadas como PRISMA/STROBE/CONSORT/COREQ/SRQR, generar protocolo de busqueda sistematica, crear cadenas reproducibles, deduplicar y cribar fuentes con conteos tipo PRISMA, combinar resultados preliminares, construir matrices de estado del arte, priorizar preguntas investigables, o generar tablas y visualizaciones Python antes de pasar a redaccion-articulo-cientifico-imryd, gestor-marco-teorico-estado-del-arte, automatizador-referencias o editor-en-jefe."
+description: "Explora, clasifica y propone temas de artículos científicos a partir de literatura, resultados bibliográficos, PDFs convertidos, matrices de fuentes o notas de estado del arte. Usar para mapear estudios similares, distinguir originales de revisiones, detectar vacíos, agrupar temas, orientar el tipo de estudio o guía de reporte, preparar insumos preliminares de búsqueda y cribado, construir matrices y generar tablas o visualizaciones antes de transferir el trabajo a la skill metodológica o de redacción responsable. No gobierna una revisión PRISMA ni Kitchenham."
 ---
 
-# Explorador Temas Articulos
+# Explorador de Temas para Artículos
 
 Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `editor-en-jefe/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../editor-en-jefe/references/portabilidad.md#protección-de-informes).
 
@@ -13,7 +13,9 @@ Consultar [la guía común de ejecución](../editor-en-jefe/references/portabili
 
 ## Objetivo
 
-Si ya existe un protocolo Kitchenham, usar esta skill únicamente para clasificar literatura, explorar vocabulario y tabular. No ejecutar su selector metodológico, generador de protocolo ni cribado PRISMA sobre ese proyecto. El protocolo aprobado gobierna las decisiones de selección.
+Si ya existe un protocolo Kitchenham, usar esta skill únicamente para clasificar literatura, explorar vocabulario y tabular. No ejecutar su selector metodológico, generador de protocolo ni cribado sobre ese proyecto. El protocolo aprobado gobierna las decisiones de selección.
+
+Si el proyecto se reportará con PRISMA, usar esta skill solo para exploración preliminar y transferir protocolo, búsqueda, cribado, conteos y checklist a `$revision-sistematica-prisma`. Sus scripts no certifican cumplimiento PRISMA.
 
 Apoyar la fase previa a la redaccion de articulos: convertir una coleccion de fuentes o notas en un mapa de temas, tipos de estudio, similitudes, vacios, propuestas investigables y metodologias estandarizadas aplicables.
 
@@ -24,16 +26,16 @@ No presentar las propuestas como conclusiones definitivas. Los scripts producen 
 ## Flujo
 
 1. Preparar insumos con `$preprocesador-documentos`, `$automatizador-referencias` o busquedas bibliograficas.
-2. Seleccionar metodologia o guia de reporte estandarizada cuando corresponda: PRISMA 2020, PRISMA-ScR, STROBE, CONSORT 2025, COREQ/SRQR, STARD, TRIPOD, CARE, SPIRIT o PRISMA-P.
-3. Si sera revision sistematica/scoping/integrativa, generar protocolo y cadenas de busqueda reproducibles.
-4. Cribar y deduplicar registros con criterios explicitos, registrando razones de exclusion y conteos tipo PRISMA.
+2. Orientar la metodología o guía de reporte candidata: PRISMA 2020, PRISMA-ScR, STROBE, CONSORT 2025, COREQ/SRQR, STARD, TRIPOD, CARE, SPIRIT o PRISMA-P.
+3. Si será una revisión PRISMA, transferir la decisión y los insumos a `$revision-sistematica-prisma`; para Kitchenham, transferir a su skill exclusiva.
+4. Generar borradores de protocolo, cadenas, deduplicación o cribado solo como insumos preliminares, con criterios explícitos y sin declarar cumplimiento metodológico.
 5. Clasificar literatura en original, revision, metodologico, caso, teorico u otro.
 6. Construir matriz de estado del arte: tema, enfoque, metodo, poblacion/contexto, resultados, vacio.
 7. Proponer temas y preguntas investigables segun frecuencia, novedad, vacios, factibilidad y compatibilidad metodologica.
 8. Generar tablas y visualizaciones para comparar lineas, anos, tipos de estudio y grupos tematicos.
 9. Pasar el corpus incluido a `$redaccion-articulo-cientifico-imryd` o `$gestor-marco-teorico-estado-del-arte`.
 
-## Scripts
+## Herramientas automatizadas
 
 ### Clasificar Literatura
 
@@ -57,7 +59,7 @@ Agrupa literatura por tema y tipo de estudio, y produce vacios probables.
 python skills/editor-en-jefe/scripts/ejecutar.py explorador-temas-articulos/scripts/seleccionar_metodologia.py clasificacion.csv --out metodologia.md --json-out metodologia.json
 ```
 
-Recomienda una metodologia o guia de reporte estandarizada segun el corpus o el objetivo. Acepta `--goal revision`, `--goal scoping`, `--goal metaanalisis`, `--goal observacional`, `--goal ensayo`, `--goal cualitativo`, `--goal diagnostico`, `--goal predictivo`, `--goal caso` o `--goal protocolo`.
+Orienta una metodología o guía de reporte según el corpus o el objetivo. La recomendación debe ser confirmada por la skill especializada. Acepta `--goal revision`, `--goal scoping`, `--goal metaanalisis`, `--goal observacional`, `--goal ensayo`, `--goal cualitativo`, `--goal diagnostico`, `--goal predictivo`, `--goal caso` o `--goal protocolo`.
 
 ### Generar Protocolo De Revision
 
@@ -65,7 +67,7 @@ Recomienda una metodologia o guia de reporte estandarizada segun el corpus o el 
 python skills/editor-en-jefe/scripts/ejecutar.py explorador-temas-articulos/scripts/generar_protocolo_revision.py --topic "tema" --question "pregunta" --methodology revision_sistematica --concepts "termino 1; termino 2" --contexts "contexto" --years 2020-2026 --out protocolo.md --json-out protocolo.json
 ```
 
-Genera protocolo, criterios de inclusion/exclusion y cadenas reproducibles por base de datos. Usar antes de declarar PRISMA, PRISMA-ScR o cualquier revision trazable.
+Genera un borrador de protocolo, criterios y cadenas por base de datos. Para PRISMA o PRISMA-ScR, someter ese borrador a `$revision-sistematica-prisma` antes de ejecutar o declarar conformidad.
 
 ### Cribar Fuentes De Revision
 
@@ -73,7 +75,7 @@ Genera protocolo, criterios de inclusion/exclusion y cadenas reproducibles por b
 python skills/editor-en-jefe/scripts/ejecutar.py explorador-temas-articulos/scripts/cribar_fuentes_revision.py registros.csv --include-terms "concepto; contexto" --year-min 2020 --require-doi --require-full-text --exclude-red --out cribado.md --json-out cribado.json --csv-out cribado.csv
 ```
 
-Deduplica por DOI/titulo, aplica criterios mecanicos de inclusion/exclusion, registra razones y produce conteos tipo PRISMA para identificacion, duplicados, cribado, exclusion y elegibilidad.
+Deduplica por DOI/título, aplica filtros mecánicos, registra razones y produce conteos preliminares. No sustituye el cribado humano protocolizado ni el diagrama oficial; `$revision-sistematica-prisma` valida el flujo cuando esa guía está activa.
 
 ### Proponer Temas
 
@@ -110,11 +112,11 @@ Si solo hay Markdown o TXT, el script extrae registros por encabezados o lineas 
 
 ## Metodologias Estandarizadas
 
-Leer `references/metodologias-estandarizadas.md` cuando el usuario pida vincular el tema con PRISMA, revisiones sistematicas, scoping reviews, estudios originales, ensayos, cualitativos, diagnosticos, predictivos, protocolos o guias internacionales de uso comun.
+Leer `references/metodologias-estandarizadas.md` para orientar el tipo de producto. Si la decisión es PRISMA, continuar con `$revision-sistematica-prisma` y sus fuentes oficiales.
 
 ## Busqueda Sistematica
 
-Leer `references/busqueda-sistematica.md` cuando el usuario pida completar una revision metodologica, dejar trazabilidad PRISMA, construir cadenas de busqueda, deduplicar resultados, cribar fuentes o registrar razones de exclusion.
+Leer `references/busqueda-sistematica.md` para preparar vocabulario, cadenas o matrices preliminares. La conducción y documentación PRISMA pertenecen a `$revision-sistematica-prisma`.
 
 ## Conexiones
 

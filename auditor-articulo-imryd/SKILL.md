@@ -1,6 +1,6 @@
 ---
 name: auditor-articulo-imryd
-description: Extrae secciones, fragmentos y señales mecánicas de artículos IMRyD para orientar una revisión científica. Usar para inventario estructural y checklist de envío; sus scripts no prueban coherencia entre objetivo, método y resultados ni suficiencia de evidencia.
+description: Extrae secciones, fragmentos y señales mecánicas de artículos IMRyD para orientar una revisión científica. Usar para elaborar un inventario estructural y una lista de comprobación previa al envío; sus herramientas automatizadas no prueban la coherencia entre objetivo, método y resultados ni la suficiencia de la evidencia.
 ---
 
 # Auditor Artículo IMRyD
@@ -13,7 +13,7 @@ Consultar [la guía común de ejecución](../editor-en-jefe/references/portabili
 
 Producir un diagnóstico rápido de estructura científica antes de redactar, reordenar o enviar un artículo.
 
-## Scripts
+## Herramientas automatizadas
 
 ```text
 python skills/editor-en-jefe/scripts/ejecutar.py auditor-articulo-imryd/scripts/auditar_imryd.py articulo.md --out imryd.md --json-out imryd.json

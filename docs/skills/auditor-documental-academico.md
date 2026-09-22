@@ -1,6 +1,6 @@
-# Auditor Documental Academico
+# Auditor Documental Académico
 
-Inventaria y audita mecánicamente documentos académicos o editoriales para reducir lectura manual: estructura, encabezados, extensión por sección, tablas, figuras, citas, bibliografía, terminología, anexos y checklist de preentrega. Use when Codex needs to prepare compact reports for editor-en-jefe, convertidor-tesis-a-libro, redaccion-articulo-cientifico-imryd, gestor-tablas-figuras-pies, normalizador-terminologia-glosario or maquetacion-academica-preentrega.
+Inventaria y audita mecánicamente documentos académicos o editoriales para reducir la lectura manual: estructura, encabezados, extensión por sección, tablas, figuras, citas, bibliografía, terminología, anexos y lista de comprobación de preentrega. Usar cuando Codex necesite preparar informes compactos para editor-en-jefe, convertidor-tesis-a-libro, redaccion-articulo-cientifico-imryd, gestor-tablas-figuras-pies, normalizador-terminologia-glosario o maquetacion-academica-preentrega.
 
 ## Uso
 
@@ -16,12 +16,12 @@ Usa $auditor-documental-academico para [describe aquí la tarea y los archivos d
 
 - Ejecución multiplataforma
 - Objetivo
-- Scripts
+- Herramientas automatizadas
 - Uso
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/analizar_repeticiones.py`](../../auditor-documental-academico/scripts/analizar_repeticiones.py)
 - [`scripts/auditar_terminologia.py`](../../auditor-documental-academico/scripts/auditar_terminologia.py)

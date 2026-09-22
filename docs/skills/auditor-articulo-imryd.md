@@ -1,6 +1,6 @@
-# Auditor Articulo Imryd
+# Auditor Artículo IMRyD
 
-Extrae secciones, fragmentos y señales mecánicas de artículos IMRyD para orientar una revisión científica. Usar para inventario estructural y checklist de envío; sus scripts no prueban coherencia entre objetivo, método y resultados ni suficiencia de evidencia.
+Extrae secciones, fragmentos y señales mecánicas de artículos IMRyD para orientar una revisión científica. Usar para elaborar un inventario estructural y una lista de comprobación previa al envío; sus herramientas automatizadas no prueban la coherencia entre objetivo, método y resultados ni la suficiencia de la evidencia.
 
 ## Uso
 
@@ -16,12 +16,12 @@ Usa $auditor-articulo-imryd para [describe aquí la tarea y los archivos de entr
 
 - Ejecución multiplataforma
 - Objetivo
-- Scripts
+- Herramientas automatizadas
 - Uso
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/auditar_imryd.py`](../../auditor-articulo-imryd/scripts/auditar_imryd.py)
 - [`scripts/check_envio_revista.py`](../../auditor-articulo-imryd/scripts/check_envio_revista.py)

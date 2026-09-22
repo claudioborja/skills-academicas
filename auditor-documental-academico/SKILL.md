@@ -1,6 +1,6 @@
 ---
 name: auditor-documental-academico
-description: "Inventaria y audita mecánicamente documentos académicos o editoriales para reducir lectura manual: estructura, encabezados, extensión por sección, tablas, figuras, citas, bibliografía, terminología, anexos y checklist de preentrega. Use when Codex needs to prepare compact reports for editor-en-jefe, convertidor-tesis-a-libro, redaccion-articulo-cientifico-imryd, gestor-tablas-figuras-pies, normalizador-terminologia-glosario or maquetacion-academica-preentrega."
+description: "Inventaria y audita mecánicamente documentos académicos o editoriales para reducir la lectura manual: estructura, encabezados, extensión por sección, tablas, figuras, citas, bibliografía, terminología, anexos y lista de comprobación de preentrega. Usar cuando Codex necesite preparar informes compactos para editor-en-jefe, convertidor-tesis-a-libro, redaccion-articulo-cientifico-imryd, gestor-tablas-figuras-pies, normalizador-terminologia-glosario o maquetacion-academica-preentrega."
 ---
 
 # Auditor Documental Académico
@@ -13,7 +13,7 @@ Consultar [la guía común de ejecución](../editor-en-jefe/references/portabili
 
 Generar inventarios compactos para que el agente no tenga que leer un manuscrito completo antes de decidir qué corregir, reordenar o revisar.
 
-## Scripts
+## Herramientas automatizadas
 
 ```text
 python skills/editor-en-jefe/scripts/ejecutar.py auditor-documental-academico/scripts/inventariar_documento.py manuscrito.md --out inventario.md --json-out inventario.json

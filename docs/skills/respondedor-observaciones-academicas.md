@@ -1,4 +1,4 @@
-# Respondedor Observaciones Academicas
+# Respondedor De Observaciones Académicas
 
 Úsalo cuando el usuario necesite responder observaciones de tutor, jurado, editor, evaluador o par revisor, convirtiendo comentarios dispersos en una matriz de cambios, plan de respuesta y ajustes concretos al manuscrito.
 
@@ -23,7 +23,7 @@ Usa $respondedor-observaciones-academicas para [describe aquí la tarea y los ar
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/observaciones_a_matriz.py`](../../respondedor-observaciones-academicas/scripts/observaciones_a_matriz.py)
 

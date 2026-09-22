@@ -2,6 +2,8 @@
 
 Registro de mantenimiento de las automatizaciones existentes. Consultarlo al revisar cobertura o evolución de herramientas; no es un paso obligatorio del flujo editorial ni un certificado de validación vigente.
 
+La incorporación posterior de `$revision-sistematica-prisma` reemplaza el enrutamiento PRISMA descrito originalmente para `$explorador-temas-articulos`: el explorador conserva preparación preliminar; la nueva skill gobierna guía, extensiones, flujo y checklist.
+
 ## Objetivo
 
 Reducir consumo de tokens delegando tareas mecanicas a scripts locales: conversion documental, segmentacion, proteccion de bloques, auditoria bibliografica, inventario documental, exploracion de temas, propuesta de articulos, visualizacion y revision IMRyD.
@@ -16,7 +18,8 @@ Reducir consumo de tokens delegando tareas mecanicas a scripts locales: conversi
 | `auditor-articulo-imryd` | `auditar_imryd.py`, `matriz_objetivo_metodo_resultados.py`, `check_envio_revista.py` | Audita estructura IMRyD, alineacion y checklist de envio a revista. |
 | `maquetacion-academica-preentrega` | `markdown_a_txt_final.py` | Convierte entregas finales Markdown a TXT limpio sin marcas de estilo; para libros produce `libro_completo.txt`. |
 | `humanizar-redaccion-academica` | `analizar_marcas_ia.py`, `analizar_reporte_compilatio.py`, `documento_a_perfil_estilo.py`, `comparar_con_perfil_estilo.py`, `perfilar_y_comparar_estilo.py` | Detecta marcas mecanicas, interpreta reportes de similitud/IA, extrae perfil de estilo desde PDF/DOCX/MD/TXT/HTML, guarda cada estilo en `styles/<nombre>` dentro del skill y compara borradores contra la voz objetivo sin alterar citas o fuentes. |
-| `explorador-temas-articulos` | `generar_protocolo_revision.py`, `cribar_fuentes_revision.py`, `clasificar_literatura.py`, `matriz_estado_arte.py`, `proponer_temas.py`, `seleccionar_metodologia.py`, `tabular_visualizar.py` | Genera protocolo y cadenas de busqueda, deduplica y criba fuentes con conteos tipo PRISMA, clasifica literatura, separa originales/revisiones, agrupa similares, detecta vacios, vincula PRISMA/STROBE/CONSORT/COREQ/SRQR y otras guias, propone temas y genera tablas/graficos. |
+| `explorador-temas-articulos` | `generar_protocolo_revision.py`, `cribar_fuentes_revision.py`, `clasificar_literatura.py`, `matriz_estado_arte.py`, `proponer_temas.py`, `seleccionar_metodologia.py`, `tabular_visualizar.py` | Prepara borradores de protocolo, cadenas, deduplicación y conteos preliminares; clasifica literatura, detecta vacíos, orienta guías y genera tablas/gráficos. No certifica PRISMA. |
+| `revision-sistematica-prisma` | `auditar_prisma.py` | Audita la aritmética de rutas del flujo PRISMA 2020 y la cobertura documentada de sus 42 subítems; no certifica rigor científico. |
 | `respondedor-observaciones-academicas` | `observaciones_a_matriz.py` | Convierte observaciones dispersas en matriz de respuesta. |
 | `filtro-editoriales-depredadoras` | `check_editorial_risk.py --file` | Revisa riesgo editorial por nombre individual o lote. |
 | `gestor-referencias-academicas` | `pdf_a_contexto.py --profile fuente|imryd|tesis` | Extrae contexto compacto de PDFs con perfiles de lectura. |
@@ -24,7 +27,7 @@ Reducir consumo de tokens delegando tareas mecanicas a scripts locales: conversi
 ## Flujo recomendado
 
 1. Si llega PDF/DOCX/HTML/TXT/MD largo: usar `$preprocesador-documentos`.
-2. Si se busca tema de articulo, similares, vacios, lineas posibles, revision con trazabilidad PRISMA o metodologia estandarizada: usar `$explorador-temas-articulos`.
+2. Si se buscan temas, similares, vacíos o líneas posibles: usar `$explorador-temas-articulos`. Si la revisión se reportará con PRISMA: transferir los insumos a `$revision-sistematica-prisma`.
 3. Si ya hay literatura o fuentes: usar `$automatizador-referencias` y `$filtro-editoriales-depredadoras`.
 4. Si ya hay manuscrito convertido: usar `$auditor-documental-academico`.
 5. Si el producto sera articulo cientifico: usar `$auditor-articulo-imryd` y luego `$redaccion-articulo-cientifico-imryd`.

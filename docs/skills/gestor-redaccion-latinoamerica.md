@@ -1,4 +1,4 @@
-# Gestor Redaccion Latinoamerica
+# Gestor De Redacción Latinoamérica
 
 Úsalo cuando el usuario necesite redactar, reescribir, estructurar o pulir textos académicos, técnicos, institucionales o editoriales en español neutro latinoamericano, especialmente tesis, artículos, ensayos, informes, capítulos y libros. También aplica cuando se requiera elevar claridad, rigor, cohesión, consistencia terminológica y tono profesional sin introducir patrones típicos de texto generado por IA.
 

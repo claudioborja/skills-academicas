@@ -14,7 +14,7 @@ import tempfile
 
 EXCLUDED_PARTS = {".runtime", "__pycache__", ".git", ".venv", "venv"}
 RESOURCE_GROUPS = (
-    ("scripts", "Scripts"),
+    ("scripts", "Herramientas automatizadas"),
     ("references", "Referencias"),
     ("assets", "Plantillas y recursos"),
     ("tests", "Pruebas"),
@@ -25,6 +25,7 @@ RESOURCE_GROUPS = (
 @dataclass(frozen=True)
 class SkillInfo:
     name: str
+    title: str
     description: str
     path: Path
     sections: tuple[str, ...]
@@ -52,6 +53,18 @@ def parse_frontmatter(text: str, source: Path) -> tuple[str, str]:
     return name, description
 
 
+def parse_title(text: str, source: Path) -> str:
+    match = re.search(r"^# (.+)$", text, flags=re.MULTILINE)
+    if not match:
+        raise ValueError(f"Título principal ausente en {source}")
+    return match.group(1).strip()
+
+
+def validate_description(description: str, source: Path) -> None:
+    if re.search(r"\bUse when(?: Codex needs to)?\b", description, flags=re.IGNORECASE):
+        raise ValueError(f"La descripción contiene una mezcla de idiomas en {source}")
+
+
 def discover_resources(skill: Path, directory: str) -> tuple[Path, ...]:
     root = skill / directory
     if not root.is_dir():
@@ -74,6 +87,8 @@ def discover_skills(root: Path) -> list[SkillInfo]:
             continue
         text = source.read_text(encoding="utf-8")
         name, description = parse_frontmatter(text, source)
+        title = parse_title(text, source)
+        validate_description(description, source)
         if name != path.name:
             raise ValueError(f"El nombre {name} no coincide con el directorio {path.name}")
         sections = tuple(
@@ -82,19 +97,15 @@ def discover_skills(root: Path) -> list[SkillInfo]:
             if heading.strip()
         )
         resources = {directory: discover_resources(path, directory) for directory, _ in RESOURCE_GROUPS}
-        skills.append(SkillInfo(name, description, path, sections, resources))
+        skills.append(SkillInfo(name, title, description, path, sections, resources))
     if not skills:
         raise ValueError(f"No se encontraron skills en {root}")
     return skills
 
 
-def display_name(name: str) -> str:
-    return " ".join(word.capitalize() for word in name.split("-"))
-
-
 def render_skill(skill: SkillInfo) -> str:
     lines = [
-        f"# {display_name(skill.name)}",
+        f"# {skill.title}",
         "",
         skill.description,
         "",

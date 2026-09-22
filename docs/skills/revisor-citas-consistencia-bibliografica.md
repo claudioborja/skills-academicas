@@ -1,4 +1,4 @@
-# Revisor Citas Consistencia Bibliografica
+# Revisor De Citas Y Consistencia Bibliográfica
 
 Úsalo cuando el usuario necesite comprobar que las citas del cuerpo coinciden con la bibliografía final, detectar referencias huérfanas, entradas faltantes, datos inconsistentes, fuentes sin DOI/acceso completo, revistas o editoriales depredadoras y mezclas de estilo bibliográfico dentro de un mismo documento.
 

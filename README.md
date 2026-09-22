@@ -2,7 +2,7 @@
 
 Colección de trabajo editorial, coordinada por **Editor en jefe** (`$editor-en-jefe`).
 
-Colección de 29 skills coordinadas para planificar, investigar, redactar, revisar y entregar tesis, libros, artículos científicos y revisiones sistemáticas. Incluye automatización reproducible para documentos, referencias, imágenes, ecuaciones, tablas, formato APA 7, IEEE y control de preentrega.
+Colección de 30 skills coordinadas para planificar, investigar, redactar, revisar y entregar tesis, libros, artículos científicos y revisiones sistemáticas. Incluye automatización reproducible para documentos, referencias, imágenes, ecuaciones, tablas, formato APA 7, IEEE y control de preentrega.
 
 La colección está diseñada para trabajar de dos maneras:
 
@@ -14,6 +14,7 @@ La colección está diseñada para trabajar de dos maneras:
 - Arquitectura y continuidad de libros, tesis y manuscritos extensos.
 - Conversión de tesis en libros y redacción de artículos IMRyD.
 - Revisión sistemática Kitchenham para ingeniería de software.
+- [Revisión sistemática y metaanálisis con PRISMA](revision-sistematica-prisma/SKILL.md): PRISMA 2020, PRISMA-P, PRISMA-S y [extensiones/fuentes oficiales](revision-sistematica-prisma/references/fuentes-oficiales.md).
 - Búsqueda, verificación y consistencia de referencias APA 7 e IEEE.
 - Redacción académica en español latinoamericano, estilo y ortotipografía.
 - Tablas, figuras, imágenes científicas y ecuaciones editables.
@@ -55,6 +56,10 @@ Usa $gestor-imagenes-academicas-libros para preparar una ilustración anatómica
 
 ```text
 Usa $gestor-referencias-academicas para verificar y normalizar estas referencias en IEEE.
+```
+
+```text
+Usa $revision-sistematica-prisma para preparar y auditar el protocolo, la búsqueda, el flujo y el reporte PRISMA 2020 de esta revisión.
 ```
 
 Las instrucciones normativas están siempre en el `SKILL.md` de cada directorio. Las fichas de `docs/skills/` son guías de navegación y no sustituyen esas instrucciones.

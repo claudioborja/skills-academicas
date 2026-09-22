@@ -1,4 +1,4 @@
-# Gestor Imagenes Academicas Libros
+# Gestor de Imágenes Académicas para Libros
 
 Genera, localiza, evalúa, descarga y documenta imágenes para libros académicos, tesis, artículos y materiales educativos. Usar cuando Codex deba crear ilustraciones originales, diagramas o imágenes conceptuales; buscar figuras, mapas, fotografías o gráficos en fuentes académicas e institucionales confiables; comprobar licencia y atribución; preparar pies de figura; o integrar recursos visuales con trazabilidad editorial sin confundir ilustración con evidencia científica.
 
@@ -28,7 +28,7 @@ Usa $gestor-imagenes-academicas-libros para [describe aquí la tarea y los archi
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/inspeccionar_imagen.py`](../../gestor-imagenes-academicas-libros/scripts/inspeccionar_imagen.py)
 - [`scripts/registrar_imagen.py`](../../gestor-imagenes-academicas-libros/scripts/registrar_imagen.py)

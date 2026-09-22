@@ -1,6 +1,6 @@
-# Redaccion Articulo Cientifico Imryd
+# Redacción Artículo Científico IMRyD
 
-Redacta, estructura, diagnostica y revisa artículos científicos de alto nivel con lógica IMRyD/IMRAD: título, resumen, palabras clave, introducción, métodos, resultados, discusión, conclusiones, limitaciones, tablas, figuras, citas, respuesta a revisores y adecuación a normas de revista. Use when Codex needs to convert tesis, informes, resultados de investigación, capítulos o borradores en artículos publicables; planificar un paper desde cero; auditar coherencia científica; preparar manuscritos para envío; o coordinar esta tarea con editor-en-jefe, gestores de referencias APA7/IEEE, revisor de resumen/abstract, tablas/figuras, humanización académica y respuesta a observaciones.
+Redacta, estructura, diagnostica y revisa artículos científicos de alto nivel con lógica IMRyD o IMRAD: título, resumen, palabras clave, introducción, métodos, resultados, discusión, conclusiones, limitaciones, tablas, figuras, citas, respuesta a revisores y adecuación a las normas de la revista. Usar cuando Codex necesite convertir tesis, informes, resultados de investigación, capítulos o borradores en artículos publicables; planificar un artículo desde cero; auditar la coherencia científica; preparar manuscritos para envío; o coordinar esta tarea con editor-en-jefe, los gestores de referencias APA 7 o IEEE, el revisor de resúmenes y palabras clave, el gestor de tablas y figuras, la humanización académica y la respuesta a observaciones.
 
 ## Uso
 

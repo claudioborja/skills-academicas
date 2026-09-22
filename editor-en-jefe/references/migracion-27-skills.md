@@ -1,5 +1,7 @@
 # Reorganización de la colección: 29 a 27 skills
 
+Documento histórico de una reorganización anterior. El catálogo vigente contiene 30 skills e incorpora `revision-sistematica-prisma`; no usar este archivo como inventario actual.
+
 - `desgenericador-humanizador-texto` se integra como modo de `humanizar-redaccion-academica`. Se conservan las referencias útiles y un único analizador.
 - `gestor-referencias-apa7` y `gestor-referencias-ieee` se integran en `gestor-referencias-academicas`. Seleccionar APA 7 o IEEE dentro del flujo común.
 - Los extractores `pdf_a_contexto_apa7.py` y `pdf_a_contexto_ieee.py` se sustituyen por `gestor-referencias-academicas/scripts/pdf_a_contexto.py`. Actualizar comandos externos; no quedan alias instalados que activen flujos antiguos.

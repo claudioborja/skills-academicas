@@ -1,4 +1,4 @@
-# Gestor Referencias Academicas
+# Gestor de Referencias Académicas
 
 Busca, verifica y utiliza fuentes académicas para respaldar afirmaciones y formatear citas y bibliografía en APA 7 o IEEE. Usar para fortalecer borradores, consultar fuentes completas, organizar evidencia o cambiar de norma bibliográfica; la selección de estudios de una revisión corresponde a su protocolo.
 
@@ -23,7 +23,7 @@ Usa $gestor-referencias-academicas para [describe aquí la tarea y los archivos 
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/pdf_a_contexto.py`](../../gestor-referencias-academicas/scripts/pdf_a_contexto.py)
 

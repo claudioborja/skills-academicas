@@ -8,6 +8,7 @@ Kitchenham gobierna el método. Activar otras skills solo por necesidad técnica
 | --- | --- | --- | --- |
 | Insumos largos | `$preprocesador-documentos` | Convertir PDF/DOCX, segmentar y proteger | No sustituye lectura crítica |
 | Alcance inicial | `$explorador-temas-articulos` | Clasificar, detectar vocabulario y tabular | No usar protocolo, selector ni conteos PRISMA |
+| Guía PRISMA | `$revision-sistematica-prisma` | No activar por defecto | Solo si existe exigencia externa explícita; no desplaza Kitchenham ni crea una metodología combinada |
 | Metadatos | `$automatizador-referencias` | Inventariar DOI, fuentes y duplicados | No decidir inclusión |
 | Riesgo editorial | `$filtro-editoriales-depredadoras` | Detectar sitios clonados y riesgo | No excluir solo por ausencia de DOI si el protocolo no lo exige |
 | Bibliografía | `$gestor-referencias-academicas` | Formatear citas verificadas | No reemplazar criterios Kitchenham |

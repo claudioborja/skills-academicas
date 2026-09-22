@@ -26,6 +26,8 @@ Aplicar la política del proyecto según [../editor-en-jefe/references/perfiles-
 
 Con Kitchenham activo, su protocolo gobierna admisión, descarga, revisión manual y trazabilidad. Esta skill solo verifica el respaldo y da formato a fuentes admitidas; no cambia criterios de inclusión ni introduce requisitos de DOI o PRISMA.
 
+Con `$revision-sistematica-prisma` activo, respetar su protocolo y distinguir registros, informes y estudios. Esta skill apoya búsqueda, metadatos y citación, pero no decide elegibilidad, razones de exclusión, conteos del flujo ni cumplimiento de la checklist.
+
 ## Flujo
 
 Para libros, aplicar la sección de evidencia de [producción editorial integrada](../editor-en-jefe/references/produccion-editorial-eficiente.md). Antes de buscar o extraer de nuevo, consultar los originales, extracciones y decisiones del proyecto. Recuperar pasajes con contexto y localizadores; una coincidencia de búsqueda o una fuente admitida no certifica respaldo. No exigir aprobación individual del usuario salvo instrucción o protocolo. Registrar cambios que invaliden evidencia ya usada.

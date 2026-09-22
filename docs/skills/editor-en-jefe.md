@@ -1,4 +1,4 @@
-# Editor En Jefe
+# Editor en jefe
 
 Coordina las skills académicas y editoriales según el producto y la etapa del manuscrito. Usar para organizar proyectos de libro, tesis, artículo o revisión y seleccionar apoyos sin duplicar intervenciones.
 
@@ -23,7 +23,7 @@ Usa $editor-en-jefe para [describe aquí la tarea y los archivos de entrada].
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/archivos_seguros.py`](../../editor-en-jefe/scripts/archivos_seguros.py)
 - [`scripts/ejecutar.py`](../../editor-en-jefe/scripts/ejecutar.py)

@@ -1,4 +1,4 @@
-# Planificador Obra Academica
+# Planificador De Obra Académica
 
 Úsalo cuando el usuario necesite convertir una idea, tema o borrador en la arquitectura completa de una obra académica o editorial, incluyendo propósito, alcance, lector, objetivos, índice, secuencia de capítulos, progresión argumentativa, distribución de extensión y estructura local de directorios capaz de sostener investigación, manuscrito, casos, recursos, revisión y entregables. Aplica a libros nuevos, tesis, informes extensos, manuales, artículos largos y proyectos editoriales que deban inicializarse o normalizarse.
 
@@ -25,7 +25,7 @@ Usa $planificador-obra-academica para [describe aquí la tarea y los archivos de
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/inicializar_proyecto_libro.py`](../../planificador-obra-academica/scripts/inicializar_proyecto_libro.py)
 

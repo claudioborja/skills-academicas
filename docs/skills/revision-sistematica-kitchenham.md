@@ -1,6 +1,6 @@
-# Revision Sistematica Kitchenham
+# Revisión Sistemática Kitchenham
 
-Planifica, ejecuta, documenta, respalda, analiza y redacta revisiones sistemáticas de literatura siguiendo exclusivamente Kitchenham y Charters para ingeniería de software. Use when Codex needs to desarrollar una revisión desde la pregunta hasta el informe; validar protocolo; seleccionar fuentes por cobertura disciplinar y complementariedad; ejecutar búsquedas reproducibles y snowballing; probar artículos semilla; medir aporte marginal y saturación; descargar localmente, preservar y revisar manualmente todas las fuentes utilizadas; excluir recursos sin texto completo descargable; deduplicar y cribar; evaluar calidad, actualidad, impacto y novedad; extraer y sintetizar evidencia; mantener hashes y snapshots; actualizar búsquedas; o auditar suficiencia metodológica sin imponer cuotas universales de estudios.
+Planifica, ejecuta, documenta, respalda, analiza y redacta revisiones sistemáticas de literatura siguiendo exclusivamente Kitchenham y Charters para ingeniería de software. Usar cuando Codex necesite desarrollar una revisión desde la pregunta hasta el informe; validar el protocolo; seleccionar fuentes por cobertura disciplinar y complementariedad; ejecutar búsquedas reproducibles y búsquedas por referencias hacia atrás y hacia delante; probar artículos semilla; medir el aporte marginal y la saturación; descargar, preservar y revisar manualmente todas las fuentes utilizadas; excluir recursos sin texto completo descargable; deduplicar y cribar; evaluar calidad, actualidad, impacto y novedad; extraer y sintetizar evidencia; mantener huellas digitales e instantáneas de respaldo; actualizar búsquedas; o auditar la suficiencia metodológica sin imponer cuotas universales de estudios.
 
 ## Uso
 
@@ -29,7 +29,7 @@ Usa $revision-sistematica-kitchenham para [describe aquí la tarea y los archivo
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/kitchenham_workspace.py`](../../revision-sistematica-kitchenham/scripts/kitchenham_workspace.py)
 

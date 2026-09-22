@@ -1,0 +1,38 @@
+{
+  "review_type": "new",
+  "identification": {
+    "records_databases_registers": 100
+  },
+  "removed_before_screening": {
+    "duplicates": 15,
+    "automation": 3,
+    "other": 2
+  },
+  "screening": {
+    "records_screened": 80,
+    "records_excluded": 50
+  },
+  "database_path": {
+    "reports_sought": 30,
+    "reports_not_retrieved": 5,
+    "reports_assessed": 25,
+    "reports_excluded_by_reason": {
+      "wrong_population": 5,
+      "wrong_design": 3
+    }
+  },
+  "other_methods_path": {
+    "reports_identified": 10,
+    "reports_sought": 10,
+    "reports_not_retrieved": 1,
+    "reports_assessed": 9,
+    "reports_excluded_by_reason": {
+      "wrong_population": 3,
+      "insufficient_data": 1
+    }
+  },
+  "included": {
+    "reports": 22,
+    "studies": 20
+  }
+}

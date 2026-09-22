@@ -1,4 +1,4 @@
-# Gestor Ecuaciones Academicas
+# Gestor de Ecuaciones Académicas
 
 Crea, revisa, normaliza, convierte e integra ecuaciones académicas y científicas en LaTeX, Markdown, MathML, OMML/Word y formatos editoriales. Usar cuando Codex deba comprobar notación, variables, unidades, dimensiones, numeración, referencias cruzadas, editabilidad o presentación de fórmulas; no sustituye la validación disciplinar de una demostración o modelo.
 
@@ -24,7 +24,7 @@ Usa $gestor-ecuaciones-academicas para [describe aquí la tarea y los archivos d
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/auditar_ecuaciones.py`](../../gestor-ecuaciones-academicas/scripts/auditar_ecuaciones.py)
 

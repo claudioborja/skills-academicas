@@ -1,4 +1,4 @@
-# Constructor Tesis Academica
+# Constructor de Tesis Académica
 
 Construye, diagnostica, organiza y revisa tesis, tesinas, trabajos de grado, proyectos de titulación y disertaciones desde el tema inicial hasta la preentrega. Usarlo para planteamiento del problema, objetivos, preguntas o hipótesis, justificación, marco teórico, metodología, resultados, discusión, conclusiones, recomendaciones, matriz de consistencia, operacionalización, coherencia entre secciones, normas universitarias o respuesta a tutor y jurado.
 

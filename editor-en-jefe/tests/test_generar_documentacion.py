@@ -11,12 +11,14 @@ SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "generar_documentacio
 
 
 class GenerarDocumentacionSkillsTests(unittest.TestCase):
-    def create_skill(self, root: Path, name: str, description: str) -> None:
+    def create_skill(
+        self, root: Path, name: str, description: str, title: str | None = None
+    ) -> None:
         skill = root / name
         (skill / "scripts").mkdir(parents=True)
         (skill / "references").mkdir()
         (skill / "SKILL.md").write_text(
-            f"---\nname: {name}\ndescription: {description}\n---\n\n# {name}\n",
+            f"---\nname: {name}\ndescription: {description}\n---\n\n# {title or name}\n",
             encoding="utf-8",
         )
         (skill / "scripts" / "accion.py").write_text("print('ok')\n", encoding="utf-8")
@@ -88,6 +90,42 @@ class GenerarDocumentacionSkillsTests(unittest.TestCase):
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertTrue((output / "vigente.md").is_file())
             self.assertFalse((output / "obsoleta.md").exists())
+
+    def test_uses_the_skill_heading_as_the_documentation_title(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(
+                root,
+                "revision-sistematica-prisma",
+                "Documenta revisiones sistemáticas.",
+                title="Revisión Sistemática PRISMA",
+            )
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            page = (output / "revision-sistematica-prisma.md").read_text(encoding="utf-8")
+            self.assertTrue(page.startswith("# Revisión Sistemática PRISMA\n"))
+
+    def test_rejects_the_english_activation_template_in_a_description(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(
+                root,
+                "descripcion-bilingue",
+                "Resume documentos. Use when Codex needs to prepare reports.",
+                title="Descripción Bilingüe",
+            )
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 2)
+            self.assertIn("mezcla de idiomas", result.stderr)
+            self.assertFalse(output.exists())
 
 
 if __name__ == "__main__":

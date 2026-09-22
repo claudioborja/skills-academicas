@@ -11,6 +11,8 @@ Consultar al iniciar una obra o cuando cambien método, norma, formato o restric
 
 La norma de cita no decide la inclusión de estudios. Con Kitchenham activo, conservar su protocolo, selección, calidad, extracción y trazabilidad; no introducir PRISMA, sus conteos ni un filtro nuevo de DOI desde skills auxiliares. Si una exigencia externa resulta incompatible, explicitar el conflicto antes de declarar cumplimiento.
 
+Con `$revision-sistematica-prisma` activo, PRISMA gobierna el reporte y las extensiones aplicables, mientras el método de conducción declarado gobierna la ejecución. Ningún perfil editorial puede completar retroactivamente búsquedas, cribado, conteos o evaluaciones ausentes.
+
 ## Campos de la ficha
 
 - Producto y lector: libro, tesis, artículo, informe o intervención breve.

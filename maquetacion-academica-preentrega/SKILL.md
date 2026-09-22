@@ -3,7 +3,7 @@ name: maquetacion-academica-preentrega
 description: Usalo cuando el usuario necesite una revision final de presentacion academica o editorial antes de entrega, incluyendo titulos, subtitulos, numeracion, secciones preliminares, bibliografia, anexos, consistencia visual, exportacion a Word con tablas nativas editables, limpieza general para Word/PDF, o generacion complementaria de TXT limpio sin marcas Markdown para libros y manuscritos.
 ---
 
-# Maquetacion Academica Y Preentrega
+# Maquetación Académica y Preentrega
 
 ## Ejecución multiplataforma
 
@@ -64,7 +64,7 @@ Tras exportar, renderizar el DOCX a páginas o PDF y revisar jerarquía, numerac
 6. Generar después el TXT final limpio como respaldo complementario.
 7. Entregar el `.docx` para edición y el `.txt` para preservación.
 
-## Script Para Word
+## Herramienta para Word
 
 Los exportadores DOCX y TXT requieren `editor-en-jefe/scripts/archivos_seguros.py`, también al ejecutarlos directamente. Rechazan salidas existentes salvo `--overwrite`; nunca autorizan sustituir el manuscrito, la plantilla o las imágenes de entrada. Con el lanzador, añadir además `--permitir-sobrescritura` antes de la ruta del script. El DOCX se ensambla completo (incluidos los SVG) antes de publicarse atómicamente; un fallo de conversión conserva la salida anterior. Esto protege el archivo, no certifica su presentación visual. Consultar los límites de escritura y sistemas de archivos en [portabilidad](../editor-en-jefe/references/portabilidad.md).
 
@@ -106,7 +106,7 @@ Para APA 7, usar `número en negrita -> título en cursiva -> tabla o figura -> 
 
 Aplicar `mantener con el siguiente` al número y al título de cada tabla o figura; en las figuras, aplicarlo también al párrafo que contiene la imagen. No permitir que el número o el título queden huérfanos al pie de una página mientras el recurso aparece en la siguiente.
 
-## Script Para TXT Final
+## Herramienta para el TXT final
 
 ```text
 python skills/editor-en-jefe/scripts/ejecutar.py maquetacion-academica-preentrega/scripts/markdown_a_txt_final.py "ruta/09_entregables/v02_revision/libro_completo.md" --out "ruta/09_entregables/v03_final_txt/libro_completo.txt"

@@ -1,6 +1,6 @@
-# Revisor Resumen Abstract Palabras Clave
+# Revisor de Resúmenes y Palabras Clave
 
-Úsalo cuando el usuario necesite redactar, corregir u optimizar resumen, abstract, sinopsis, palabras clave, descriptores o texto de contraportada, manteniendo precisión conceptual, densidad informativa y naturalidad.
+Úsalo cuando el usuario necesite redactar, corregir u optimizar un resumen en español o en inglés, una sinopsis, palabras clave, descriptores o un texto de contraportada, manteniendo precisión conceptual, densidad informativa y naturalidad.
 
 ## Uso
 

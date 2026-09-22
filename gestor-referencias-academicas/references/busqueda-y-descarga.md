@@ -2,7 +2,7 @@
 
 ## Antes de buscar
 
-Identificar la afirmación, el contexto, el alcance y la política de fuentes. Consultar el perfil del proyecto en `../../editor-en-jefe/references/perfiles-editoriales.md`. Con Kitchenham, seguir su protocolo y su estructura de archivos.
+Identificar la afirmación, el contexto, el alcance y la política de fuentes. Consultar el perfil del proyecto en `../../editor-en-jefe/references/perfiles-editoriales.md`. Con Kitchenham, seguir su protocolo y estructura. Con PRISMA activo, seguir `$revision-sistematica-prisma` para elegibilidad, unidades documentales, exclusiones y flujo; esta guía solo apoya recuperación y trazabilidad bibliográfica.
 
 ## Secuencia
 

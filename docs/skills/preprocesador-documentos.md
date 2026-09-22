@@ -22,7 +22,7 @@ Usa $preprocesador-documentos para [describe aquí la tarea y los archivos de en
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/dependencias.py`](../../preprocesador-documentos/scripts/dependencias.py)
 - [`scripts/documento_a_markdown.py`](../../preprocesador-documentos/scripts/documento_a_markdown.py)

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Revisión Sistemática PRISMA"
+  short_description: "Planifica y reporta revisiones con PRISMA"
+  default_prompt: "Usa $revision-sistematica-prisma para planificar, documentar y auditar una revisión sistemática con PRISMA 2020 y las extensiones que correspondan."

@@ -1,4 +1,4 @@
-# Normalizador Terminologia Glosario
+# Normalizador De Terminología Y Glosario
 
 Úsalo cuando el usuario necesite uniformar términos técnicos, conceptos, nombres de variables, siglas, traducciones, categorías o etiquetas a lo largo de un manuscrito, y construir un glosario o banco terminológico consistente.
 

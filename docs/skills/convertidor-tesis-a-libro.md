@@ -26,7 +26,7 @@ Usa $convertidor-tesis-a-libro para [describe aquí la tarea y los archivos de e
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/diagnosticar_tesis.py`](../../convertidor-tesis-a-libro/scripts/diagnosticar_tesis.py)
 

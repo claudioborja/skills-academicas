@@ -1,6 +1,6 @@
 ---
 name: revision-sistematica-kitchenham
-description: "Planifica, ejecuta, documenta, respalda, analiza y redacta revisiones sistemáticas de literatura siguiendo exclusivamente Kitchenham y Charters para ingeniería de software. Use when Codex needs to desarrollar una revisión desde la pregunta hasta el informe; validar protocolo; seleccionar fuentes por cobertura disciplinar y complementariedad; ejecutar búsquedas reproducibles y snowballing; probar artículos semilla; medir aporte marginal y saturación; descargar localmente, preservar y revisar manualmente todas las fuentes utilizadas; excluir recursos sin texto completo descargable; deduplicar y cribar; evaluar calidad, actualidad, impacto y novedad; extraer y sintetizar evidencia; mantener hashes y snapshots; actualizar búsquedas; o auditar suficiencia metodológica sin imponer cuotas universales de estudios."
+description: "Planifica, ejecuta, documenta, respalda, analiza y redacta revisiones sistemáticas de literatura siguiendo exclusivamente Kitchenham y Charters para ingeniería de software. Usar cuando Codex necesite desarrollar una revisión desde la pregunta hasta el informe; validar el protocolo; seleccionar fuentes por cobertura disciplinar y complementariedad; ejecutar búsquedas reproducibles y búsquedas por referencias hacia atrás y hacia delante; probar artículos semilla; medir el aporte marginal y la saturación; descargar, preservar y revisar manualmente todas las fuentes utilizadas; excluir recursos sin texto completo descargable; deduplicar y cribar; evaluar calidad, actualidad, impacto y novedad; extraer y sintetizar evidencia; mantener huellas digitales e instantáneas de respaldo; actualizar búsquedas; o auditar la suficiencia metodológica sin imponer cuotas universales de estudios."
 ---
 
 # Revisión Sistemática Kitchenham
@@ -15,7 +15,7 @@ Consultar [la guía común de ejecución](../editor-en-jefe/references/portabili
 
 Usar Kitchenham y Charters (2007) como autoridad central. Usar Kitchenham (2004) como antecedente, Brereton et al. (2007) para lecciones de aplicación y Wohlin (2014) solo para operacionalizar snowballing compatible con el protocolo.
 
-No presentar el trabajo como PRISMA, PRISMA-ScR ni metodología combinada. Si una skill auxiliar contradice Kitchenham o el protocolo congelado, aplicar Kitchenham y registrar cualquier enmienda.
+No presentar el trabajo como PRISMA, PRISMA-ScR ni metodología combinada. No activar `$revision-sistematica-prisma` por defecto dentro de un proyecto Kitchenham. Si una skill auxiliar contradice Kitchenham o el protocolo congelado, aplicar Kitchenham y registrar cualquier enmienda.
 
 Leer:
 

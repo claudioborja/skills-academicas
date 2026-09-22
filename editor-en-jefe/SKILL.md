@@ -17,6 +17,7 @@ El lanzador comprueba colisiones de entrada/salida y salidas existentes para `--
 
 - Aplicar [references/perfiles-editoriales.md](references/perfiles-editoriales.md) para la precedencia entre encargo, protocolo, norma y perfil. Registrar preferencias en la ficha existente del proyecto; no replicar reglas numéricas en cada skill.
 - Con Kitchenham activo, su protocolo gobierna búsqueda, selección, calidad, extracción y síntesis. No activar protocolos o conteos PRISMA desde un apoyo editorial. Una enmienda debe quedar documentada.
+- Con PRISMA activo, distinguir el método de conducción de la guía de reporte. Activar `$revision-sistematica-prisma` para PRISMA 2020 y sus extensiones; no presentarlo como sustituto de Kitchenham u otro método disciplinar.
 - Proteger datos, citas textuales, transcripciones, DOI, URLs, referencias, tablas, fórmulas y código. No inventar evidencia ni completar una extensión con relleno.
 - Automatizar solo operaciones deterministas reutilizables. Mantener tema, contenido del libro y preferencias autorales en datos o en el manuscrito, nunca como párrafos fijos de un programa general.
 - Los inventarios, coincidencias léxicas y métricas son señales para revisión. No certifican coherencia científica, respaldo de una cita, autoría humana ni calidad editorial.
@@ -32,7 +33,7 @@ Cuando se reciba un contexto maestro, ficha editorial o documento de tipo de obr
 
 Leer todas sus secciones y mantener una matriz de requisitos con origen, ámbito, destino y evidencia. Incluir propósito, identidad, alcance, objetivos, lector, enfoque, convenciones, recursos, proceso y resultado esperado. Transmitir también la jerarquía y presentación acordadas a redacción y preentrega; el checklist final no sustituye la comprobación del contexto completo.
 
-1. **Situar el producto.** Tesis que seguirá siendo tesis: constructor de tesis. Cambio de tesis a libro: convertidor. Artículo: IMRyD. Revisión Kitchenham: su skill metodológica.
+1. **Situar el producto.** Tesis que seguirá siendo tesis: constructor de tesis. Cambio de tesis a libro: convertidor. Artículo: IMRyD. Revisión Kitchenham: su skill metodológica. Revisión que debe reportarse con PRISMA: skill PRISMA y método de conducción declarado por separado.
 2. **Preparar insumos si hace falta.** Para archivos largos, usar preprocesamiento y mapas de secciones. Si se necesita un inventario mecánico, activar auditor documental. Leer los pasajes necesarios para juzgar el contenido.
 3. **Planificar.** Elegir con el planificador una estructura proporcional; crear carpetas cuando hagan falta. La estructura completa y su inicializador son opcionales. Respetar las carpetas de proyectos existentes y protocolos.
 4. **Investigar y redactar.** Resolver problema, objetivos, evidencia y método antes de pulir estilo. Seleccionar las skills de fuentes, marco teórico y redacción pertinentes.

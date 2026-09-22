@@ -1,6 +1,6 @@
 ---
 name: automatizador-referencias
-description: "Automatiza tareas mecánicas de citas, DOI, bibliografía y fuentes descargadas para reducir consumo de tokens. Use when Codex needs to auditar citas APA/IEEE frente a bibliografía, detectar DOI faltantes o repetidos, consultar metadatos DOI en Crossref, inventariar PDFs/HTML/Markdown de referencias, normalizar entradas bibliográficas preliminares, o preparar insumos para gestor-referencias-academicas, revisor-citas-consistencia-bibliografica, filtro-editoriales-depredadoras y editor-en-jefe."
+description: "Automatiza tareas mecánicas relacionadas con citas, DOI, bibliografía y fuentes descargadas para reducir el consumo de tokens. Usar cuando Codex necesite auditar citas APA o IEEE frente a la bibliografía, detectar DOI faltantes o repetidos, consultar metadatos DOI en Crossref, inventariar archivos PDF, HTML o Markdown de referencias, normalizar entradas bibliográficas preliminares o preparar insumos para gestor-referencias-academicas, revisor-citas-consistencia-bibliografica, filtro-editoriales-depredadoras y editor-en-jefe."
 ---
 
 # Automatizador Referencias
@@ -19,7 +19,7 @@ Delegar en scripts las tareas repetibles de referencias: detectar citas, separar
 
 No inventar metadatos. Si DOI, año, autores, revista, volumen, número o páginas no son verificables, marcar `pendiente` y dejar que la skill bibliográfica especializada decida.
 
-## Scripts
+## Herramientas automatizadas
 
 ### DOI A Referencia
 

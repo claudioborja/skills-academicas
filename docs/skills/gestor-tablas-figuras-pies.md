@@ -1,4 +1,4 @@
-# Gestor Tablas Figuras Pies
+# Gestor De Tablas Figuras Y Pies
 
 Úsalo cuando el usuario necesite decidir, crear, revisar, uniformar o exportar tablas, figuras, gráficos, títulos, numeración, fuentes, notas al pie, llamadas en el texto y criterios de presentación visual dentro de un documento académico o editorial, especialmente cuando las tablas Markdown deban conservarse como tablas editables en Word o publicarse en HTML para facilitar su revisión y copia.
 
@@ -26,7 +26,7 @@ Usa $gestor-tablas-figuras-pies para [describe aquí la tarea y los archivos de 
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/exportar_tablas_html.py`](../../gestor-tablas-figuras-pies/scripts/exportar_tablas_html.py)
 - [`scripts/registrar_tabla.py`](../../gestor-tablas-figuras-pies/scripts/registrar_tabla.py)

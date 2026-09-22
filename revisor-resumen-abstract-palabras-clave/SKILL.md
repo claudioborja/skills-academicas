@@ -1,9 +1,9 @@
 ---
 name: revisor-resumen-abstract-palabras-clave
-description: Úsalo cuando el usuario necesite redactar, corregir u optimizar resumen, abstract, sinopsis, palabras clave, descriptores o texto de contraportada, manteniendo precisión conceptual, densidad informativa y naturalidad.
+description: Úsalo cuando el usuario necesite redactar, corregir u optimizar un resumen en español o en inglés, una sinopsis, palabras clave, descriptores o un texto de contraportada, manteniendo precisión conceptual, densidad informativa y naturalidad.
 ---
 
-# Revisor De Resumen Abstract Y Palabras Clave
+# Revisor de Resúmenes y Palabras Clave
 
 ## Objetivo
 
@@ -29,4 +29,3 @@ Este skill condensa obras extensas en piezas breves y de alta densidad informati
 - no hay frases vacías ni promocionales
 - las palabras clave son específicas
 - la versión breve conserva valor informativo
-

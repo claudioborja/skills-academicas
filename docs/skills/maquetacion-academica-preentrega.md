@@ -1,4 +1,4 @@
-# Maquetacion Academica Preentrega
+# Maquetación Académica y Preentrega
 
 Usalo cuando el usuario necesite una revision final de presentacion academica o editorial antes de entrega, incluyendo titulos, subtitulos, numeracion, secciones preliminares, bibliografia, anexos, consistencia visual, exportacion a Word con tablas nativas editables, limpieza general para Word/PDF, o generacion complementaria de TXT limpio sin marcas Markdown para libros y manuscritos.
 
@@ -20,14 +20,14 @@ Usa $maquetacion-academica-preentrega para [describe aquí la tarea y los archiv
 - Regla De Productos Finales
 - Perfil formal del proyecto
 - Flujo De Trabajo
-- Script Para Word
+- Herramienta para Word
 - Formato editorial e imágenes
-- Script Para TXT Final
+- Herramienta para el TXT final
 - Validacion Final
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/auditar_docx_apa7.py`](../../maquetacion-academica-preentrega/scripts/auditar_docx_apa7.py)
 - [`scripts/markdown_a_docx.py`](../../maquetacion-academica-preentrega/scripts/markdown_a_docx.py)

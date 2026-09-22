@@ -1,4 +1,4 @@
-# Ajustes Editoriales Bibliograficos
+# Ajustes Editoriales Bibliográficos
 
 Úsalo cuando el usuario necesite aplicar reglas editoriales o institucionales adicionales sobre citas y bibliografía, más estrictas o diferentes de la norma base, por ejemplo prohibir referencias sin fecha, exigir tipos de fuente concretos, vetar ciertas clases de documentos o adaptar el manuscrito a criterios de un editor, revista o universidad.
 

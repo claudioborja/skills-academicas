@@ -9,6 +9,7 @@ Elegir por el resultado solicitado. Las siguientes especialidades complementan a
 | Transformar una tesis en libro | `convertidor-tesis-a-libro` | Cambia lector y género; conserva evidencia. |
 | Explorar temas y literatura inicial | `explorador-temas-articulos` | El protocolo elegido gobierna las revisiones posteriores. |
 | Revisión Kitchenham | `revision-sistematica-kitchenham` | Autoridad metodológica de su revisión; no importar PRISMA. |
+| Revisión reportada con PRISMA | `revision-sistematica-prisma` | PRISMA gobierna el reporte y sus extensiones; declarar aparte el método de conducción. |
 | Marco teórico y debates | `gestor-marco-teorico-estado-del-arte` | Sintetizar y relacionar literatura, no listar resúmenes. |
 | Artículo científico | `redaccion-articulo-cientifico-imryd` | Organizar el informe sin cambiar el diseño del estudio. |
 | Redactar contenido | `gestor-redaccion-latinoamerica` | Construir prosa con evidencia disponible. |

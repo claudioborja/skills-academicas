@@ -14,6 +14,14 @@ Usar `$editor-en-jefe` cuando:
 
 Después del diagnóstico, volver a esta skill para convertir la ruta en arquitectura de artículo.
 
+## Revisiones sistemáticas
+
+Usar `$revision-sistematica-prisma` cuando el informe deba aplicar PRISMA 2020, PRISMA-P, PRISMA-S o una extensión oficial. Esa skill gobierna la guía de reporte, el flujo y la matriz de cumplimiento; esta skill adapta la presentación a IMRyD y a la revista sin cambiar decisiones metodológicas.
+
+Usar `$revision-sistematica-kitchenham` cuando Kitchenham y Charters sea la autoridad del proyecto. No añadir PRISMA por defecto ni convertir sus artefactos en una metodología combinada.
+
+Usar `$explorador-temas-articulos` solo para explorar temas, vocabulario y literatura preliminar antes de elegir el protocolo.
+
 ## Referencias Y Citas
 
 Usar `$gestor-referencias-academicas` cuando:

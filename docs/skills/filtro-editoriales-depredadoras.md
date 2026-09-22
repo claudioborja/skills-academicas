@@ -1,4 +1,4 @@
-# Filtro Editoriales Depredadoras
+# Filtro De Editoriales Depredadoras
 
 Úsalo como filtro auxiliar antes de buscar, descargar, citar o validar fuentes académicas, cuando sea necesario evitar revistas, editoriales, congresos, plataformas o sitios clonados potencialmente depredadores, espurios o de reputación dudosa. Aplica especialmente en búsquedas bibliográficas APA 7, IEEE, revisión de bibliografía, selección de revistas, verificación de DOI, acceso abierto, indexación real, Scopus/WoS/DOAJ/SciELO/Redalyc/Latindex y evaluación de fuentes de América Latina, el Caribe e Iberoamérica.
 
@@ -25,7 +25,7 @@ Usa $filtro-editoriales-depredadoras para [describe aquí la tarea y los archivo
 
 ## Recursos incluidos
 
-### Scripts
+### Herramientas automatizadas
 
 - [`scripts/check_editorial_risk.py`](../../filtro-editoriales-depredadoras/scripts/check_editorial_risk.py)
 
