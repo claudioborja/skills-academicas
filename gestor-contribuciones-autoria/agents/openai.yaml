@@ -1,0 +1,4 @@
+interface:
+  display_name: "Gestor de contribuciones y autoría"
+  short_description: "Selecciona taxonomías y criterios de autoría"
+  default_prompt: "Usa $gestor-contribuciones-autoria para elegir y aplicar el perfil de contribuciones, autoría y metadatos adecuado para esta obra."

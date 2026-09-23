@@ -6,7 +6,7 @@ La incorporación posterior de `$revision-sistematica-prisma` reemplaza el enrut
 
 ## Objetivo
 
-Reducir consumo de tokens delegando tareas mecanicas a scripts locales: conversion documental, segmentacion, proteccion de bloques, auditoria bibliografica, inventario documental, exploracion de temas, propuesta de articulos, visualizacion y revision IMRyD.
+Reducir consumo de tokens delegando tareas mecanicas a scripts locales: conversion documental, segmentacion, proteccion de bloques, auditoria bibliografica, inventario documental, exploracion de temas, propuesta de articulos, seleccion inicial de perfiles de contribucion, visualizacion y revision IMRyD.
 
 ## Automatizaciones implementadas
 
@@ -20,6 +20,7 @@ Reducir consumo de tokens delegando tareas mecanicas a scripts locales: conversi
 | `humanizar-redaccion-academica` | `analizar_marcas_ia.py`, `analizar_reporte_compilatio.py`, `documento_a_perfil_estilo.py`, `comparar_con_perfil_estilo.py`, `perfilar_y_comparar_estilo.py` | Detecta marcas mecanicas, interpreta reportes de similitud/IA, extrae perfil de estilo desde PDF/DOCX/MD/TXT/HTML, guarda cada estilo en `styles/<nombre>` dentro del skill y compara borradores contra la voz objetivo sin alterar citas o fuentes. |
 | `explorador-temas-articulos` | `generar_protocolo_revision.py`, `cribar_fuentes_revision.py`, `clasificar_literatura.py`, `matriz_estado_arte.py`, `proponer_temas.py`, `seleccionar_metodologia.py`, `tabular_visualizar.py` | Prepara borradores de protocolo, cadenas, deduplicación y conteos preliminares; clasifica literatura, detecta vacíos, orienta guías y genera tablas/gráficos. No certifica PRISMA. |
 | `revision-sistematica-prisma` | `auditar_prisma.py` | Audita la aritmética de rutas del flujo PRISMA 2020 y la cobertura documentada de sus 42 subítems; no certifica rigor científico. |
+| `gestor-contribuciones-autoria` | `seleccionar_perfil.py` | Recomienda taxonomías, criterios y formatos por producto y destino; no asigna roles a personas ni decide autoría. |
 | `respondedor-observaciones-academicas` | `observaciones_a_matriz.py` | Convierte observaciones dispersas en matriz de respuesta. |
 | `filtro-editoriales-depredadoras` | `check_editorial_risk.py --file` | Revisa riesgo editorial por nombre individual o lote. |
 | `gestor-referencias-academicas` | `pdf_a_contexto.py --profile fuente|imryd|tesis` | Extrae contexto compacto de PDFs con perfiles de lectura. |
@@ -31,9 +32,10 @@ Reducir consumo de tokens delegando tareas mecanicas a scripts locales: conversi
 3. Si ya hay literatura o fuentes: usar `$automatizador-referencias` y `$filtro-editoriales-depredadoras`.
 4. Si ya hay manuscrito convertido: usar `$auditor-documental-academico`.
 5. Si el producto sera articulo cientifico: usar `$auditor-articulo-imryd` y luego `$redaccion-articulo-cientifico-imryd`.
-6. Si hay que reducir prosa mecanica o alinear una voz con documentos modelo: usar `$humanizar-redaccion-academica`.
-7. Si hay libro o manuscrito final en Markdown: usar `$maquetacion-academica-preentrega` para generar `.txt` limpio.
-8. Si hay observaciones: usar `$respondedor-observaciones-academicas`.
+6. Si deben declararse contribuciones, evaluar autoría o exportar roles: usar `$gestor-contribuciones-autoria`.
+7. Si hay que reducir prosa mecanica o alinear una voz con documentos modelo: usar `$humanizar-redaccion-academica`.
+8. Si hay libro o manuscrito final en Markdown: usar `$maquetacion-academica-preentrega` para generar `.txt` limpio.
+9. Si hay observaciones: usar `$respondedor-observaciones-academicas`.
 
 ## Estado
 

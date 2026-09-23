@@ -1,0 +1,11 @@
+{
+  "tipo_obra": "articulo",
+  "disciplina": "biomedicina",
+  "salida_investigacion": true,
+  "decidir_autoria": true,
+  "destinos": [
+    "jats",
+    "crossref",
+    "orcid"
+  ]
+}

@@ -1,6 +1,6 @@
 # Reorganización de la colección: 29 a 27 skills
 
-Documento histórico de una reorganización anterior. El catálogo vigente contiene 31 skills e incorpora `revision-sistematica-prisma` y `disenador-maquetador-word`; no usar este archivo como inventario actual.
+Documento histórico de una reorganización anterior. El catálogo vigente contiene 32 skills e incorpora, entre otras posteriores, `revision-sistematica-prisma`, `disenador-maquetador-word` y `gestor-contribuciones-autoria`; no usar este archivo como inventario actual.
 
 - `desgenericador-humanizador-texto` se integra como modo de `humanizar-redaccion-academica`. Se conservan las referencias útiles y un único analizador.
 - `gestor-referencias-apa7` y `gestor-referencias-ieee` se integran en `gestor-referencias-academicas`. Seleccionar APA 7 o IEEE dentro del flujo común.
