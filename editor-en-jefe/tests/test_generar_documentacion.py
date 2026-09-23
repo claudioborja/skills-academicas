@@ -109,6 +109,22 @@ class GenerarDocumentacionSkillsTests(unittest.TestCase):
             page = (output / "revision-sistematica-prisma.md").read_text(encoding="utf-8")
             self.assertTrue(page.startswith("# Revisión Sistemática PRISMA\n"))
 
+    def test_does_not_link_historical_zip_backups_as_distributed_resources(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(root, "editor-en-jefe", "Coordina la colección.")
+            backups = root / "editor-en-jefe" / "assets" / "migraciones"
+            backups.mkdir(parents=True)
+            (backups / "antes-fusion.zip").write_bytes(b"respaldo local")
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            page = (output / "editor-en-jefe.md").read_text(encoding="utf-8")
+            self.assertNotIn("antes-fusion.zip", page)
+
     def test_rejects_the_english_activation_template_in_a_description(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp) / "coleccion"

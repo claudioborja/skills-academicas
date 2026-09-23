@@ -22,7 +22,7 @@ Separar tres revisiones y declarar cuál se realizó:
 3. Establecer una notación canónica antes de convertir: símbolos, índices, vectores, matrices, operadores, conjuntos, unidades y condiciones.
 4. Revisar cada ecuación contra el texto y, cuando corresponda, contra la fuente, derivación, datos o implementación que la sustenta. No completar términos ausentes por intuición.
 5. Comprobar consistencia dimensional y algebraica solo cuando los supuestos y unidades estén disponibles; marcar lo no verificable.
-6. Numerar únicamente las ecuaciones que deban citarse o que la plantilla exija. Mantener etiquetas estables y referencias cruzadas, nunca números escritos manualmente como fuente de verdad.
+6. Numerar únicamente las ecuaciones que deban citarse o que la plantilla exija. Si el destino no prescribe otro sistema, usar números arábigos entre paréntesis al margen derecho —por ejemplo, `(1)`— y una secuencia estable adecuada al producto. Mantener etiquetas y referencias cruzadas automáticas, nunca números escritos manualmente como fuente de verdad.
 7. Convertir al formato de entrega sin rasterizar. Conservar el formato maestro editable y verificar visualmente el artefacto final.
 8. Entregar inventario de cambios, incidencias resueltas, incidencias pendientes y límites de la revisión.
 
@@ -75,4 +75,3 @@ No declarar terminada la intervención hasta comprobar que:
 - la conversión no perdió términos, límites, alineación ni agrupaciones;
 - el DOCX, PDF, HTML o EPUB final fue renderizado e inspeccionado cuando se modificó la presentación;
 - el informe distingue errores confirmados, advertencias y aspectos no verificables.
-

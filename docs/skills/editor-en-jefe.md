@@ -46,11 +46,6 @@ Usa $editor-en-jefe para [describe aquí la tarea y los archivos de entrada].
 - [`references/produccion-editorial-eficiente.md`](../../editor-en-jefe/references/produccion-editorial-eficiente.md)
 - [`references/ruta-de-trabajo.md`](../../editor-en-jefe/references/ruta-de-trabajo.md)
 
-### Plantillas y recursos
-
-- [`assets/migraciones/antes-fusion-20260919.zip`](../../editor-en-jefe/assets/migraciones/antes-fusion-20260919.zip)
-- [`assets/migraciones/apa7-previo-20260919.zip`](../../editor-en-jefe/assets/migraciones/apa7-previo-20260919.zip)
-
 ### Pruebas
 
 - [`tests/test_flujos_seguros.py`](../../editor-en-jefe/tests/test_flujos_seguros.py)

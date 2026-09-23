@@ -73,7 +73,7 @@ def discover_resources(skill: Path, directory: str) -> tuple[Path, ...]:
     for path in root.rglob("*"):
         if not path.is_file() or any(part in EXCLUDED_PARTS for part in path.parts):
             continue
-        if path.suffix in {".pyc", ".pyo"}:
+        if path.suffix.lower() in {".pyc", ".pyo", ".zip"}:
             continue
         files.append(path.relative_to(skill))
     return tuple(sorted(files, key=lambda item: item.as_posix().casefold()))

@@ -27,6 +27,19 @@ No asumir que una conversión visualmente aceptable conserva semántica. Compara
 
 Seguir primero la plantilla de la revista, universidad o editorial. APA 7 o IEEE no sustituyen instrucciones específicas del destino. Mantener un solo sistema de numeración y referencias automáticas; evitar numerar expresiones que nunca se citan salvo exigencia de la plantilla.
 
+### Numeración de ecuaciones en bloque
+
+Cuando el destino no indique otra convención, aplicar este criterio editorial predeterminado:
+
+- Centrar o componer la ecuación según la plantilla y colocar su número al margen derecho, en la misma línea visual, con números arábigos entre paréntesis: `(1)`, `(2)`, `(3)`.
+- Numerar consecutivamente en todo el artículo. En libros, tesis o documentos extensos puede usarse numeración por capítulo o sección —por ejemplo, `(2.1)`— si mejora la localización y se mantiene uniforme. Para apéndices y grupos relacionados, admitir formas como `(A1)` y `(3a)` solo cuando el perfil editorial las contemple.
+- En ecuaciones de varias líneas, asignar un único número y alinearlo con la última línea, salvo instrucción distinta de la plantilla.
+- Citar cada ecuación numerada en el texto y respetar la forma verbal del destino: `en (1)`, `Ec. (1)` o `ecuación (1)`. No mezclar estas variantes dentro del mismo manuscrito.
+- No numerar por defecto fórmulas breves en línea ni ecuaciones en bloque que no se citarán. No reutilizar números ni dejar saltos involuntarios.
+- En LaTeX, usar `equation`, `align` u otros entornos con `\label` y `\eqref`; evitar `\tag` manual salvo exigencia justificada. En Word, conservar OMML y referencias cruzadas editables. No alinear el número mediante espacios o tabulaciones manuales.
+
+Esta convención coincide con la práctica de IEEE, Taylor & Francis y Springer Nature, pero no es universal. IEEE usa numeración consecutiva al margen derecho y referencia ordinaria mediante `(1)`; Taylor & Francis recomienda numerar serialmente a la derecha las ecuaciones citadas; Springer Nature suele numerar por capítulo a la derecha en libros. La plantilla específica siempre tiene precedencia.
+
 Usar tipografía matemática coherente: distinguir variables, constantes, operadores, unidades y texto descriptivo conforme a la convención disciplinar y al motor de composición. No insertar espacios manuales para simular alineación. Dividir ecuaciones extensas en puntos matemáticamente válidos, preservando operadores y legibilidad.
 
 Para accesibilidad, acompañar expresiones complejas con una explicación textual de su función y variables. El texto alternativo no debe ser una lectura ambigua de símbolos; usar MathML semántico o la capacidad accesible del formato cuando exista.
@@ -41,4 +54,3 @@ Para accesibilidad, acompañar expresiones complejas con una explicación textua
 - Unidades, dimensiones, precisión y convenciones consistentes.
 - Etiquetas únicas, numeración estable y referencias resueltas.
 - Ecuaciones editables y representación final inspeccionada.
-
