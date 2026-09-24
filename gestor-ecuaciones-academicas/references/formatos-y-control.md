@@ -7,7 +7,7 @@ Mantener una representación maestra editable y registrar el formato de destino:
 | Destino | Representación preferida | Comprobación mínima |
 | --- | --- | --- |
 | LaTeX/PDF | LaTeX estructurado | Compilar, revisar advertencias y comparar el PDF. |
-| Word | OMML nativo | Abrir/renderizar el DOCX y comprobar edición, saltos y alineación. |
+| Word | OMML nativo | Validar OOXML y abrir el DOCX en Microsoft Word para comprobar edición, saltos y alineación; no usar LibreOffice en este flujo. |
 | HTML/EPUB | MathML o motor admitido por el destino | Probar accesibilidad y renderizado en el lector objetivo. |
 | Canal sin soporte matemático | Derivado SVG/raster más fuente editable | Documentar la pérdida de editabilidad y verificar resolución. |
 
@@ -37,6 +37,20 @@ Cuando el destino no indique otra convención, aplicar este criterio editorial p
 - Citar cada ecuación numerada en el texto y respetar la forma verbal del destino: `en (1)`, `Ec. (1)` o `ecuación (1)`. No mezclar estas variantes dentro del mismo manuscrito.
 - No numerar por defecto fórmulas breves en línea ni ecuaciones en bloque que no se citarán. No reutilizar números ni dejar saltos involuntarios.
 - En LaTeX, usar `equation`, `align` u otros entornos con `\label` y `\eqref`; evitar `\tag` manual salvo exigencia justificada. En Word, conservar OMML y referencias cruzadas editables. No alinear el número mediante espacios o tabulaciones manuales.
+
+En Word, la composición predeterminada para una ecuación numerada es una tabla sin bordes de **dos columnas**, no tres:
+
+1. una columna flexible con todo el ancho restante y el párrafo OMML centrado;
+2. una columna estrecha de ancho fijo, centrada verticalmente, alineada a la derecha y sin ajuste de línea para el número.
+
+La columna vacía a la izquierda usada en algunas tablas simétricas reduce innecesariamente el ancho disponible y puede forzar saltos en ecuaciones largas. Si una fórmula todavía no cabe con dos columnas, dividirla dentro del objeto matemático en un operador o relación adecuados y asignar un solo número según la plantilla; no forzar el quiebre mediante el ancho de la celda.
+
+### Espaciado OMML
+
+- No crear `m:r` o `m:t` vacíos o compuestos solo por espacios entre operandos, operadores o delimitadores.
+- No usar espacios ASCII iniciales o finales dentro de un átomo matemático para controlar la apariencia; Word calcula el espaciado matemático según el operador.
+- Conservar el espacio interno de fragmentos textuales —por ejemplo, una condición escrita en palabras— y cualquier estructura OMML con función semántica.
+- Tras convertir desde LaTeX, MathML o texto, inspeccionar casos que combinan operadores, subíndices, exponentes, matrices y texto. Un hueco visual no autoriza a eliminar un término: comparar siempre con la fuente.
 
 Esta convención coincide con la práctica de IEEE, Taylor & Francis y Springer Nature, pero no es universal. IEEE usa numeración consecutiva al margen derecho y referencia ordinaria mediante `(1)`; Taylor & Francis recomienda numerar serialmente a la derecha las ecuaciones citadas; Springer Nature suele numerar por capítulo a la derecha en libros. La plantilla específica siempre tiene precedencia.
 

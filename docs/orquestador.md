@@ -22,7 +22,7 @@ Para una corrección aislada —por ejemplo, normalizar una bibliografía IEEE o
 2. **Preparar los insumos.** Preprocesar documentos largos o crear inventarios mecánicos cuando reduzca lectura innecesaria.
 3. **Planificar.** Definir arquitectura y entregables sin imponer la estructura de un libro a otros productos.
 4. **Investigar y redactar.** Reutilizar evidencia trazable vigente y desarrollar capítulos completos con revisión integrada de respaldo, argumento y estilo.
-5. **Revisar el conjunto.** Comprobar continuidad, terminología, referencias, ecuaciones y recursos visuales; la revisión local no sustituye la global. Resolver contribuciones y autoría con la política aplicable antes del cierre.
+5. **Revisar el conjunto.** Verificar los resultados comprobables con [`verificador-resultados-investigacion`](../verificador-resultados-investigacion/SKILL.md), resolver o declarar hallazgos y reabrir discusión/conclusiones cuando cambien los datos. Comprobar continuidad, terminología, referencias, ecuaciones y recursos visuales; la revisión local no sustituye la global. Resolver contribuciones y autoría con la política aplicable antes del cierre.
 6. **Cerrar.** Si el libro requiere dirección visual profesional, diseñarlo con `disenador-maquetador-word`; después comprobar requisitos y entrega con `maquetacion-academica-preentrega`. Verificar el DOCX mediante renderizado e inspección visual y mantener controles y pendientes fuera de la obra. Si hay bloqueos, identificarla como borrador.
 7. **Responder observaciones.** Abrir una ronda trazable sin rehacer fases que no fueron afectadas.
 
@@ -31,6 +31,7 @@ Para una corrección aislada —por ejemplo, normalizar una bibliografía IEEE o
 - La instrucción del usuario delimita la intervención: diagnosticar no autoriza reescribir.
 - Citas, datos, DOI, fórmulas, tablas, código y transcripciones son contenido protegido.
 - Los scripts producen señales e inventarios; no certifican coherencia científica ni suficiencia de evidencia.
+- [`verificador-resultados-investigacion`](../verificador-resultados-investigacion/SKILL.md) separa control mecánico, revisión metodológica e interpretación; conserva fuentes y deja un informe individual por hallazgo antes de cualquier corrección autorizada.
 - Kitchenham gobierna completamente las revisiones sistemáticas de ingeniería de software cuando está activo.
 - [`revision-sistematica-prisma`](../revision-sistematica-prisma/SKILL.md) gobierna PRISMA 2020, sus extensiones, el flujo y la lista de comprobación; el método de conducción debe declararse por separado y no se mezcla con Kitchenham por defecto.
 - [`disenador-maquetador-word`](../disenador-maquetador-word/SKILL.md) gobierna la identidad visual, los estilos y la composición editable de libros en Word; la preentrega conserva ese diseño y verifica los requisitos finales.
@@ -60,6 +61,10 @@ Usa $revision-sistematica-prisma para auditar este protocolo, las búsquedas, el
 
 ```text
 Usa $gestor-contribuciones-autoria para documentar quién hizo qué, aplicar la política de autoría de la revista y preparar los roles para JATS y Crossref.
+```
+
+```text
+Usa $verificador-resultados-investigacion para comprobar estos resultados, explicar cada discrepancia y corregir solo lo autorizado con una segunda verificación.
 ```
 
 ## Mantenimiento

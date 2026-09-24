@@ -23,6 +23,8 @@ Si el usuario pide una ruta completa, activar primero `$editor-en-jefe` para dia
 
 Si el usuario entrega un artículo ya escrito, activar primero `$auditor-articulo-imryd` para detectar secciones faltantes, señales de objetivo, método, resultados, discusión, limitaciones y checklist de envío.
 
+Si el artículo reutiliza resultados, presenta cifras contradictorias o incluye datos/código/tablas suficientes para reproducir controles, activar `$verificador-resultados-investigacion` antes de cerrar resultados, discusión y conclusiones. No tratar un control aritmético correcto como certificación metodológica.
+
 Si el usuario pide citas, bibliografía o normas de revista:
 - usar `$automatizador-referencias` para auditoría mecánica de citas, DOI y referencias antes de aplicar estilo;
 - usar `$gestor-referencias-academicas` cuando la revista, área o usuario pida IEEE;
@@ -35,14 +37,15 @@ Si el usuario pide citas, bibliografía o normas de revista:
 1. Diagnosticar el tipo de artículo: original empírico, revisión, estudio de caso, comunicación breve, ensayo científico, artículo metodológico o artículo derivado de tesis.
 2. Identificar revista, audiencia, idioma, norma bibliográfica, límite de palabras y estructura requerida. Si falta revista, trabajar con IMRyD estándar y dejar advertencia.
 3. Construir la pregunta, brecha, objetivo y contribución. No redactar resultados sin datos verificables.
-4. Diseñar el mapa IMRyD:
+4. Verificar los resultados disponibles con el alcance que permitan sus fuentes. Documentar por separado errores confirmados, inconsistencias, resultados no verificables y asuntos que requieren revisión metodológica; no corregir el manuscrito sin trazabilidad.
+5. Diseñar el mapa IMRyD:
    - Introducción: problema, literatura crítica, brecha, objetivo e hipótesis/pregunta.
    - Métodos: diseño, muestra/corpus, instrumentos, procedimiento, análisis, ética y reproducibilidad.
    - Resultados: hallazgos ordenados por pregunta/objetivo, tablas/figuras y datos sin interpretación excesiva.
    - Discusión: interpretación, comparación con literatura, contribución, implicaciones, limitaciones y futuras líneas.
-5. Revisar resumen, título y palabras clave al final, no al inicio, salvo que el usuario pida un esquema preliminar.
-6. Coordinar citas, tablas, figuras, estilo y respuesta a revisores con las skills correspondientes.
-7. Cerrar con checklist de envío y riesgos pendientes.
+6. Revisar resumen, título y palabras clave al final, no al inicio, salvo que el usuario pida un esquema preliminar.
+7. Coordinar citas, tablas, figuras, estilo y respuesta a revisores con las skills correspondientes.
+8. Cerrar con checklist de envío y riesgos pendientes.
 
 ## Criterios De Calidad
 
@@ -60,6 +63,8 @@ Evitar afirmaciones infladas como "se demuestra", "se comprueba definitivamente"
 ## Coordinación Con Otras Skills
 
 Leer `references/conexiones-skills.md` cuando la tarea requiera citas IEEE/APA, conversión desde tesis, revisión de abstract, tablas/figuras, respuesta a pares o humanización del manuscrito.
+
+Usar `$verificador-resultados-investigacion` para controles reproducibles y revisión trazable de resultados; remitir la validez del diseño, modelo o interpretación a revisión metodológica o disciplinar.
 
 Leer `references/estructura-imryd.md` cuando se vaya a planificar, redactar o revisar secciones IMRyD.
 
@@ -81,6 +86,7 @@ Según el pedido, entregar uno de estos productos:
 - redacción o reescritura de secciones;
 - resumen/abstract y palabras clave;
 - tabla de correspondencia objetivo-método-resultados-discusión;
+- informe consolidado e informes individuales de resultados observados, cuando la verificación forme parte del encargo;
 - checklist de envío;
 - respuesta técnica a observaciones de revisores.
 

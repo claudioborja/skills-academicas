@@ -2,7 +2,7 @@
 
 Colección de trabajo editorial, coordinada por **Editor en jefe** (`$editor-en-jefe`).
 
-Colección de 32 skills coordinadas para planificar, investigar, redactar, revisar, diseñar y entregar tesis, libros, artículos científicos y revisiones sistemáticas. Incluye automatización reproducible para documentos, referencias, imágenes, ecuaciones, tablas, contribuciones y autoría, diseño profesional en Word, formato APA 7, IEEE y control de preentrega.
+Colección de 33 skills coordinadas para planificar, investigar, redactar, revisar, diseñar y entregar tesis, libros, artículos científicos y revisiones sistemáticas. Incluye automatización reproducible para documentos, referencias, imágenes, ecuaciones, tablas, verificación de resultados, contribuciones y autoría, diseño profesional en Word, formato APA 7, IEEE y control de preentrega.
 
 La colección está diseñada para trabajar de dos maneras:
 
@@ -16,6 +16,7 @@ La colección está diseñada para trabajar de dos maneras:
 - Revisión sistemática Kitchenham para ingeniería de software.
 - [Revisión sistemática y metaanálisis con PRISMA](revision-sistematica-prisma/SKILL.md): PRISMA 2020, PRISMA-P, PRISMA-S y [extensiones/fuentes oficiales](revision-sistematica-prisma/references/fuentes-oficiales.md).
 - Búsqueda, verificación y consistencia de referencias APA 7 e IEEE.
+- [Verificación de resultados de investigación](verificador-resultados-investigacion/SKILL.md): controles reproducibles, revisión metodológica/interpretativa diferenciada e informe individual de cada intervención.
 - [Contribuciones, autoría y metadatos](gestor-contribuciones-autoria/SKILL.md): selección contextual de CRediT, ICMJE, COPE, DataCite, CodeMeta/CFF, MARC, CRO y formatos de intercambio.
 - Redacción académica en español latinoamericano, estilo y ortotipografía.
 - Tablas, figuras, imágenes científicas y ecuaciones editables.
@@ -70,6 +71,10 @@ Usa $disenador-maquetador-word para convertir este manuscrito en un libro profes
 
 ```text
 Usa $gestor-contribuciones-autoria para preparar la declaración de contribuciones, comprobar los criterios de autoría y mapear los roles al formato exigido por la revista.
+```
+
+```text
+Usa $verificador-resultados-investigacion para comprobar estos resultados, explicar cada error y preparar informes individuales antes de corregir el manuscrito.
 ```
 
 Las instrucciones normativas están siempre en el `SKILL.md` de cada directorio. Las fichas de `docs/skills/` son guías de navegación y no sustituyen esas instrucciones.

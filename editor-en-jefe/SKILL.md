@@ -19,6 +19,7 @@ El lanzador comprueba colisiones de entrada/salida y salidas existentes para `--
 - Con Kitchenham activo, su protocolo gobierna búsqueda, selección, calidad, extracción y síntesis. No activar protocolos o conteos PRISMA desde un apoyo editorial. Una enmienda debe quedar documentada.
 - Con PRISMA activo, distinguir el método de conducción de la guía de reporte. Activar `$revision-sistematica-prisma` para PRISMA 2020 y sus extensiones; no presentarlo como sustituto de Kitchenham u otro método disciplinar.
 - Para contribuciones o autoría, activar `$gestor-contribuciones-autoria`: CRediT describe tareas, la política del destino decide elegibilidad y responsabilidad, y JATS/Crossref/DataCite/ORCID u otros formatos solo representan metadatos.
+- Cuando una tesis, libro o artículo presente resultados comprobables, activar `$verificador-resultados-investigacion` antes de consolidar su interpretación. Sus controles reproducibles detectan errores e inconsistencias, pero no certifican por sí solos la validez metodológica o disciplinar.
 - Proteger datos, citas textuales, transcripciones, DOI, URLs, referencias, tablas, fórmulas y código. No inventar evidencia ni completar una extensión con relleno.
 - Automatizar solo operaciones deterministas reutilizables. Mantener tema, contenido del libro y preferencias autorales en datos o en el manuscrito, nunca como párrafos fijos de un programa general.
 - Los inventarios, coincidencias léxicas y métricas son señales para revisión. No certifican coherencia científica, respaldo de una cita, autoría humana ni calidad editorial.
@@ -38,7 +39,7 @@ Leer todas sus secciones y mantener una matriz de requisitos con origen, ámbito
 2. **Preparar insumos si hace falta.** Para archivos largos, usar preprocesamiento y mapas de secciones. Si se necesita un inventario mecánico, activar auditor documental. Leer los pasajes necesarios para juzgar el contenido.
 3. **Planificar.** Elegir con el planificador una estructura proporcional; crear carpetas cuando hagan falta. La estructura completa y su inicializador son opcionales. Respetar las carpetas de proyectos existentes y protocolos.
 4. **Investigar y redactar.** Resolver problema, objetivos, evidencia y método antes de pulir estilo. Seleccionar las skills de fuentes, marco teórico y redacción pertinentes.
-5. **Revisar.** Coherencia interna, continuidad entre capítulos y terminología según el alcance; referencias, ecuaciones y recursos visuales cuando existan. Si la obra requiere declaración de contribuciones o decisión de autoría, resolverla con la política del destino y `$gestor-contribuciones-autoria` antes de la entrega.
+5. **Revisar.** Verificar los resultados relevantes antes de fijar discusión y conclusiones; registrar cada hallazgo y reabrir todos los derivados afectados por una corrección. Comprobar además coherencia interna, continuidad entre capítulos y terminología según el alcance; referencias, ecuaciones y recursos visuales cuando existan. Si la obra requiere declaración de contribuciones o decisión de autoría, resolverla con la política del destino y `$gestor-contribuciones-autoria` antes de la entrega.
 6. **Cerrar estilo y entrega.** Humanizar solo si hay genericidad o voz mecánica; después corregir ortotipografía y redactar el resumen. Si el libro requiere identidad visual y composición profesional en Word, activar `$disenador-maquetador-word`; cerrar con `$maquetacion-academica-preentrega` para comprobar requisitos y entrega.
 7. **Responder observaciones.** Abrir una nueva ronda trazable con la skill correspondiente, sin repetir fases ya resueltas.
 
@@ -61,6 +62,8 @@ Cuando la obra contenga ecuaciones, activar `$gestor-ecuaciones-academicas` para
 Cuando un libro técnico incluya código, comandos, configuraciones o salidas de consola como contenido de lectura, activar `$gestor-codigo-tecnico-editorial`. Esa skill decide su presentación y trazabilidad; no sustituye la revisión técnica, de seguridad o de licencias del software.
 
 Cuando deban identificarse autores, colaboradores, traductores, responsables de datos o desarrolladores, usar `$gestor-contribuciones-autoria`. No inferir autoría por cargo, número de roles CRediT u orden histórico; conservar confirmación, política aplicada y mapeo técnico.
+
+Cuando existan resultados cuantitativos o cualitativos susceptibles de comprobación, usar `$verificador-resultados-investigacion`. Mantener fuentes intactas, separar comprobación mecánica de revisión metodológica, producir un informe individual por hallazgo y no aplicar correcciones sin autorización y reverificación.
 
 Si llega un reporte de similitud/IA, usar humanización para interpretarlo con cautela y revisar prosa propia de forma selectiva. No perseguir porcentajes ni alterar contenido protegido para modificar una puntuación.
 

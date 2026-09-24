@@ -18,6 +18,7 @@ Usa $gestor-ecuaciones-academicas para [describe aquí la tarea y los archivos d
 - Flujo
 - Formatos
 - Auditoría mecánica reproducible
+- Normalización de ecuaciones en Word
 - Límites de intervención
 - Coordinación
 - Cierre
@@ -27,6 +28,7 @@ Usa $gestor-ecuaciones-academicas para [describe aquí la tarea y los archivos d
 ### Herramientas automatizadas
 
 - [`scripts/auditar_ecuaciones.py`](../../gestor-ecuaciones-academicas/scripts/auditar_ecuaciones.py)
+- [`scripts/normalizar_ecuaciones_word.py`](../../gestor-ecuaciones-academicas/scripts/normalizar_ecuaciones_word.py)
 
 ### Referencias
 
@@ -35,6 +37,7 @@ Usa $gestor-ecuaciones-academicas para [describe aquí la tarea y los archivos d
 ### Pruebas
 
 - [`tests/test_auditar_ecuaciones.py`](../../gestor-ecuaciones-academicas/tests/test_auditar_ecuaciones.py)
+- [`tests/test_normalizar_ecuaciones_word.py`](../../gestor-ecuaciones-academicas/tests/test_normalizar_ecuaciones_word.py)
 
 ### Configuración de interfaz
 

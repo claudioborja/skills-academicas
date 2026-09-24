@@ -1,0 +1,29 @@
+{
+  "proyecto": "tesis-demo",
+  "tolerancia": 0.01,
+  "resultados": [
+    {
+      "id": "RES-001",
+      "ubicacion": "Capítulo 4, Tabla 7",
+      "afirmacion": "El 70 % de los participantes respondió afirmativamente.",
+      "tipo": "porcentaje",
+      "reportado": 70,
+      "numerador": 30,
+      "denominador": 40,
+      "fuente": "datos/encuesta.csv:respuesta"
+    },
+    {
+      "id": "RES-002",
+      "ubicacion": "Capítulo 4, Tabla 8",
+      "afirmacion": "La media observada fue 4.",
+      "tipo": "media",
+      "reportado": 4,
+      "valores": [
+        2,
+        4,
+        6
+      ],
+      "fuente": "datos/mediciones.csv:puntaje"
+    }
+  ]
+}

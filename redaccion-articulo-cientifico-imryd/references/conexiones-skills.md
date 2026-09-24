@@ -14,6 +14,12 @@ Usar `$editor-en-jefe` cuando:
 
 Después del diagnóstico, volver a esta skill para convertir la ruta en arquitectura de artículo.
 
+## Verificación De Resultados
+
+Usar `$verificador-resultados-investigacion` antes de cerrar resultados, discusión y conclusiones cuando existan cifras reutilizadas, cálculos reproducibles, tablas/figuras, categorías cualitativas trazables o contradicciones entre secciones.
+
+La verificación mecánica comprueba operaciones y consistencia declarada; no certifica el diseño, la elección del modelo, la significación práctica ni la interpretación causal. Cada error o inconsistencia debe conservar ubicación, fuente, explicación, corrección propuesta, autorización y comprobación posterior. Si faltan insumos, clasificar como `NO_VERIFICABLE` en lugar de reconstruir datos.
+
 ## Revisiones sistemáticas
 
 Usar `$revision-sistematica-prisma` cuando el informe deba aplicar PRISMA 2020, PRISMA-P, PRISMA-S o una extensión oficial. Esa skill gobierna la guía de reporte, el flujo y la matriz de cumplimiento; esta skill adapta la presentación a IMRyD y a la revista sin cambiar decisiones metodológicas.

@@ -43,12 +43,14 @@ Para DOCX, PDF, HTML o manuscritos extensos, usar primero `$preprocesador-docume
 4. Formular la tesis argumental del libro y comprobar que procede de la evidencia disponible.
 5. Diseñar el mapa capítulo -> pregunta -> evidencia antes de reescribir.
 6. Elaborar y validar la matriz de conversión y el presupuesto de extensión antes de reescribir.
-7. Convertir el índice de tesis en índice de libro, con progresión acumulativa.
-8. Reubicar metodología, resultados y anexos según su utilidad, sin aislar los datos en un único capítulo cuando sostienen argumentos posteriores.
-9. Resolver antes de publicar los permisos, confidencialidad, datos personales y atribuciones pendientes.
-10. Reescribir introducciones y transiciones para lector de libro.
-11. Aplicar continuidad, humanización académica y corrección final.
-12. Preparar preliminares y cierre editorial.
+7. Verificar con `$verificador-resultados-investigacion` los resultados que se reutilizarán, empezando por cálculos, totales, denominadores, tablas, figuras y repeticiones contradictorias. Conservar el informe consolidado y un informe individual por hallazgo.
+8. Resolver o declarar los estados `ERROR_CONFIRMADO`, `INCONSISTENTE`, `NO_VERIFICABLE` y `REQUIERE_REVISION_METODOLOGICA` antes de convertirlos en afirmaciones editoriales. No corregir silenciosamente ni inferir valores faltantes.
+9. Convertir el índice de tesis en índice de libro, con progresión acumulativa.
+10. Reubicar metodología, resultados y anexos según su utilidad, sin aislar los datos en un único capítulo cuando sostienen argumentos posteriores.
+11. Resolver antes de publicar los permisos, confidencialidad, datos personales y atribuciones pendientes.
+12. Reescribir introducciones y transiciones para lector de libro.
+13. Aplicar continuidad, humanización académica y corrección final.
+14. Preparar preliminares y cierre editorial.
 
 Si el usuario pide solo diagnóstico, no reescribir todavía: entregar mapa de conversión y prioridades.
 
@@ -120,6 +122,7 @@ El mapa de evidencia por capítulo debe indicar: propósito del capítulo, vínc
 
 Usar otros skills del workflow después de esta conversión:
 
+- `$verificador-resultados-investigacion` antes de reutilizar hallazgos en capítulos, sin confundir la comprobación mecánica con validación científica;
 - `$gestor-continuidad-libro` para coherencia entre capítulos;
 - `$revisor-citas-consistencia-bibliografica` para citas y bibliografía;
 - `$gestor-tablas-figuras-pies` para aparato visual;
@@ -136,6 +139,7 @@ Según el pedido, entregar:
 - arquitectura argumental y mapa de evidencia por capítulo;
 - tabla "tesis -> libro";
 - matriz de conversión trazable, con decisiones pendientes claramente separadas;
+- informe consolidado de verificación e informes individuales de intervención para resultados observados, cuando existan datos verificables;
 - presupuesto de extensión por capítulo cuando se solicite una longitud objetivo;
 - lista de secciones que se conservan, se resumen, se mueven o se eliminan;
 - capítulos reescritos;
@@ -149,6 +153,7 @@ Comprobar:
 - el libro ya no se lee como documento presentado a un tribunal;
 - la metodología queda proporcionada al lector;
 - los resultados no pierden trazabilidad;
+- cada resultado reutilizado tiene estado de verificación, fuente y alcance; toda corrección aprobada se propagó a tablas, discusión, conclusiones y demás derivados afectados;
 - las citas y datos se conservan;
 - el índice tiene progresión editorial;
 - el tono es académico, claro y publicable;

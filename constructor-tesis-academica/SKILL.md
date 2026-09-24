@@ -20,14 +20,16 @@ Diagnosticar la etapa real y la norma institucional antes de redactar. No rellen
 3. Construir la matriz de consistencia cuando el enfoque o la institución la requieran. Leer `references/matriz-consistencia.md`.
 4. Ordenar secciones conforme a la guía universitaria; si no existe, usar la estructura común como propuesta sujeta a adaptación.
 5. Intervenir por capas: lógica y evidencia; redacción y continuidad; formato y preentrega.
-6. Exigir que cada objetivo tenga soporte teórico, método, resultado, discusión y conclusión correspondientes.
-7. Entregar versión revisada, cambios realizados, pendientes críticos y siguiente acción.
+6. Antes de cerrar discusión y conclusiones, activar `$verificador-resultados-investigacion` cuando existan cálculos, tablas, figuras, categorías o afirmaciones empíricas comprobables. Resolver o declarar errores, inconsistencias, límites de verificación y revisiones metodológicas pendientes.
+7. Exigir que cada objetivo tenga soporte teórico, método, resultado, discusión y conclusión correspondientes. Si cambia un resultado, reabrir todos sus derivados.
+8. Entregar versión revisada, cambios realizados, pendientes críticos, informe de verificación cuando corresponda y siguiente acción.
 
 ## Coordinación
 
 - Usar `$humanizar-redaccion-academica` cuando el contenido sea suficiente pero la prosa resulte mecánica.
 - Usar `$humanizar-redaccion-academica` cuando la redacción sea abstracta o intercambiable.
 - Usar `$redaccion-articulo-cientifico-imryd` para convertir una contribución de la tesis en artículo.
+- Usar `$verificador-resultados-investigacion` para comprobar resultados y documentar cada corrección; su automatización no sustituye revisión estadística, metodológica o disciplinar.
 - No humanizar antes de resolver problema, objetivos, método, resultados y citas.
 
 ## Referencias

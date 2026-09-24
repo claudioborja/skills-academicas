@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verificador de resultados"
+  short_description: "Comprueba resultados y documenta correcciones"
+  default_prompt: "Usa $verificador-resultados-investigacion para verificar estos resultados, explicar cada hallazgo y preparar intervenciones trazables sin alterar las fuentes originales."
