@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 import tempfile
 import unittest
+from zipfile import ZipFile
 
 
 SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "generar_documentacion_skills.py"
@@ -229,6 +230,34 @@ class GenerarDocumentacionSkillsTests(unittest.TestCase):
             self.assertIn("| Recurso | Función |", page)
             self.assertIn("Ejecuta la acción demostrativa.", page)
             self.assertIn("Criterios", page)
+
+    def test_uses_the_first_docx_paragraph_as_the_asset_description(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(root, "alfa-skill", "Procesa entradas alfa.")
+            assets = root / "alfa-skill" / "assets"
+            assets.mkdir()
+            document = assets / "formulario.docx"
+            with ZipFile(document, "w") as archive:
+                archive.writestr(
+                    "word/document.xml",
+                    (
+                        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>'
+                        '<w:document xmlns:w="http://schemas.openxmlformats.org/'
+                        'wordprocessingml/2006/main"><w:body><w:p><w:r><w:t>'
+                        "Ficha de control editorial de libros"
+                        "</w:t></w:r></w:p></w:body></w:document>"
+                    ),
+                )
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            page = (output / "alfa-skill.md").read_text(encoding="utf-8")
+            self.assertIn("Ficha de control editorial de libros", page)
+            self.assertNotIn("Recurso auxiliar: Formulario", page)
 
     def test_groups_known_skills_by_workflow_in_the_index(self):
         with tempfile.TemporaryDirectory() as tmp:

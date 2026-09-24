@@ -2,7 +2,7 @@
 
 Colección de trabajo editorial, coordinada por **Editor en jefe** (`$editor-en-jefe`).
 
-Colección de 33 skills coordinadas para planificar, investigar, redactar, revisar, diseñar y entregar tesis, libros, artículos científicos y revisiones sistemáticas. Incluye automatización reproducible para documentos, referencias, imágenes, ecuaciones, tablas, verificación de resultados, contribuciones y autoría, diseño profesional en Word, formato APA 7, IEEE y control de preentrega.
+Colección de 34 skills coordinadas para planificar, investigar, redactar, revisar, diseñar y entregar tesis, libros, artículos científicos y revisiones sistemáticas. Incluye automatización reproducible para documentos, referencias, imágenes, ecuaciones, tablas, verificación de resultados, contribuciones y autoría, control editorial de libros, diseño profesional en Word, formato APA 7, IEEE y control de preentrega.
 
 La colección está diseñada para trabajar de dos maneras:
 
@@ -18,6 +18,7 @@ La colección está diseñada para trabajar de dos maneras:
 - Búsqueda, verificación y consistencia de referencias APA 7 e IEEE.
 - [Verificación de resultados de investigación](verificador-resultados-investigacion/SKILL.md): controles reproducibles, revisión metodológica/interpretativa diferenciada e informe individual de cada intervención.
 - [Contribuciones, autoría y metadatos](gestor-contribuciones-autoria/SKILL.md): selección contextual de CRediT, ICMJE, COPE, DataCite, CodeMeta/CFF, MARC, CRO y formatos de intercambio.
+- [Control editorial de libros](gestor-control-editorial-libros/SKILL.md): admisibilidad, selección de front matter, perfil BKCI opcional y control técnico prepublicación.
 - Redacción académica en español latinoamericano, estilo y ortotipografía.
 - Tablas, figuras, imágenes científicas y ecuaciones editables.
 - Preprocesamiento de PDF, DOCX, HTML, TXT y Markdown.
@@ -94,6 +95,7 @@ El [catálogo completo](docs/skills/README.md) agrupa las especialidades por flu
 | Skill | Función principal |
 | --- | --- |
 | [`gestor-contribuciones-autoria`](docs/skills/gestor-contribuciones-autoria.md) | Selecciona taxonomías, criterios de autoría y formatos de metadatos. |
+| [`gestor-control-editorial-libros`](docs/skills/gestor-control-editorial-libros.md) | Gestiona admisibilidad, front matter, BKCI opcional y control prepublicación. |
 | [`disenador-maquetador-word`](docs/skills/disenador-maquetador-word.md) | Diseña libros profesionales como DOCX editables y resistentes al reflujo. |
 | [`maquetacion-academica-preentrega`](docs/skills/maquetacion-academica-preentrega.md) | Comprueba formato, limpieza y condiciones finales de entrega. |
 

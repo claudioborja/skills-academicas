@@ -11,6 +11,8 @@ from pathlib import Path
 import re
 import sys
 import tempfile
+from xml.etree import ElementTree
+from zipfile import BadZipFile, ZipFile
 
 
 EXCLUDED_PARTS = {".runtime", "__pycache__", ".git", ".venv", "venv"}
@@ -83,6 +85,7 @@ SKILL_CATEGORIES = {
     "gestor-ecuaciones-academicas": "Recursos técnicos y visuales",
     "gestor-codigo-tecnico-editorial": "Recursos técnicos y visuales",
     "gestor-contribuciones-autoria": "Edición, autoría y entrega",
+    "gestor-control-editorial-libros": "Edición, autoría y entrega",
     "disenador-maquetador-word": "Edición, autoría y entrega",
     "maquetacion-academica-preentrega": "Edición, autoría y entrega",
 }
@@ -159,6 +162,18 @@ def resource_purpose(path: Path) -> str:
             heading = first_heading(path.read_text(encoding="utf-8"))
             if heading:
                 return heading
+        if suffix == ".docx":
+            with ZipFile(path) as archive:
+                document = ElementTree.fromstring(archive.read("word/document.xml"))
+            namespace = {
+                "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+            }
+            for paragraph in document.findall(".//w:body/w:p", namespace):
+                text = "".join(
+                    node.text or "" for node in paragraph.findall(".//w:t", namespace)
+                ).strip()
+                if text:
+                    return text
         if path.name == "openai.yaml":
             return "Metadatos de interfaz e invocación de la skill."
         if suffix == ".csv":
@@ -167,7 +182,7 @@ def resource_purpose(path: Path) -> str:
             return f"Datos estructurados o ejemplo: {humanize_stem(path)}."
         if "requirements" in path.name:
             return "Dependencias Python fijadas para esta herramienta."
-    except (OSError, SyntaxError, UnicodeError):
+    except (BadZipFile, ElementTree.ParseError, KeyError, OSError, SyntaxError, UnicodeError):
         pass
     return f"Recurso auxiliar: {humanize_stem(path)}."
 

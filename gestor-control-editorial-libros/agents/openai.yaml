@@ -1,0 +1,4 @@
+interface:
+  display_name: "Control editorial de libros"
+  short_description: "Admisibilidad, front matter y prepublicación"
+  default_prompt: "Usa $gestor-control-editorial-libros para seleccionar y documentar el control editorial aplicable a esta obra."

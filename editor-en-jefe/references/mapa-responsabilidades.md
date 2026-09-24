@@ -25,6 +25,7 @@ Elegir por el resultado solicitado. Las siguientes especialidades complementan a
 | Operaciones bibliográficas repetibles | `automatizador-referencias` | Metadatos, cruces y duplicados; no decide admisión de estudios. |
 | Buscar, verificar y citar en APA/IEEE | `gestor-referencias-academicas` | Protocolo y política seleccionada gobiernan fuentes. |
 | Contribuciones, autoría y metadatos de participantes | `gestor-contribuciones-autoria` | CRediT describe tareas; la política del destino decide autoría; los formatos técnicos no sustituyen ninguna de esas capas. |
+| Admisibilidad, front matter, preparación BKCI y control prepublicación de libros | `gestor-control-editorial-libros` | Controla evidencia y expediente editorial; no transforma la obra, evalúa su ciencia ni garantiza indexación. |
 | Correspondencia final citas-bibliografía | `revisor-citas-consistencia-bibliografica` | Revisión editorial apoyada por automatización. |
 | Restricciones bibliográficas adicionales | `ajustes-editoriales-bibliograficos` | Distinguir política del proyecto y norma de cita. |
 | Riesgo de procedencia editorial | `filtro-editoriales-depredadoras` | Alertas justificadas; no usar ausencia de DOI como prueba de fraude. |

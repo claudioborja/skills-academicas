@@ -13,6 +13,7 @@ Esta documentación tiene tres niveles:
 | Proyecto integral o alcance incierto | [`editor-en-jefe`](skills/editor-en-jefe.md) |
 | Tesis que seguirá siendo tesis | [`constructor-tesis-academica`](skills/constructor-tesis-academica.md) |
 | Transformar tesis en libro | [`convertidor-tesis-a-libro`](skills/convertidor-tesis-a-libro.md) |
+| Controlar admisibilidad, front matter o prepublicación de un libro | [`gestor-control-editorial-libros`](skills/gestor-control-editorial-libros.md) |
 | Artículo científico | [`redaccion-articulo-cientifico-imryd`](skills/redaccion-articulo-cientifico-imryd.md) |
 | Revisión Kitchenham | [`revision-sistematica-kitchenham`](skills/revision-sistematica-kitchenham.md) |
 | Reporte PRISMA | [`revision-sistematica-prisma`](skills/revision-sistematica-prisma.md) |
@@ -30,11 +31,12 @@ Esta documentación tiene tres niveles:
 - [Fuentes oficiales PRISMA](../revision-sistematica-prisma/references/fuentes-oficiales.md)
 - [Diseño y maquetación profesional en Word](../disenador-maquetador-word/SKILL.md)
 - [Contribuciones, autoría y metadatos](../gestor-contribuciones-autoria/SKILL.md)
+- [Control editorial de libros](../gestor-control-editorial-libros/SKILL.md)
 - [Verificación de resultados e informes de intervención](../verificador-resultados-investigacion/SKILL.md)
 - [Organización proporcional del proyecto de libro](../planificador-obra-academica/references/estructura-directorios-libro.md)
 - [Instalación y distribución de la colección](../README.md)
 
-El catálogo contiene 33 skills. Cada ficha conserva la guía operativa, el ejemplo real de invocación, los límites, la coordinación, los comandos presentes en el `SKILL.md` y una tabla descriptiva de recursos. Las fichas se regeneran; los `SKILL.md` siguen siendo las instrucciones normativas. El README principal y esta guía se mantienen manualmente.
+El catálogo contiene 34 skills. Cada ficha conserva la guía operativa, el ejemplo real de invocación, los límites, la coordinación, los comandos presentes en el `SKILL.md` y una tabla descriptiva de recursos. Las fichas se regeneran; los `SKILL.md` siguen siendo las instrucciones normativas. El README principal y esta guía se mantienen manualmente.
 
 Para revisiones, Kitchenham y PRISMA son rutas separadas: Kitchenham gobierna su metodología en ingeniería de software; PRISMA gobierna el reporte y exige declarar aparte el método de conducción. Para contribuciones, CRediT describe tareas, mientras la política del destino gobierna la autoría y los esquemas técnicos gobiernan la exportación. Para resultados, los controles automáticos reproducen operaciones y consistencia; la revisión humana conserva la decisión metodológica, disciplinar e interpretativa.
 

@@ -45,7 +45,7 @@ Leer todas sus secciones y mantener una matriz de requisitos con origen, ámbito
 3. **Planificar.** Elegir con el planificador una estructura proporcional; crear carpetas cuando hagan falta. La estructura completa y su inicializador son opcionales. Respetar las carpetas de proyectos existentes y protocolos.
 4. **Investigar y redactar.** Resolver problema, objetivos, evidencia y método antes de pulir estilo. Seleccionar las skills de fuentes, marco teórico y redacción pertinentes.
 5. **Revisar.** Verificar los resultados relevantes antes de fijar discusión y conclusiones; registrar cada hallazgo y reabrir todos los derivados afectados por una corrección. Comprobar además coherencia interna, continuidad entre capítulos y terminología según el alcance; referencias, ecuaciones y recursos visuales cuando existan. Si la obra requiere declaración de contribuciones o decisión de autoría, resolverla con la política del destino y `$gestor-contribuciones-autoria` antes de la entrega.
-6. **Cerrar estilo y entrega.** Humanizar solo si hay genericidad o voz mecánica; después corregir ortotipografía y redactar el resumen. Si el libro requiere identidad visual y composición profesional en Word, activar `$disenador-maquetador-word`; cerrar con `$maquetacion-academica-preentrega` para comprobar requisitos y entrega.
+6. **Cerrar estilo y entrega.** Humanizar solo si hay genericidad o voz mecánica; después corregir ortotipografía y redactar el resumen. En libros que deban pasar admisibilidad, preparar front matter, aplicar un perfil BKCI declarado o documentar la autorización prepublicación, activar `$gestor-control-editorial-libros`. Si el libro requiere identidad visual y composición profesional en Word, activar `$disenador-maquetador-word`; cerrar con `$maquetacion-academica-preentrega` para comprobar requisitos y entrega.
 7. **Responder observaciones.** Abrir una nueva ronda trazable con la skill correspondiente, sin repetir fases ya resueltas.
 
 No ejecutar todas las etapas por rutina. Tras una edición sustancial, revisar únicamente lo que pudo verse afectado: por ejemplo, referencias y conclusiones si se cambió el argumento.
@@ -67,6 +67,8 @@ Cuando la obra contenga ecuaciones, activar `$gestor-ecuaciones-academicas` para
 Cuando un libro técnico incluya código, comandos, configuraciones o salidas de consola como contenido de lectura, activar `$gestor-codigo-tecnico-editorial`. Esa skill decide su presentación y trazabilidad; no sustituye la revisión técnica, de seguridad o de licencias del software.
 
 Cuando deban identificarse autores, colaboradores, traductores, responsables de datos o desarrolladores, usar `$gestor-contribuciones-autoria`. No inferir autoría por cargo, número de roles CRediT u orden histórico; conservar confirmación, política aplicada y mapeo técnico.
+
+Cuando un libro necesite control de admisibilidad, selección de front matter, preparación opcional para Book Citation Index o control técnico posterior a la aceptación, usar `$gestor-control-editorial-libros`. La transformación de una tesis continúa bajo `$convertidor-tesis-a-libro`; BKCI solo se activa como destino explícito y nunca se presenta como garantía de selección.
 
 Cuando existan resultados cuantitativos o cualitativos susceptibles de comprobación, usar `$verificador-resultados-investigacion`. Mantener fuentes intactas, separar comprobación mecánica de revisión metodológica, producir un informe individual por hallazgo y no aplicar correcciones sin autorización y reverificación.
 

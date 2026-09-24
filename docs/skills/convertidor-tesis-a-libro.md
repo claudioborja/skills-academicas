@@ -56,6 +56,7 @@ Para DOCX, PDF, HTML o manuscritos extensos, usar primero `$preprocesador-docume
 12. Reescribir introducciones y transiciones para lector de libro.
 13. Aplicar continuidad, humanización académica y corrección final.
 14. Preparar preliminares y cierre editorial.
+15. Entregar el libro a `$gestor-control-editorial-libros` cuando deba seleccionarse el front matter, documentarse la admisibilidad o prepublicación, o aplicarse un perfil BKCI declarado. No asumir que una tesis convertida usa obra completa: confirmar si los capítulos tienen autoría y citabilidad independientes.
 
 Si el usuario pide solo diagnóstico, no reescribir todavía: entregar mapa de conversión y prioridades.
 
@@ -133,6 +134,7 @@ Usar otros skills del workflow después de esta conversión:
 - `$gestor-tablas-figuras-pies` para aparato visual;
 - `$humanizar-redaccion-academica` para naturalidad;
 - `$correccion-estilo-ortotipografica` para cierre editorial;
+- `$gestor-control-editorial-libros` para seleccionar el front matter y documentar admisibilidad, BKCI opcional y control prepublicación;
 - `$maquetacion-academica-preentrega` antes de exportar.
 
 ### Salida Esperada
@@ -150,6 +152,7 @@ Según el pedido, entregar:
 - capítulos reescritos;
 - preliminares de libro;
 - plan de revisión final.
+- perfil de control editorial y front matter aplicable cuando el libro continúe hacia publicación.
 
 ### Validación Final
 
@@ -168,6 +171,7 @@ Comprobar:
 - todos los capítulos desarrollan la misma tesis argumental y tienen una relación explícita con evidencia, hallazgos o casos de la investigación;
 - los datos no quedan relegados a un único capítulo si fundamentan interpretaciones o aplicaciones posteriores;
 - la extensión solicitada se sostiene con contenido planificado y verificable, sin relleno ni temas externos no autorizados.
+- el traspaso editorial no confunde la transformación de la tesis con la admisibilidad, la revisión por pares o una garantía de indexación.
 
 ## Recursos incluidos
 
