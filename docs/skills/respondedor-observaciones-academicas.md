@@ -2,37 +2,64 @@
 
 Úsalo cuando el usuario necesite responder observaciones de tutor, jurado, editor, evaluador o par revisor, convirtiendo comentarios dispersos en una matriz de cambios, plan de respuesta y ajustes concretos al manuscrito.
 
-## Uso
-
-Invócala directamente con `$respondedor-observaciones-academicas` o permite que el orquestador la seleccione según el encargo.
-
-Ejemplo:
+## Ejemplo de uso
 
 ```text
-Usa $respondedor-observaciones-academicas para [describe aquí la tarea y los archivos de entrada].
+Usa $respondedor-observaciones-academicas para organizar estas observaciones y proponer respuestas y cambios.
 ```
 
-## Cobertura
+## Guía operativa
 
-- Automatización Previa
-- Objetivo
-- Cuándo usarlo
-- Flujo de trabajo
-- Salida esperada
-- Validación final
+### Automatización Previa
+
+Si las observaciones llegan como lista, texto pegado, dictamen o comentarios dispersos, ejecutar primero `scripts/observaciones_a_matriz.py` para construir una matriz con ID, tipo, severidad, acción sugerida y estado. Luego redactar la respuesta académica con trazabilidad.
+
+### Objetivo
+
+Este skill transforma comentarios externos en un plan de acción claro. Organiza observaciones, las clasifica por tipo, propone respuesta y ayuda a traducirlas en cambios concretos dentro del manuscrito.
+
+### Cuándo usarlo
+
+- después de recibir comentarios de tutor o jurado
+- tras revisión editorial o arbitraje
+- cuando hay observaciones mezcladas o contradictorias
+- cuando se necesita redactar carta o matriz de respuesta
+
+### Flujo de trabajo
+
+1. Reúne todas las observaciones.
+2. Clasifícalas por prioridad y tipo.
+3. Distingue cambios obligatorios, debatibles y aclaraciones.
+4. Propone respuesta respetuosa y técnica.
+5. Vincula cada respuesta con una acción en el manuscrito.
+
+### Salida esperada
+
+- matriz de observaciones
+- propuesta de respuesta
+- plan de cambios
+- lista de puntos pendientes
+
+### Validación final
+
+- ninguna observación importante queda sin respuesta
+- las respuestas son claras y profesionales
+- cada observación tiene acción asociada o justificación
 
 ## Recursos incluidos
 
 ### Herramientas automatizadas
 
-- [`scripts/observaciones_a_matriz.py`](../../respondedor-observaciones-academicas/scripts/observaciones_a_matriz.py)
+| Recurso | Función |
+| --- | --- |
+| [`scripts/observaciones_a_matriz.py`](../../respondedor-observaciones-academicas/scripts/observaciones_a_matriz.py) | Recurso auxiliar: Observaciones a matriz. |
 
 ### Configuración de interfaz
 
-- [`agents/openai.yaml`](../../respondedor-observaciones-academicas/agents/openai.yaml)
+| Recurso | Función |
+| --- | --- |
+| [`agents/openai.yaml`](../../respondedor-observaciones-academicas/agents/openai.yaml) | Metadatos de interfaz e invocación de la skill. |
 
-## Integración
+## Fuente normativa
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
-
-Consulta las instrucciones normativas en [`respondedor-observaciones-academicas/SKILL.md`](../../respondedor-observaciones-academicas/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.
+Esta ficha se genera desde [`respondedor-observaciones-academicas/SKILL.md`](../../respondedor-observaciones-academicas/SKILL.md), que permanece como contrato normativo. Regenera la ficha después de modificar ese archivo.

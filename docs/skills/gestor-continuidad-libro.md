@@ -2,36 +2,68 @@
 
 Úsalo cuando el usuario necesite mantener continuidad temática, estilística, terminológica y estructural entre capítulos de un libro, tesis extensa o manuscrito largo, evitando repeticiones, cambios de voz y quiebres de enfoque.
 
-## Uso
-
-Invócala directamente con `$gestor-continuidad-libro` o permite que el orquestador la seleccione según el encargo.
-
-Ejemplo:
+## Ejemplo de uso
 
 ```text
-Usa $gestor-continuidad-libro para [describe aquí la tarea y los archivos de entrada].
+Usa $gestor-continuidad-libro para revisar la continuidad entre estos capítulos.
 ```
 
-## Cobertura
+## Guía operativa
 
-- Objetivo
-- Cuándo usarlo
-- Flujo de trabajo
-- Validación final
-- Referencias de apoyo
+### Objetivo
+
+Este skill vela por la unidad de obras extensas. Revisa si los capítulos mantienen la misma voz, el mismo nivel de profundidad, el mismo sistema conceptual y una progresión coherente de principio a fin.
+
+### Cuándo usarlo
+
+- cuando el manuscrito tiene varios capítulos
+- cuando distintos bloques fueron escritos en momentos diferentes
+- cuando hay sospecha de repetición o incoherencia entre secciones
+- antes de cierre editorial o académico
+
+### Flujo de trabajo
+
+Reutilizar el registro de capítulos y decisiones según [producción editorial integrada](../../editor-en-jefe/references/produccion-editorial-eficiente.md). Durante la escritura, revisar bloques modificados y sus relaciones; conservar una revisión global al integrar el libro. Una conclusión o término cambiado puede afectar capítulos no contiguos. No repetir auditorías vigentes ni reescribir toda la obra por rutina.
+
+1. Identifica propósito global e hilo conductor.
+2. Compara capítulos en voz, tono, terminología y nivel de desarrollo.
+3. Compara extensión total y por sección, mediana de palabras por párrafo, densidad conceptual y rachas de párrafos breves.
+4. Distingue repetición verbal de recapitulación funcional; detecta vacíos, compresión excesiva y rupturas de continuidad.
+5. Ajusta aperturas, cierres y enlaces entre capítulos mediante recurrencia conceptual, no conectores rituales.
+6. Uniforma profundidad y función de cada bloque sin forzar tamaños idénticos.
+7. Si la obra fue humanizada, contrasta con la versión anterior y recupera explicaciones, evidencia, matices o implicaciones eliminados por una edición demasiado reductora.
+8. Audita la continuidad alrededor de tablas y figuras. Cada recurso debe tener una llamada previa y, después de su nota, un párrafo sustantivo que interprete relaciones, consecuencias o límites y enlace con el argumento siguiente.
+9. Impide las secuencias `recurso -> preguntas`, `recurso -> recurso` y `recurso -> nuevo apartado` cuando entre ambos no exista análisis y transición. Las preguntas de reflexión deben aparecer después del cierre analítico de la sección, no como sustituto de ese cierre.
+
+### Validación final
+
+- la voz autoral es estable
+- no hay capítulos que parezcan de otra obra
+- los bloques avanzan sin repetir el mismo contenido
+- no existen rachas involuntarias de párrafos breves ni capítulos claramente subdesarrollados
+- la extensión responde a la función editorial de cada bloque
+- ninguna tabla o figura queda sin análisis posterior ni se yuxtapone directamente con preguntas, otro recurso o un encabezado
+- el análisis posterior no repite el título o las celdas: explica al menos una relación relevante y su implicación para el hilo argumental
+- el lector percibe continuidad real
+
+### Referencias de apoyo
+
+- Para continuidad de obras largas: lee [references/continuidad-de-manuscrito.md](../../gestor-continuidad-libro/references/continuidad-de-manuscrito.md).
 
 ## Recursos incluidos
 
 ### Referencias
 
-- [`references/continuidad-de-manuscrito.md`](../../gestor-continuidad-libro/references/continuidad-de-manuscrito.md)
+| Recurso | Función |
+| --- | --- |
+| [`references/continuidad-de-manuscrito.md`](../../gestor-continuidad-libro/references/continuidad-de-manuscrito.md) | Continuidad de manuscrito |
 
 ### Configuración de interfaz
 
-- [`agents/openai.yaml`](../../gestor-continuidad-libro/agents/openai.yaml)
+| Recurso | Función |
+| --- | --- |
+| [`agents/openai.yaml`](../../gestor-continuidad-libro/agents/openai.yaml) | Metadatos de interfaz e invocación de la skill. |
 
-## Integración
+## Fuente normativa
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
-
-Consulta las instrucciones normativas en [`gestor-continuidad-libro/SKILL.md`](../../gestor-continuidad-libro/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.
+Esta ficha se genera desde [`gestor-continuidad-libro/SKILL.md`](../../gestor-continuidad-libro/SKILL.md), que permanece como contrato normativo. Regenera la ficha después de modificar ese archivo.

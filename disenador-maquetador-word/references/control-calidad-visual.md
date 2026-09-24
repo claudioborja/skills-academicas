@@ -4,7 +4,7 @@ Leer este documento después de generar o modificar la maqueta y antes de declar
 
 ## Renderizado de control
 
-Renderizar una copia temporal del DOCX con una herramienta disponible, como LibreOffice, y convertir páginas representativas en imágenes si facilita su inspección. El PDF o las imágenes son instrumentos internos: el entregable continúa siendo el DOCX.
+Validar primero estilos, secciones, campos y objetos mediante OOXML. Abrir después una copia temporal en Microsoft Word para inspeccionar páginas representativas cuando esté disponible. LibreOffice no forma parte de este flujo. Cualquier PDF o imagen de control es un instrumento interno: el entregable continúa siendo el DOCX.
 
 Si no es posible renderizar, informar que la validación visual está pendiente. La estructura interna del archivo no demuestra que Word lo presentará correctamente.
 

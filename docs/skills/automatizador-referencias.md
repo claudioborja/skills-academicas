@@ -2,48 +2,102 @@
 
 Automatiza tareas mecánicas relacionadas con citas, DOI, bibliografía y fuentes descargadas para reducir el consumo de tokens. Usar cuando Codex necesite auditar citas APA o IEEE frente a la bibliografía, detectar DOI faltantes o repetidos, consultar metadatos DOI en Crossref, inventariar archivos PDF, HTML o Markdown de referencias, normalizar entradas bibliográficas preliminares o preparar insumos para gestor-referencias-academicas, revisor-citas-consistencia-bibliografica, filtro-editoriales-depredadoras y editor-en-jefe.
 
-## Uso
-
-Invócala directamente con `$automatizador-referencias` o permite que el orquestador la seleccione según el encargo.
-
-Ejemplo:
+## Ejemplo de uso
 
 ```text
-Usa $automatizador-referencias para [describe aquí la tarea y los archivos de entrada].
+Usa $automatizador-referencias para auditar citas, DOI, bibliografía y fuentes descargadas.
 ```
 
-## Cobertura
+## Guía operativa
 
-- Ejecución multiplataforma
-- Objetivo
-- Regla Central
-- Herramientas automatizadas
-- Salida Esperada
+Los generadores de informes y perfiles exigen `--overwrite` para reemplazar salidas existentes, nunca entradas. Requieren `editor-en-jefe/scripts/archivos_seguros.py`, también en ejecución directa. Consultar [protección y límites de escritura](../../editor-en-jefe/references/portabilidad.md#protección-de-informes).
+
+### Ejecución multiplataforma
+
+Consultar [la guía común de ejecución](../../editor-en-jefe/references/portabilidad.md) para elegir intérprete y preparar dependencias.
+
+### Objetivo
+
+Delegar en scripts las tareas repetibles de referencias: detectar citas, separar bibliografía, extraer DOI, consultar metadatos, inventariar fuentes y producir reportes compactos.
+
+### Regla Central
+
+No inventar metadatos. Si DOI, año, autores, revista, volumen, número o páginas no son verificables, marcar `pendiente` y dejar que la skill bibliográfica especializada decida.
+
+### Herramientas automatizadas
+
+#### DOI A Referencia
+
+```text
+python skills/editor-en-jefe/scripts/ejecutar.py automatizador-referencias/scripts/doi_a_referencia.py 10.xxxx/xxxxx --style apa --out refs.md --json-out refs.json
+```
+
+Acepta uno o varios DOI. Consulta Crossref si hay red; si falla, conserva el DOI y marca metadatos pendientes.
+
+La salida es preliminar en ambas normas. IEEE genera borradores de artículos de revista; otros tipos y datos esenciales incompletos quedan pendientes sin aplicarles una plantilla errónea. Revisar abreviatura oficial, versión/fecha, mes, autoría y localizadores. `borrador` no equivale a cumplimiento; `pendiente` exige completar o seleccionar el modelo adecuado. El año de depósito del DOI no se usa como año de publicación.
+
+#### Auditoría De Citas Y Bibliografía
+
+```text
+python skills/editor-en-jefe/scripts/ejecutar.py automatizador-referencias/scripts/auditar_citas_bibliografia.py manuscrito.md --out auditoria.md --json-out auditoria.json
+```
+
+Detecta citas numéricas, citas APA probables, referencias finales, DOI, citas sin referencia y referencias no citadas.
+
+Para una obra completa IEEE añadir `--style ieee --strict`: reconoce localizadores, alerta de rangos comprimidos, orden incorrecto y números duplicados; devuelve 1 si hay errores mecánicos. Sin `--strict` conserva salida 0 para generar informes. No renumera ni borra fuentes. Requiere sección explícita Referencias/References/Bibliografía; si falta, avisa y no infiere bibliografía de citas del cuerpo. Fragmentos, expresiones matemáticas y encabezados no estándar requieren revisión. Siempre informa alcance parcial.
+
+#### Inventario De Fuentes
+
+```text
+python skills/editor-en-jefe/scripts/ejecutar.py automatizador-referencias/scripts/inventario_fuentes.py referencias-descargadas --recursive --out fuentes.md --json-out fuentes.json
+```
+
+Lista archivos fuente, tamaño, extensión, DOI probable y decisión inicial.
+
+#### Normalizar Referencias
+
+```text
+python skills/editor-en-jefe/scripts/ejecutar.py automatizador-referencias/scripts/normalizar_referencias.py bibliografia.md --out normalizadas.md --json-out normalizadas.json
+```
+
+Limpia espacios, detecta estilo probable, DOI y duplicados exactos.
+
+La detección de duplicados compara DOI normalizado o texto sin el número inicial. Es una señal para revisión, no deduplicación destructiva ni comprobación semántica de versiones.
+
+### Salida Esperada
+
+Usar los reportes como insumo para `$gestor-referencias-academicas` o `$revisor-citas-consistencia-bibliografica`. El agente debe leer primero advertencias, faltantes y tablas compactas, no la bibliografía completa.
 
 ## Recursos incluidos
 
 ### Herramientas automatizadas
 
-- [`scripts/auditar_citas_bibliografia.py`](../../automatizador-referencias/scripts/auditar_citas_bibliografia.py)
-- [`scripts/doi_a_referencia.py`](../../automatizador-referencias/scripts/doi_a_referencia.py)
-- [`scripts/inventario_fuentes.py`](../../automatizador-referencias/scripts/inventario_fuentes.py)
-- [`scripts/normalizar_referencias.py`](../../automatizador-referencias/scripts/normalizar_referencias.py)
+| Recurso | Función |
+| --- | --- |
+| [`scripts/auditar_citas_bibliografia.py`](../../automatizador-referencias/scripts/auditar_citas_bibliografia.py) | Recurso auxiliar: Auditar citas bibliografia. |
+| [`scripts/doi_a_referencia.py`](../../automatizador-referencias/scripts/doi_a_referencia.py) | Recurso auxiliar: Doi a referencia. |
+| [`scripts/inventario_fuentes.py`](../../automatizador-referencias/scripts/inventario_fuentes.py) | Recurso auxiliar: Inventario fuentes. |
+| [`scripts/normalizar_referencias.py`](../../automatizador-referencias/scripts/normalizar_referencias.py) | Recurso auxiliar: Normalizar referencias. |
 
 ### Referencias
 
-- [`references/criterios.md`](../../automatizador-referencias/references/criterios.md)
+| Recurso | Función |
+| --- | --- |
+| [`references/criterios.md`](../../automatizador-referencias/references/criterios.md) | Criterios |
 
 ### Pruebas
 
-- [`tests/test_duplicados.py`](../../automatizador-referencias/tests/test_duplicados.py)
-- [`tests/test_ieee.py`](../../automatizador-referencias/tests/test_ieee.py)
+| Recurso | Función |
+| --- | --- |
+| [`tests/test_duplicados.py`](../../automatizador-referencias/tests/test_duplicados.py) | Recurso auxiliar: Test duplicados. |
+| [`tests/test_ieee.py`](../../automatizador-referencias/tests/test_ieee.py) | Recurso auxiliar: Test ieee. |
 
 ### Configuración de interfaz
 
-- [`agents/openai.yaml`](../../automatizador-referencias/agents/openai.yaml)
+| Recurso | Función |
+| --- | --- |
+| [`agents/openai.yaml`](../../automatizador-referencias/agents/openai.yaml) | Metadatos de interfaz e invocación de la skill. |
 
-## Integración
+## Fuente normativa
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
-
-Consulta las instrucciones normativas en [`automatizador-referencias/SKILL.md`](../../automatizador-referencias/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.
+Esta ficha se genera desde [`automatizador-referencias/SKILL.md`](../../automatizador-referencias/SKILL.md), que permanece como contrato normativo. Regenera la ficha después de modificar ese archivo.

@@ -12,17 +12,31 @@ SCRIPT = Path(__file__).resolve().parents[1] / "scripts" / "generar_documentacio
 
 class GenerarDocumentacionSkillsTests(unittest.TestCase):
     def create_skill(
-        self, root: Path, name: str, description: str, title: str | None = None
+        self,
+        root: Path,
+        name: str,
+        description: str,
+        title: str | None = None,
+        body: str = "",
+        default_prompt: str | None = None,
     ) -> None:
         skill = root / name
         (skill / "scripts").mkdir(parents=True)
         (skill / "references").mkdir()
         (skill / "SKILL.md").write_text(
-            f"---\nname: {name}\ndescription: {description}\n---\n\n# {title or name}\n",
+            f"---\nname: {name}\ndescription: {description}\n---\n\n# {title or name}\n\n{body}",
             encoding="utf-8",
         )
-        (skill / "scripts" / "accion.py").write_text("print('ok')\n", encoding="utf-8")
+        (skill / "scripts" / "accion.py").write_text(
+            '"""Ejecuta la acción demostrativa."""\n\nprint("ok")\n', encoding="utf-8"
+        )
         (skill / "references" / "criterios.md").write_text("# Criterios\n", encoding="utf-8")
+        if default_prompt is not None:
+            agents = skill / "agents"
+            agents.mkdir()
+            (agents / "openai.yaml").write_text(
+                f'interface:\n  default_prompt: "{default_prompt}"\n', encoding="utf-8"
+            )
 
     def run_generator(self, root: Path, output: Path, *extra: str) -> subprocess.CompletedProcess[str]:
         return subprocess.run(
@@ -142,6 +156,126 @@ class GenerarDocumentacionSkillsTests(unittest.TestCase):
             self.assertEqual(result.returncode, 2)
             self.assertIn("mezcla de idiomas", result.stderr)
             self.assertFalse(output.exists())
+
+    def test_preserves_operational_guidance_and_uses_the_real_prompt(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(
+                root,
+                "alfa-skill",
+                "Procesa entradas alfa de forma controlada.",
+                title="Alfa Skill",
+                body=(
+                    "## Flujo\n\n"
+                    "1. Conserva el archivo original.\n"
+                    "2. Ejecuta el control reproducible.\n\n"
+                    "```text\npython alfa-skill/scripts/accion.py entrada.txt\n```\n\n"
+                    "## Límites\n\nNo reemplaza la revisión humana.\n"
+                ),
+                default_prompt="Usa $alfa-skill para comprobar este archivo sin alterar el original.",
+            )
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            page = (output / "alfa-skill.md").read_text(encoding="utf-8")
+            self.assertIn("Usa $alfa-skill para comprobar este archivo", page)
+            self.assertIn("### Flujo", page)
+            self.assertIn("Conserva el archivo original", page)
+            self.assertIn("python alfa-skill/scripts/accion.py entrada.txt", page)
+            self.assertIn("### Límites", page)
+            self.assertIn("No reemplaza la revisión humana", page)
+            self.assertNotIn("[describe aquí", page)
+
+    def test_rewrites_local_links_from_the_skill_to_the_generated_page(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(
+                root,
+                "alfa-skill",
+                "Procesa entradas alfa.",
+                body=(
+                    "## Referencias\n\n"
+                    "Leer [criterios](references/criterios.md) y "
+                    "[guía común](../editor-en-jefe/references/ruta.md).\n"
+                ),
+            )
+            editor_reference = root / "editor-en-jefe" / "references"
+            editor_reference.mkdir(parents=True)
+            (editor_reference / "ruta.md").write_text("# Ruta\n", encoding="utf-8")
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            page = (output / "alfa-skill.md").read_text(encoding="utf-8")
+            self.assertIn("(../../alfa-skill/references/criterios.md)", page)
+            self.assertIn("(../../editor-en-jefe/references/ruta.md)", page)
+
+    def test_describes_resources_instead_of_only_listing_filenames(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(root, "alfa-skill", "Procesa entradas alfa.")
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            page = (output / "alfa-skill.md").read_text(encoding="utf-8")
+            self.assertIn("| Recurso | Función |", page)
+            self.assertIn("Ejecuta la acción demostrativa.", page)
+            self.assertIn("Criterios", page)
+
+    def test_groups_known_skills_by_workflow_in_the_index(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(root, "editor-en-jefe", "Coordina la colección.")
+            self.create_skill(root, "constructor-tesis-academica", "Construye tesis.")
+            self.create_skill(root, "gestor-ecuaciones-academicas", "Gestiona ecuaciones.")
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            index = (output / "README.md").read_text(encoding="utf-8")
+            self.assertIn("## Orquestación y preparación", index)
+            self.assertIn("## Tesis y libros", index)
+            self.assertIn("## Recursos técnicos y visuales", index)
+
+    def test_does_not_rewrite_headings_or_links_inside_code_fences(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp) / "coleccion"
+            output = Path(tmp) / "docs" / "skills"
+            root.mkdir()
+            self.create_skill(
+                root,
+                "alfa-skill",
+                "Procesa entradas alfa.",
+                body=(
+                    "## Formato\n\n"
+                    "```markdown\n"
+                    "## Título del ejemplo\n"
+                    "[enlace de muestra](references/no-real.md)\n"
+                    "```\n\n"
+                    "La sintaxis `![pie](archivo.png)` es solo un ejemplo.\n\n"
+                    "Leer [criterios reales](references/criterios.md).\n"
+                ),
+            )
+
+            result = self.run_generator(root, output)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            page = (output / "alfa-skill.md").read_text(encoding="utf-8")
+            self.assertIn("### Formato", page)
+            self.assertIn("## Título del ejemplo", page)
+            self.assertIn("[enlace de muestra](references/no-real.md)", page)
+            self.assertIn("`![pie](archivo.png)`", page)
+            self.assertIn("[criterios reales](../../alfa-skill/references/criterios.md)", page)
 
 
 if __name__ == "__main__":

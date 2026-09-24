@@ -93,14 +93,14 @@ El auditor verifica márgenes, formato heredado de párrafos del cuerpo, niveles
 1. Registrar perfil y excepciones; recorrer esta lista y la guía bibliográfica.
 2. Ejecutar auditoría y resolver errores o documentar excepciones válidas.
 3. Revisar contenido y fuentes; no inferir corrección semántica de un script.
-4. Renderizar DOCX en Word/LibreOffice o PDF y revisar portada, encabezados, páginas, citas, tablas, figuras, referencias y apéndices. Sin renderizador, declarar revisión visual pendiente.
+4. Validar el OOXML y abrir el DOCX en Microsoft Word para revisar portada, encabezados, páginas, citas, tablas, figuras, referencias y apéndices. No usar LibreOffice. Sin Microsoft Word u otro motor autorizado, declarar revisión visual pendiente.
 5. Entregar cobertura real y pendientes; no afirmar «todos los parámetros» sin revisión completa del alcance aplicable.
 
 ## Regresión del renderizado
 
 `scripts/regresion_visual_apa.py` genera cuatro casos ficticios (estudiantil, título largo, profesional y nota larga), ejecuta el conversor y el renderizador, y examina la geometría y el texto del PDF resultante. Está destinado al mantenimiento del generador, no a manuscritos arbitrarios. No compara capturas píxel a píxel ni garantiza ausencia de toda superposición, recorte, sustitución de fuente o defecto editorial.
 
-Requisitos: Python 3.10+ con `pymupdf` para el verificador; un entorno de renderizado con `python-docx`, `pdf2image`, LibreOffice y Poppler. Proporcionar explícitamente el Python y el `render_docx.py` de confianza de ese entorno. En Codex, seleccionar las dependencias empaquetadas según la skill de documentos, sin recurrir silenciosamente al LibreOffice de escritorio. No descarga ni instala dependencias. No copiar el entorno Python entre sistemas.
+Requisitos: Python 3.10+ con `pymupdf` para el verificador y `python-docx` para generación nativa. Para PDF ya disponibles pueden emplearse `pdf2image` y Poppler. La inspección visual del DOCX corresponde a Microsoft Word u otro motor autorizado expresamente; LibreOffice está excluido. No descarga ni instala dependencias. No copiar el entorno Python entre sistemas.
 
 Desde la raíz de la colección, reemplazar las rutas de ejemplo por las del equipo:
 

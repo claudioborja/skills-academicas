@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import ast
 from dataclasses import dataclass
 import os
 from pathlib import Path
@@ -23,13 +24,68 @@ RESOURCE_GROUPS = (
 
 
 @dataclass(frozen=True)
+class ResourceInfo:
+    path: Path
+    purpose: str
+
+
+@dataclass(frozen=True)
 class SkillInfo:
     name: str
     title: str
     description: str
     path: Path
-    sections: tuple[str, ...]
-    resources: dict[str, tuple[Path, ...]]
+    guide: str
+    default_prompt: str
+    resources: dict[str, tuple[ResourceInfo, ...]]
+
+
+CATEGORY_ORDER = (
+    "Orquestación y preparación",
+    "Tesis y libros",
+    "Artículos y revisiones",
+    "Evidencia, resultados y referencias",
+    "Redacción y revisión",
+    "Recursos técnicos y visuales",
+    "Edición, autoría y entrega",
+    "Otras especialidades",
+)
+
+SKILL_CATEGORIES = {
+    "editor-en-jefe": "Orquestación y preparación",
+    "planificador-obra-academica": "Orquestación y preparación",
+    "preprocesador-documentos": "Orquestación y preparación",
+    "auditor-documental-academico": "Orquestación y preparación",
+    "constructor-tesis-academica": "Tesis y libros",
+    "convertidor-tesis-a-libro": "Tesis y libros",
+    "gestor-continuidad-libro": "Tesis y libros",
+    "gestor-marco-teorico-estado-del-arte": "Tesis y libros",
+    "explorador-temas-articulos": "Artículos y revisiones",
+    "redaccion-articulo-cientifico-imryd": "Artículos y revisiones",
+    "auditor-articulo-imryd": "Artículos y revisiones",
+    "revision-sistematica-kitchenham": "Artículos y revisiones",
+    "revision-sistematica-prisma": "Artículos y revisiones",
+    "verificador-resultados-investigacion": "Evidencia, resultados y referencias",
+    "gestor-referencias-academicas": "Evidencia, resultados y referencias",
+    "automatizador-referencias": "Evidencia, resultados y referencias",
+    "revisor-citas-consistencia-bibliografica": "Evidencia, resultados y referencias",
+    "ajustes-editoriales-bibliograficos": "Evidencia, resultados y referencias",
+    "filtro-editoriales-depredadoras": "Evidencia, resultados y referencias",
+    "gestor-redaccion-latinoamerica": "Redacción y revisión",
+    "humanizar-redaccion-academica": "Redacción y revisión",
+    "correccion-estilo-ortotipografica": "Redacción y revisión",
+    "auditor-coherencia-argumentativa": "Redacción y revisión",
+    "normalizador-terminologia-glosario": "Redacción y revisión",
+    "revisor-resumen-abstract-palabras-clave": "Redacción y revisión",
+    "respondedor-observaciones-academicas": "Redacción y revisión",
+    "gestor-tablas-figuras-pies": "Recursos técnicos y visuales",
+    "gestor-imagenes-academicas-libros": "Recursos técnicos y visuales",
+    "gestor-ecuaciones-academicas": "Recursos técnicos y visuales",
+    "gestor-codigo-tecnico-editorial": "Recursos técnicos y visuales",
+    "gestor-contribuciones-autoria": "Edición, autoría y entrega",
+    "disenador-maquetador-word": "Edición, autoría y entrega",
+    "maquetacion-academica-preentrega": "Edición, autoría y entrega",
+}
 
 
 def parse_frontmatter(text: str, source: Path) -> tuple[str, str]:
@@ -65,7 +121,58 @@ def validate_description(description: str, source: Path) -> None:
         raise ValueError(f"La descripción contiene una mezcla de idiomas en {source}")
 
 
-def discover_resources(skill: Path, directory: str) -> tuple[Path, ...]:
+def extract_guide(text: str, source: Path) -> str:
+    title = re.search(r"^# .+$", text, flags=re.MULTILINE)
+    if title is None:
+        raise ValueError(f"Título principal ausente en {source}")
+    return text[title.end() :].strip()
+
+
+def parse_default_prompt(skill: Path, name: str) -> str:
+    metadata = skill / "agents" / "openai.yaml"
+    if metadata.is_file():
+        text = metadata.read_text(encoding="utf-8")
+        match = re.search(r"^\s*default_prompt:\s*(.+?)\s*$", text, flags=re.MULTILINE)
+        if match:
+            return match.group(1).strip().strip('"').strip("'")
+    return f"Usa ${name} para aplicar esta especialidad al material indicado."
+
+
+def first_heading(text: str) -> str | None:
+    match = re.search(r"^#\s+(.+)$", text, flags=re.MULTILINE)
+    return match.group(1).strip() if match else None
+
+
+def humanize_stem(path: Path) -> str:
+    return path.stem.replace("_", " ").replace("-", " ").strip().capitalize()
+
+
+def resource_purpose(path: Path) -> str:
+    suffix = path.suffix.lower()
+    try:
+        if suffix == ".py":
+            module = ast.parse(path.read_text(encoding="utf-8"))
+            docstring = ast.get_docstring(module, clean=True)
+            if docstring:
+                return docstring.splitlines()[0].strip()
+        if suffix == ".md":
+            heading = first_heading(path.read_text(encoding="utf-8"))
+            if heading:
+                return heading
+        if path.name == "openai.yaml":
+            return "Metadatos de interfaz e invocación de la skill."
+        if suffix == ".csv":
+            return f"Plantilla o registro editable: {humanize_stem(path)}."
+        if suffix == ".json":
+            return f"Datos estructurados o ejemplo: {humanize_stem(path)}."
+        if "requirements" in path.name:
+            return "Dependencias Python fijadas para esta herramienta."
+    except (OSError, SyntaxError, UnicodeError):
+        pass
+    return f"Recurso auxiliar: {humanize_stem(path)}."
+
+
+def discover_resources(skill: Path, directory: str) -> tuple[ResourceInfo, ...]:
     root = skill / directory
     if not root.is_dir():
         return ()
@@ -75,8 +182,8 @@ def discover_resources(skill: Path, directory: str) -> tuple[Path, ...]:
             continue
         if path.suffix.lower() in {".pyc", ".pyo", ".zip"}:
             continue
-        files.append(path.relative_to(skill))
-    return tuple(sorted(files, key=lambda item: item.as_posix().casefold()))
+        files.append(ResourceInfo(path.relative_to(skill), resource_purpose(path)))
+    return tuple(sorted(files, key=lambda item: item.path.as_posix().casefold()))
 
 
 def discover_skills(root: Path) -> list[SkillInfo]:
@@ -91,39 +198,99 @@ def discover_skills(root: Path) -> list[SkillInfo]:
         validate_description(description, source)
         if name != path.name:
             raise ValueError(f"El nombre {name} no coincide con el directorio {path.name}")
-        sections = tuple(
-            heading.strip()
-            for heading in re.findall(r"^## (.+)$", text, flags=re.MULTILINE)
-            if heading.strip()
-        )
+        guide = extract_guide(text, source)
+        default_prompt = parse_default_prompt(path, name)
         resources = {directory: discover_resources(path, directory) for directory, _ in RESOURCE_GROUPS}
-        skills.append(SkillInfo(name, title, description, path, sections, resources))
+        skills.append(SkillInfo(name, title, description, path, guide, default_prompt, resources))
     if not skills:
         raise ValueError(f"No se encontraron skills en {root}")
     return skills
 
 
+def transform_outside_inline_code(line: str, transform) -> str:
+    pattern = re.compile(r"(?P<ticks>`+).*?(?P=ticks)")
+    output: list[str] = []
+    cursor = 0
+    for match in pattern.finditer(line):
+        output.append(transform(line[cursor : match.start()]))
+        output.append(match.group(0))
+        cursor = match.end()
+    output.append(transform(line[cursor:]))
+    return "".join(output)
+
+
+def transform_outside_fences(markdown: str, transform) -> str:
+    inside_fence = False
+    output: list[str] = []
+    for line in markdown.splitlines(keepends=True):
+        if re.match(r"^\s*(?:```|~~~)", line):
+            output.append(line)
+            inside_fence = not inside_fence
+            continue
+        output.append(
+            line if inside_fence else transform_outside_inline_code(line, transform)
+        )
+    return "".join(output)
+
+
+def rewrite_local_links(markdown: str, skill: SkillInfo) -> str:
+    root = skill.path.parent.resolve()
+
+    def replace(match: re.Match[str]) -> str:
+        prefix, target, suffix = match.group("prefix"), match.group("target"), match.group("suffix")
+        if target.startswith(("#", "/", "mailto:")) or re.match(r"^[A-Za-z][A-Za-z0-9+.-]*://", target):
+            return match.group(0)
+        path_text, separator, anchor = target.partition("#")
+        candidate = (skill.path / path_text).resolve()
+        try:
+            relative = candidate.relative_to(root)
+        except ValueError:
+            return match.group(0)
+        rewritten = f"../../{relative.as_posix()}"
+        if separator:
+            rewritten += f"#{anchor}"
+        return f"{prefix}{rewritten}{suffix}"
+
+    pattern = re.compile(
+        r"(?P<prefix>!?\[[^\]]*\]\()(?P<target>[^)\s]+)(?P<suffix>[^)]*\))"
+    )
+    return transform_outside_fences(markdown, lambda line: pattern.sub(replace, line))
+
+
+def demote_headings(markdown: str) -> str:
+    pattern = re.compile(r"^(#{2,5})(\s+)")
+    return transform_outside_fences(
+        markdown,
+        lambda line: pattern.sub(
+            lambda match: f"#{match.group(1)}{match.group(2)}", line
+        ),
+    )
+
+
+def table_cell(text: str) -> str:
+    return " ".join(text.split()).replace("|", "\\|")
+
+
 def render_skill(skill: SkillInfo) -> str:
+    guide = demote_headings(rewrite_local_links(skill.guide, skill))
     lines = [
         f"# {skill.title}",
         "",
         skill.description,
         "",
-        "## Uso",
-        "",
-        f"Invócala directamente con `${skill.name}` o permite que el orquestador la seleccione según el encargo.",
-        "",
-        "Ejemplo:",
+        "## Ejemplo de uso",
         "",
         "```text",
-        f"Usa ${skill.name} para [describe aquí la tarea y los archivos de entrada].",
+        skill.default_prompt,
         "```",
         "",
+        "## Guía operativa",
+        "",
     ]
-    if skill.sections:
-        lines.extend(["## Cobertura", ""])
-        lines.extend(f"- {section}" for section in skill.sections)
-        lines.append("")
+    if guide:
+        lines.extend([guide, ""])
+    else:
+        lines.extend(["La skill concentra sus reglas en la descripción y los recursos enlazados.", ""])
     lines.extend(["## Recursos incluidos", ""])
     has_resources = False
     for directory, title in RESOURCE_GROUPS:
@@ -132,19 +299,20 @@ def render_skill(skill: SkillInfo) -> str:
             continue
         has_resources = True
         lines.extend([f"### {title}", ""])
+        lines.extend(["| Recurso | Función |", "| --- | --- |"])
         for resource in resources:
-            relative = resource.as_posix()
-            lines.append(f"- [`{relative}`](../../{skill.name}/{relative})")
+            relative = resource.path.as_posix()
+            lines.append(
+                f"| [`{relative}`](../../{skill.name}/{relative}) | {table_cell(resource.purpose)} |"
+            )
         lines.append("")
     if not has_resources:
         lines.extend(["La skill no necesita recursos auxiliares; sus reglas están en el archivo principal.", ""])
     lines.extend(
         [
-            "## Integración",
+            "## Fuente normativa",
             "",
-            "Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.",
-            "",
-            f"Consulta las instrucciones normativas en [`{skill.name}/SKILL.md`](../../{skill.name}/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.",
+            f"Esta ficha se genera desde [`{skill.name}/SKILL.md`](../../{skill.name}/SKILL.md), que permanece como contrato normativo. Regenera la ficha después de modificar ese archivo.",
             "",
         ]
     )
@@ -155,14 +323,23 @@ def render_index(skills: list[SkillInfo]) -> str:
     lines = [
         "# Catálogo de skills",
         "",
-        "Cada ficha resume el propósito, la cobertura y los recursos de una skill. Las instrucciones ejecutables y normativas permanecen en el `SKILL.md` de cada directorio.",
+        "Las fichas reproducen de forma navegable la guía operativa, los ejemplos reales y los recursos de cada skill. El `SKILL.md` de cada directorio permanece como contrato normativo.",
         "",
-        "| Skill | Uso principal |",
-        "| --- | --- |",
+        "Empieza por [`editor-en-jefe`](editor-en-jefe.md) cuando el encargo abarque varias etapas. Si la necesidad es aislada, entra directamente en la categoría correspondiente.",
+        "",
     ]
+    grouped: dict[str, list[SkillInfo]] = {category: [] for category in CATEGORY_ORDER}
     for skill in skills:
-        lines.append(f"| [`{skill.name}`]({skill.name}.md) | {skill.description} |")
-    lines.append("")
+        category = SKILL_CATEGORIES.get(skill.name, "Otras especialidades")
+        grouped[category].append(skill)
+    for category in CATEGORY_ORDER:
+        category_skills = grouped[category]
+        if not category_skills:
+            continue
+        lines.extend([f"## {category}", "", "| Skill | Uso principal |", "| --- | --- |"])
+        for skill in category_skills:
+            lines.append(f"| [`{skill.name}`]({skill.name}.md) | {skill.description} |")
+        lines.append("")
     return "\n".join(lines)
 
 

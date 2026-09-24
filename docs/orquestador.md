@@ -16,6 +16,20 @@ El orquestador identifica el producto, la etapa, el método, la norma y los mate
 
 Para una corrección aislada —por ejemplo, normalizar una bibliografía IEEE o auditar ecuaciones— puede invocarse directamente la skill responsable.
 
+## Mapa de especialidades
+
+| Área | Skills |
+| --- | --- |
+| Preparación y arquitectura | [`planificador-obra-academica`](skills/planificador-obra-academica.md), [`preprocesador-documentos`](skills/preprocesador-documentos.md), [`auditor-documental-academico`](skills/auditor-documental-academico.md) |
+| Tesis y libros | [`constructor-tesis-academica`](skills/constructor-tesis-academica.md), [`convertidor-tesis-a-libro`](skills/convertidor-tesis-a-libro.md), [`gestor-continuidad-libro`](skills/gestor-continuidad-libro.md), [`gestor-marco-teorico-estado-del-arte`](skills/gestor-marco-teorico-estado-del-arte.md) |
+| Artículos y revisiones | [`explorador-temas-articulos`](skills/explorador-temas-articulos.md), [`redaccion-articulo-cientifico-imryd`](skills/redaccion-articulo-cientifico-imryd.md), [`auditor-articulo-imryd`](skills/auditor-articulo-imryd.md), [`revision-sistematica-kitchenham`](skills/revision-sistematica-kitchenham.md), [`revision-sistematica-prisma`](skills/revision-sistematica-prisma.md) |
+| Evidencia y bibliografía | [`verificador-resultados-investigacion`](skills/verificador-resultados-investigacion.md), [`gestor-referencias-academicas`](skills/gestor-referencias-academicas.md), [`automatizador-referencias`](skills/automatizador-referencias.md), [`revisor-citas-consistencia-bibliografica`](skills/revisor-citas-consistencia-bibliografica.md), [`ajustes-editoriales-bibliograficos`](skills/ajustes-editoriales-bibliograficos.md), [`filtro-editoriales-depredadoras`](skills/filtro-editoriales-depredadoras.md) |
+| Redacción y revisión | [`gestor-redaccion-latinoamerica`](skills/gestor-redaccion-latinoamerica.md), [`humanizar-redaccion-academica`](skills/humanizar-redaccion-academica.md), [`correccion-estilo-ortotipografica`](skills/correccion-estilo-ortotipografica.md), [`auditor-coherencia-argumentativa`](skills/auditor-coherencia-argumentativa.md), [`normalizador-terminologia-glosario`](skills/normalizador-terminologia-glosario.md), [`revisor-resumen-abstract-palabras-clave`](skills/revisor-resumen-abstract-palabras-clave.md), [`respondedor-observaciones-academicas`](skills/respondedor-observaciones-academicas.md) |
+| Recursos técnicos | [`gestor-tablas-figuras-pies`](skills/gestor-tablas-figuras-pies.md), [`gestor-imagenes-academicas-libros`](skills/gestor-imagenes-academicas-libros.md), [`gestor-ecuaciones-academicas`](skills/gestor-ecuaciones-academicas.md), [`gestor-codigo-tecnico-editorial`](skills/gestor-codigo-tecnico-editorial.md) |
+| Cierre editorial | [`gestor-contribuciones-autoria`](skills/gestor-contribuciones-autoria.md), [`disenador-maquetador-word`](skills/disenador-maquetador-word.md), [`maquetacion-academica-preentrega`](skills/maquetacion-academica-preentrega.md) |
+
+El [mapa de responsabilidades](../editor-en-jefe/references/mapa-responsabilidades.md) define la frontera exacta de cada especialidad. Las fichas enlazadas explican entradas, flujo, entregables, límites, comandos y recursos.
+
 ## Flujo de decisión
 
 1. **Situar el producto.** Distinguir tesis, libro, artículo y revisión sistemática. En revisiones, separar Kitchenham de PRISMA y, para PRISMA, declarar además el método de conducción.
@@ -23,7 +37,7 @@ Para una corrección aislada —por ejemplo, normalizar una bibliografía IEEE o
 3. **Planificar.** Definir arquitectura y entregables sin imponer la estructura de un libro a otros productos.
 4. **Investigar y redactar.** Reutilizar evidencia trazable vigente y desarrollar capítulos completos con revisión integrada de respaldo, argumento y estilo.
 5. **Revisar el conjunto.** Verificar los resultados comprobables con [`verificador-resultados-investigacion`](../verificador-resultados-investigacion/SKILL.md), resolver o declarar hallazgos y reabrir discusión/conclusiones cuando cambien los datos. Comprobar continuidad, terminología, referencias, ecuaciones y recursos visuales; la revisión local no sustituye la global. Resolver contribuciones y autoría con la política aplicable antes del cierre.
-6. **Cerrar.** Si el libro requiere dirección visual profesional, diseñarlo con `disenador-maquetador-word`; después comprobar requisitos y entrega con `maquetacion-academica-preentrega`. Verificar el DOCX mediante renderizado e inspección visual y mantener controles y pendientes fuera de la obra. Si hay bloqueos, identificarla como borrador.
+6. **Cerrar.** Si el libro requiere dirección visual profesional, diseñarlo con `disenador-maquetador-word`; después comprobar requisitos y entrega con `maquetacion-academica-preentrega`. Validar el OOXML y realizar la inspección visual final en Microsoft Word u otro motor autorizado; no usar LibreOffice. Mantener controles y pendientes fuera de la obra. Si hay bloqueos, identificarla como borrador.
 7. **Responder observaciones.** Abrir una ronda trazable sin rehacer fases que no fueron afectadas.
 
 ## Reglas operativas

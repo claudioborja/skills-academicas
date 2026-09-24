@@ -33,7 +33,7 @@ La distribución incluye intérpretes completos para Linux x64, Windows x64, mac
 
 En un equipo sin Python ni Internet, usar el lanzador nativo de la skill: `./ejecutar.sh generar-listado ...` en Linux/macOS o `./ejecutar.ps1 generar-listado ...` en Windows. Los paquetes requeridos se entregan como ruedas offline en `runtime/python/wheels/`.
 
-LibreOffice solo se puede usar si el usuario pide expresamente comprobar un caso aislado de compatibilidad visual que `python-docx` no pueda responder. Declarar ese caso y la limitación antes de invocarlo.
+No usar LibreOffice. Para compatibilidad visual, validar la estructura mediante OOXML y reservar la inspección final del DOCX para Microsoft Word u otro motor autorizado expresamente.
 
 ## DOCX para fragmentos breves
 

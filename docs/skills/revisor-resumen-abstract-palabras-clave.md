@@ -2,31 +2,47 @@
 
 Úsalo cuando el usuario necesite redactar, corregir u optimizar un resumen en español o en inglés, una sinopsis, palabras clave, descriptores o un texto de contraportada, manteniendo precisión conceptual, densidad informativa y naturalidad.
 
-## Uso
-
-Invócala directamente con `$revisor-resumen-abstract-palabras-clave` o permite que el orquestador la seleccione según el encargo.
-
-Ejemplo:
+## Ejemplo de uso
 
 ```text
-Usa $revisor-resumen-abstract-palabras-clave para [describe aquí la tarea y los archivos de entrada].
+Usa $revisor-resumen-abstract-palabras-clave para redactar o corregir el resumen y las palabras clave de este texto.
 ```
 
-## Cobertura
+## Guía operativa
 
-- Objetivo
-- Cuándo usarlo
-- Flujo de trabajo
-- Validación final
+### Objetivo
+
+Este skill condensa obras extensas en piezas breves y de alta densidad informativa. Ayuda a redactar resúmenes y abstracts precisos, sin vaguedad ni frases promocionales.
+
+### Cuándo usarlo
+
+- al cerrar tesis, artículos, capítulos o libros
+- cuando el resumen es demasiado general o demasiado largo
+- cuando las palabras clave no representan bien el contenido
+- cuando se necesita versión bilingüe o síntesis breve
+
+### Flujo de trabajo
+
+1. Identifica tema, propósito, método y aporte principal.
+2. Reduce el contenido a lo esencial sin trivializarlo.
+3. Redacta resumen o abstract con economía expresiva.
+4. Selecciona palabras clave representativas y no redundantes.
+
+### Validación final
+
+- el resumen refleja el contenido real
+- no hay frases vacías ni promocionales
+- las palabras clave son específicas
+- la versión breve conserva valor informativo
 
 ## Recursos incluidos
 
 ### Configuración de interfaz
 
-- [`agents/openai.yaml`](../../revisor-resumen-abstract-palabras-clave/agents/openai.yaml)
+| Recurso | Función |
+| --- | --- |
+| [`agents/openai.yaml`](../../revisor-resumen-abstract-palabras-clave/agents/openai.yaml) | Metadatos de interfaz e invocación de la skill. |
 
-## Integración
+## Fuente normativa
 
-Para una tarea aislada puede invocarse directamente. En proyectos académicos completos, usa `editor-en-jefe` para decidir el orden y evitar intervenciones duplicadas.
-
-Consulta las instrucciones normativas en [`revisor-resumen-abstract-palabras-clave/SKILL.md`](../../revisor-resumen-abstract-palabras-clave/SKILL.md). Esta ficha es una guía de navegación y no reemplaza ese contrato.
+Esta ficha se genera desde [`revisor-resumen-abstract-palabras-clave/SKILL.md`](../../revisor-resumen-abstract-palabras-clave/SKILL.md), que permanece como contrato normativo. Regenera la ficha después de modificar ese archivo.

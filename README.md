@@ -25,7 +25,77 @@ La colección está diseñada para trabajar de dos maneras:
 - Exportación y control final de documentos Word y representaciones de revisión.
 - Auditorías mecánicas reproducibles que apoyan, pero no reemplazan, el juicio académico.
 
-El [catálogo completo](docs/skills/README.md) contiene una ficha independiente por cada skill.
+El [catálogo completo](docs/skills/README.md) agrupa las especialidades por flujo y contiene una ficha operativa por cada skill, con ejemplos, reglas, comandos, límites, coordinación y recursos.
+
+## Mapa completo de skills
+
+### Orquestación y preparación
+
+| Skill | Función principal |
+| --- | --- |
+| [`editor-en-jefe`](docs/skills/editor-en-jefe.md) | Diagnostica el proyecto y coordina solo las especialidades necesarias. |
+| [`planificador-obra-academica`](docs/skills/planificador-obra-academica.md) | Diseña la arquitectura, alcance, índice y estructura de proyectos extensos. |
+| [`preprocesador-documentos`](docs/skills/preprocesador-documentos.md) | Convierte, protege, segmenta y prepara inventarios de documentos largos. |
+| [`auditor-documental-academico`](docs/skills/auditor-documental-academico.md) | Produce inventarios mecánicos de estructura, recursos y señales de preentrega. |
+
+### Tesis y libros
+
+| Skill | Función principal |
+| --- | --- |
+| [`constructor-tesis-academica`](docs/skills/constructor-tesis-academica.md) | Construye y revisa la coherencia integral de tesis y trabajos de grado. |
+| [`convertidor-tesis-a-libro`](docs/skills/convertidor-tesis-a-libro.md) | Transforma una tesis en una obra editorial sin perder evidencia. |
+| [`gestor-continuidad-libro`](docs/skills/gestor-continuidad-libro.md) | Mantiene progresión, voz y continuidad entre capítulos. |
+| [`gestor-marco-teorico-estado-del-arte`](docs/skills/gestor-marco-teorico-estado-del-arte.md) | Organiza debates, antecedentes, conceptos y vacíos de literatura. |
+
+### Artículos y revisiones
+
+| Skill | Función principal |
+| --- | --- |
+| [`explorador-temas-articulos`](docs/skills/explorador-temas-articulos.md) | Clasifica literatura, detecta vacíos y propone líneas investigables. |
+| [`redaccion-articulo-cientifico-imryd`](docs/skills/redaccion-articulo-cientifico-imryd.md) | Planifica, redacta y revisa artículos con lógica IMRyD. |
+| [`auditor-articulo-imryd`](docs/skills/auditor-articulo-imryd.md) | Extrae señales estructurales y prepara controles de envío. |
+| [`revision-sistematica-kitchenham`](docs/skills/revision-sistematica-kitchenham.md) | Conduce revisiones sistemáticas de ingeniería de software con Kitchenham. |
+| [`revision-sistematica-prisma`](docs/skills/revision-sistematica-prisma.md) | Selecciona y aplica PRISMA y sus extensiones al reporte. |
+
+### Evidencia, resultados y referencias
+
+| Skill | Función principal |
+| --- | --- |
+| [`verificador-resultados-investigacion`](docs/skills/verificador-resultados-investigacion.md) | Comprueba resultados y documenta intervenciones trazables. |
+| [`gestor-referencias-academicas`](docs/skills/gestor-referencias-academicas.md) | Busca, verifica y aplica fuentes en APA 7 o IEEE. |
+| [`automatizador-referencias`](docs/skills/automatizador-referencias.md) | Automatiza controles repetibles de citas, DOI y bibliografía. |
+| [`revisor-citas-consistencia-bibliografica`](docs/skills/revisor-citas-consistencia-bibliografica.md) | Comprueba correspondencia final entre citas y referencias. |
+| [`ajustes-editoriales-bibliograficos`](docs/skills/ajustes-editoriales-bibliograficos.md) | Aplica restricciones bibliográficas institucionales o editoriales adicionales. |
+| [`filtro-editoriales-depredadoras`](docs/skills/filtro-editoriales-depredadoras.md) | Evalúa señales de riesgo en revistas, editoriales y fuentes. |
+
+### Redacción y revisión
+
+| Skill | Función principal |
+| --- | --- |
+| [`gestor-redaccion-latinoamerica`](docs/skills/gestor-redaccion-latinoamerica.md) | Redacta y reescribe en español académico latinoamericano. |
+| [`humanizar-redaccion-academica`](docs/skills/humanizar-redaccion-academica.md) | Recupera una voz definida sin alterar evidencia protegida. |
+| [`correccion-estilo-ortotipografica`](docs/skills/correccion-estilo-ortotipografica.md) | Corrige lengua, ortotipografía y uniformidad editorial. |
+| [`auditor-coherencia-argumentativa`](docs/skills/auditor-coherencia-argumentativa.md) | Revisa tesis, lógica, transiciones y conclusiones. |
+| [`normalizador-terminologia-glosario`](docs/skills/normalizador-terminologia-glosario.md) | Uniforma términos, siglas, categorías y glosarios. |
+| [`revisor-resumen-abstract-palabras-clave`](docs/skills/revisor-resumen-abstract-palabras-clave.md) | Prepara resúmenes, abstracts, sinopsis y palabras clave. |
+| [`respondedor-observaciones-academicas`](docs/skills/respondedor-observaciones-academicas.md) | Convierte observaciones en respuestas y cambios trazables. |
+
+### Recursos técnicos y visuales
+
+| Skill | Función principal |
+| --- | --- |
+| [`gestor-tablas-figuras-pies`](docs/skills/gestor-tablas-figuras-pies.md) | Crea e integra tablas, figuras, títulos, notas y llamadas. |
+| [`gestor-imagenes-academicas-libros`](docs/skills/gestor-imagenes-academicas-libros.md) | Genera, localiza y documenta imágenes con licencia y trazabilidad. |
+| [`gestor-ecuaciones-academicas`](docs/skills/gestor-ecuaciones-academicas.md) | Conserva notación, editabilidad, numeración y presentación matemática. |
+| [`gestor-codigo-tecnico-editorial`](docs/skills/gestor-codigo-tecnico-editorial.md) | Presenta código y salidas técnicas como contenido editorial legible. |
+
+### Edición, autoría y entrega
+
+| Skill | Función principal |
+| --- | --- |
+| [`gestor-contribuciones-autoria`](docs/skills/gestor-contribuciones-autoria.md) | Selecciona taxonomías, criterios de autoría y formatos de metadatos. |
+| [`disenador-maquetador-word`](docs/skills/disenador-maquetador-word.md) | Diseña libros profesionales como DOCX editables y resistentes al reflujo. |
+| [`maquetacion-academica-preentrega`](docs/skills/maquetacion-academica-preentrega.md) | Comprueba formato, limpieza y condiciones finales de entrega. |
 
 ## Editor en jefe
 
@@ -215,7 +285,7 @@ python editor-en-jefe/scripts/instalar_requisitos.py --entorno "ruta/entorno-nue
 
 No es necesario activar el entorno para usar `ejecutar.py`. Si eliges `--entorno`, define `SKILLS_RUNTIME_DIR` con esa misma ruta en futuras ejecuciones (`export SKILLS_RUNTIME_DIR="ruta"` en Linux/macOS; `$env:SKILLS_RUNTIME_DIR="ruta"` en PowerShell).
 
-Python y pip deben estar instalados previamente. Por defecto se añaden los paquetes faltantes al Python actual, que puede ser del sistema o un entorno ya activado. Si el sistema bloquea pip por permisos o por un entorno administrado externamente, el instalador informa el error; no fuerza privilegios ni `--break-system-packages`. Puedes elegir `--entorno` en ese caso. Para revisar visualmente Word/PDF también necesitas un renderizador, por ejemplo LibreOffice y Poppler; el script informa su detección en PATH, pero no los instala. Fuentes tipográficas y otras herramientas externas dependen de la maqueta requerida.
+Python y pip deben estar instalados previamente. Por defecto se añaden los paquetes faltantes al Python actual, que puede ser del sistema o un entorno ya activado. Si el sistema bloquea pip por permisos o por un entorno administrado externamente, el instalador informa el error; no fuerza privilegios ni `--break-system-packages`. Puedes elegir `--entorno` en ese caso. Para revisar visualmente un DOCX, usar Microsoft Word u otro motor autorizado expresamente; LibreOffice no forma parte de este flujo. Poppler puede emplearse para inspeccionar PDF ya generados. Fuentes tipográficas y otras herramientas externas dependen de la maqueta requerida.
 
 La implementación utiliza Python y rutas nativas para Windows, Linux y macOS; la validación ejecutada en Linux no sustituye las pruebas nativas en los otros sistemas. La disponibilidad de los paquetes fijados depende de que existan wheels compatibles con tu versión de Python y arquitectura.
 
